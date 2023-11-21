@@ -1,247 +1,690 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-<meta charset="utf-8" />
-<title>Áreas de Atuação</title>
-<meta name="description" content="Basic HTML/Tailwind starter" />
-<meta name="author" content="Daily Dev Tips" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <title>Áreas de Atuação</title>
+  <meta name="description" content="areas de atuacao" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/public/fontawesome/css/all.min.css" />
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="flex flex-col items-center justify-center w-full">
 
-<div class="w-full flex">
-<div class="">
+  <!-- NAVBAR DESKTOP -->
+  <div class=" justify-center items-center w-full lg:flex hidden absolute top-0 z-50">
+    <div class="relative flex flex-col lg:flex-wrap items-center justify-center w-full">
+      <img src="/public/img-menu.png" class="h-full w-full hidden md:flex" alt="" />
+      <img src="/public/barraEtapaFinanciamentoMobile.png" class="h-full w-full md:hidden flex" alt="" />
+      <div class="absolute top-0 flex items-center justify-center w-full">
+        <div class="absolute top-2 flex items-center justify-end w-full max-w-6xl">
+          <ul class="flex w-full gap-3 items-center justify-end">
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Perdizes
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">99999-0938</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Pinheiros
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">99939-9934</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Jardins
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">99999-0938</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Vila Romana
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">93207-3204</span></p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="absolute top-14 flex items-start justify-end w-full max-w-6xl">
+          <div class="w-1/2">
+            <a href="index.html" class="">
+              <img class="cursor-pointer" src="/public/logo-superior.png" alt="...">
+            </a>
+          </div>
+          <div class="w-full">
+            <ul class="lg:flex lg:flex-row lg:items-center lg:justify-between gap-8 w-full hidden max-w-3xl">
+              <li>
+                <a class="text-gray-400" href="index.html">Home</a>
+              </li>
 
-<div class="relative flex items-center justify-center">
-<img src="/public/bannerSearch.svg" class="h-full w-full" alt="" />
-<div class="absolute flex w-full px-8">
-<h1 class="text-xl flex text-white uppercase">Área de atuação</h1>
-</div>
-</div>
-
-<div class="flex flex-col gap-2">
-
-<!-- parte 1 -->
-<div class="flex px-3">
-<p class="">Clique e saiba mais sobre o bairro:</p>
-</div>
-
-<div class="px-3 flex flex-col items-start justify-center gap-1">
-    <h2 class="text-red-700 max-w-xs flex uppercase">
-        Bairros em destaque
-    </h2>
-
-<div class="flex flex-col items-start justify-center px-5">
-    <button>
-        <a href="">
-            Alto da Lapa
-        </a>
-    </button>
-    
-    
-    <button>
-        <a href="">
-            Alto de Pinheiros
-        </a>
-    </button>
-    
-    <button>
-        <a href="">
-            Higienópolis
-        </a>
-    </button>
-    
-    
-    <button>
-        <a href="">
-            Jardim América
-        </a>
-    </button>
-    
-    <button>
-        <a href="">
-            Jardim Paulista
-        </a>
-    </button>
-    
-    
-    <button>
-        <a href="">
-            Perdizes
-        </a>
-    </button>
-    
-    <button>
-        <a href="">
-            Pinheiros
-        </a>
-    </button>
-    
-    
-    <button>
-        <a href="">
-            Pompéia
-        </a>
-    </button>
-    
-    <button>
-        <a href="">
-            Vila Madalena
-        </a>
-    </button>
-    
-    
-    <button>
-        <a href="">
-            Vila Romana
-        </a>
-    </button>
-</div>
-
-    </div>
-
-    
-<div class="px-3 flex flex-col items-start justify-center gap-1">
-    <h2 class="text-red-700 max-w-xs flex uppercase">
-        Demais bairros
-        </h2>
-
-<div class="flex flex-col items-start justify-center px-5">
-    <button>
-        <a href="">
-            Aclimação
+              <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+                <a href="#"
+                  class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                  @click.prevent="showChildren=!showChildren">
+                  <span>Imóveis</span>
+                  <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
                 </a>
-    </button>
-    
-    
-    <button>
-        <a href="">
-            Água Branca
-        </a>
-    </button>
-    
-    <button>
-        <a href="">
-            Barra Funda
-        </a>
-    </button>
-    
-    
-    <button>
-        <a href="">
-            Bela Vista
-        </a>
-    </button>
-    
-    <button>
-        <a href="">
-            Brooklin
-        </a>
-    </button>
-    
-    
-    <button>
-        <a href="">
-            Butantã
-        </a>
-    </button>
-    
-    <button>
-        <a href="">
-            Campo Belo
-        </a>
-    </button>
-    
-    
-    <button>
-        <a href="">
-            Caxingui
-        </a>
-    </button>
-    
-    <button>
-        <a href="">
-            Chácara Klabin
-        </a>
-    </button>
-    
-    
-    <button>
-        <a href="">
-            Cidade Jardim
-        </a>
-    </button>
-        
-    <button>
-        <a href="">
-            Caxingui
-        </a>
-    </button>
-    
-    <button>
-        <a href="">
-            Chácara Klabin
-        </a>
-    </button>
-    
-    
-    <button>
-        <a href="">
-            Cidade Jardim
-        </a>
-    </button>
-        
-    <button>
-        <a href="">
-            Caxingui
-        </a>
-    </button>
-    
-    <button>
-        <a href="">
-            Chácara Klabin
-        </a>
-    </button>
-    
-    
-    <button>
-        <a href="">
-            Cidade Jardim
-        </a>
-    </button>
-        
-    <button>
-        <a href="">
-            Caxingui
-        </a>
-    </button>
-    
-    <button>
-        <a href="">
-            Chácara Klabin
-        </a>
-    </button>
-</div>
 
+                <div class="absolute top-auto left-0 min-w-full w-56 z-30 mt-1" x-show="showChildren"
+                  x-transition:enter="transition ease duration-300 transform"
+                  x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                  x-transition:leave="transition ease duration-300 transform"
+                  x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                  style="display: none;">
+                  <div class="bg-white rounded w-full relative z-10 py-1">
+                    <ul class="list-reset">
+                      <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                        @mouseenter="showChildren=true">
+                        <a href="resultadoBusca.html"
+                          class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                          <span class="flex-1">Buscar Imóveis</span> </a>
+                      </li>
+                      <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                        @mouseenter="showChildren=true">
+                        <a href="#"
+                          class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                          <span class="flex-1">Cadastre Seu Imóvel</span> </a>
+                      </li>
+                      <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                        @mouseenter="showChildren=true">
+                        <a href="avaliacaoImovel.html"
+                          class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                          <span class="flex-1">Avalie seu Imóvel</span> </a>
+                      </li>
+                      <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                        @mouseenter="showChildren=true">
+                        <a href="imoveisFavoritos.html"
+                          class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                          <span class="flex-1">Favoritos</span> </a>
+                      </li>
+                      <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                        @mouseenter="showChildren=true">
+                        <a href="#"
+                          class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                          <span class="flex-1">Imóveis Visualizados</span> </a>
+                      </li>
+                      <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                        @mouseenter="showChildren=true">
+                        <a href="indice.html"
+                          class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                          <span class="flex-1">Índice de imóveis</span> </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+                <a href="#"
+                  class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                  @click.prevent="showChildren=!showChildren">
+                  <span>Serviços</span>
+                  <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+                </a>
+
+                <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                  x-transition:enter="transition ease duration-300 transform"
+                  x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                  x-transition:leave="transition ease duration-300 transform"
+                  x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                  style="display: none;">
+                  <div class="bg-white rounded w-full relative z-10 py-1">
+                    <ul class="list-reset">
+                      <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                        @mouseenter="showChildren=true">
+                        <a href="assessoriaFinanciamento.html"
+                          class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                          <span class="flex-1">Financiamento</span> </a>
+                      </li>
+                      <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                        @mouseenter="showChildren=true">
+                        <a href="assessoriaJuridica.html"
+                          class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                          <span class="flex-1">Assessoria Jurídica</span> </a>
+                      </li>
+                      <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                        @mouseenter="showChildren=true">
+                        <a href="#"
+                          class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                          <span class="flex-1">Proposta de Compra</span> </a>
+                      </li>
+                      <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                        @mouseenter="showChildren=true">
+                        <a href="#"
+                          class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                          <span class="flex-1">Autorização de Venda</span> </a>
+                      </li>
+                      <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                        @mouseenter="showChildren=true">
+                        <a href="#"
+                          class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                          <span class="flex-1">Autorização de Publicidade</span> </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+                <a href="#"
+                  class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                  @click.prevent="showChildren=!showChildren">
+                  <span>Institucional</span>
+                  <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+                </a>
+
+                <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                  x-transition:enter="transition ease duration-300 transform"
+                  x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                  x-transition:leave="transition ease duration-300 transform"
+                  x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                  style="display: none;">
+                  <div class="bg-white rounded w-full relative z-10 py-1">
+                    <ul class="list-reset">
+                      <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                        @mouseenter="showChildren=true">
+                        <a href="institucional.html"
+                          class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                          <span class="flex-1">Sobre a Zimmermann</span> </a>
+                      </li>
+                      <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                        @mouseenter="showChildren=true">
+                        <a href="areasdeatuacao.html"
+                          class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                          <span class="flex-1">Área de Atuação</span> </a>
+                      </li>
+                      <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                        @mouseenter="showChildren=true">
+                        <a href="#"
+                          class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                          <span class="flex-1">Seja Corretor Associado</span> </a>
+                      </li>
+                      <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                        @mouseenter="showChildren=true">
+                        <a href="contact.html"
+                          class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                          <span class="flex-1">Contato</span> </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a class="text-gray-400" href="blog.html">BLOG</a>
+              </li>
+              <li>
+                <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+              </li>
+              <li>
+                <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+              </li>
+              <li>
+                <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+              </li>
+              <li>
+                <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 
-<!-- parte 6 -->
-<img src="/public/bannerFooterSearch.svg" alt=""/>
+  <!-- NAVBAR MOBILE -->
+  <div>
+    <!-- NAVBARAR MOBILE NUMEROS -->
+    <nav class="w-full md:hidden ">
+      <div class="relative flex items-center justify-center">
+        <img src="/public/menuBarraTels.png" class="" alt="" />
+        <div class="absolute flex items-center justify-end w-full py-4">
+          <div class="lg:hidden flex items-end justify-end w-full gap-2 px-2 max-w-xs">
+            <button class="outline-none mobile-menu-tel1 flex flex-col items-center justify-center text-gray-500">
+              <span>Perdizes</span>
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+            <button class="outline-none mobile-menu-tel2 flex flex-col items-center justify-center text-gray-500">
+              <span>Pinheiros</span>
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+            <div class="lg:hidden flex items-center gap-4">
+              <button class="outline-none mobile-menu-tel3 flex flex-col items-center justify-center text-gray-500">
+                <span>Jardins</span>
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+              </button>
+              <button class="outline-none mobile-menu-tel4 flex flex-col items-center justify-center text-gray-500">
+                <span>Vila Romana</span>
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- mobile menu -->
+      <!-- TEL1 -->
+      <div class="hidden mobile-tel1 bg-red-700 mt-1">
+        <div class="py-4 flex items-center justify-between px-1 gap-1 h-28">
+          <div class="items-center justify-center flex w-full gap-1">
+            <div class="w-14 h-14 bg-red-500 items-center justify-center flex rounded-md drop-shadow-xl">
+              <img src="/public/telephone.svg" width="50%" height="50%" class="text-white" alt="">
+            </div>
+            <p class="text-xs text-white">(11) <span class="text-base text-white">5466-5349</span></p>
+          </div>
+          <div class="items-center justify-center flex w-full gap-1">
+            <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+            <div class="w-14 h-14 bg-green-500 items-center justify-center flex rounded-md drop-shadow-xl">
+              <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TEL2 -->
+      <div class="hidden mobile-tel2 bg-red-700 mt-1">
+        <div class="py-4 flex items-center justify-between px-1 gap-1 h-28">
+          <div class="items-center justify-center flex w-full gap-1">
+            <div class="w-14 h-14 bg-red-500 items-center justify-center flex rounded-md drop-shadow-xl">
+              <img src="/public/telephone.svg" width="50%" height="50%" class="text-white" alt="">
+            </div>
+            <p class="text-xs text-white">(11) <span class="text-base text-white">5466-5349</span></p>
+          </div>
+          <div class="items-center justify-center flex w-full gap-1">
+            <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+            <div class="w-14 h-14 bg-green-500 items-center justify-center flex rounded-md drop-shadow-xl">
+              <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TEL3 -->
+      <div class="hidden mobile-tel3 bg-red-700 mt-1">
+        <div class="py-4 flex items-center justify-between px-1 gap-1 h-28">
+          <div class="items-center justify-center flex w-full gap-1">
+            <div class="w-14 h-14 bg-red-500 items-center justify-center flex rounded-md drop-shadow-xl">
+              <img src="/public/telephone.svg" width="50%" height="50%" class="text-white" alt="">
+            </div>
+            <p class="text-xs text-white">(11) <span class="text-base text-white">5466-5349</span></p>
+          </div>
+          <div class="items-center justify-center flex w-full gap-1">
+            <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+            <div class="w-14 h-14 bg-green-500 items-center justify-center flex rounded-md drop-shadow-xl">
+              <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TEL4 -->
+      <div class="hidden mobile-tel4 bg-red-700 mt-1">
+        <div class="py-4 flex items-center justify-between px-1 gap-1 h-28">
+          <div class="items-center justify-center flex w-full gap-1">
+            <div class="w-14 h-14 bg-red-500 items-center justify-center flex rounded-md drop-shadow-xl">
+              <img src="/public/telephone.svg" width="50%" height="50%" class="text-white" alt="">
+            </div>
+            <p class="text-xs text-white">(11) <span class="text-base text-white">5466-5349</span></p>
+          </div>
+          <div class="items-center justify-center flex w-full gap-1">
+            <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+            <div class="w-14 h-14 bg-green-500 items-center justify-center flex rounded-md drop-shadow-xl">
+              <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- JS TEL 1 -->
+      <script>
+        const tel1 = document.querySelector("button.mobile-menu-tel1");
+        const menuTel1 = document.querySelector(".mobile-tel1");
 
+        tel1.addEventListener("click", () => {
+          menuTel1.classList.toggle("hidden");
+        });
+      </script>
+      <!-- JS TEL 2 -->
+      <script>
+        const tel2 = document.querySelector("button.mobile-menu-tel2");
+        const menuTel2 = document.querySelector(".mobile-tel2");
 
+        tel2.addEventListener("click", () => {
+          menuTel2.classList.toggle("hidden");
+        });
+      </script>
+      <!-- JS TEL 1 -->
+      <script>
+        const tel3 = document.querySelector("button.mobile-menu-tel3");
+        const menuTel3 = document.querySelector(".mobile-tel3");
 
-</div>
+        tel3.addEventListener("click", () => {
+          menuTel3.classList.toggle("hidden");
+        });
+      </script>
+      <!-- JS TEL 2 -->
+      <script>
+        const tel4 = document.querySelector("button.mobile-menu-tel4");
+        const menuTel4 = document.querySelector(".mobile-tel4");
 
-<!-- MAPS -->
-<div class="w-full">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin" style="border:0" class="w-full h-screen" allowfullscreen></iframe>
+        tel4.addEventListener("click", () => {
+          menuTel4.classList.toggle("hidden");
+        });
+      </script>
+    </nav>
 
+    <!-- NAVBARAR MOBILE MENU -->
+    <nav class="w-full lg:hidden">
+      <div class="px-2 py-2">
+        <div class="flex justify-between">
+          <div>
+            <a href="index.html" class="">
+              <img class="cursor-pointer" src="/public/logo-superior.png" width="90%" height="90%" alt="...">
+            </a>
+          </div>
 
-</div>
-</div>
+          <!-- Mobile menu button -->
+          <div class="lg:hidden flex items-center">
+            <button class="outline-none mobile-menu-button">
+              <i class="fa-solid fa-bars text-2xl mr-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- mobile menu -->
+      <div class="hidden mobile-menu bg-black mt-3">
+        <div class="py-4 px-4 gap-2 flex flex-col">
+          <p><a class="text-red-700 uppercase" href="index.html">Home</a></p>
+          <p><a class="text-white" href="blog.html">BLOG</a></p>
+          <p><a class="text-white" href="blog.html">Politica de Privacidade</a></p>
+          <p><a class="text-white" href="blog.html">Termos de Uso</a></p>
+          <p class="text-white mb-1">Imóveis</p>
+          <ul class="ml-5 flex flex-col gap-1">
+            <li><a class="text-white" href="resultadoBusca.html">Buscar Imóveis</a></li>
+            <li><a class="text-white" href="">Cadastre Seu Imóvel</a></li>
+            <li><a class="text-white" href="avaliacaoImovel.html">Avalie seu Imóvel</a></li>
+            <li><a class="text-white" href="imoveisFavoritos.html">Favoritos</a></li>
+            <li><a class="text-white" href="">Imóveis Visualizados</a></li>
+            <li><a class="text-white" href="indice.html">Índice de imóveis</a></li>
+          </ul>
+          <p class="text-white mb-1">Serviços</p>
+          <ul class="ml-5 flex flex-col gap-1">
+            <li><a class="text-white" href="assessoriaFinanciamento.html">Financiamento</a></li>
+            <li><a class="text-white" href="assessoriaJuridica.html">Assessoria Jurídica</a></li>
+            <li><a class="text-white" href="#">Proposta de Compra</a></li>
+            <li><a class="text-white" href="#">Autorização de Venda</a></li>
+            <li><a class="text-white" href="#">Autorização de Publicidade</a></li>
+          </ul>
+          <p class="text-white mb-1">Institucional</p>
+          <ul class="ml-5 flex flex-col gap-1">
+            <li><a class="text-white" href="institucional.html">Sobre a Zimmermann</a></li>
+            <li><a class="text-white" href="areasdeatuacao.html">Área de Atuação</a></li>
+            <li><a class="text-white" href="#">Seja Corretor Associado</a></li>
+            <li><a class="text-white" href="contact.html">Contato</a></li>
+          </ul>
+          <button type="button"
+            class="bg-red-700 h-10 w-44 rounded-md px-2 text-white flex items-center justify-center ">
+            <a href="imoveisFavoritos.html" class="flex items-center justify-center gap-2">
+              <p>Favoritos |</p>
+              <p>00</p>
+              <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+            </a>
+          </button>
+          <div class="flex gap-6">
+            <a class="text-white text-2xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+            <a class="text-white text-2xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a class="text-white text-2xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="text-white text-2xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <script>
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
 
+        btn.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
+      </script>
+      <!-- JAVA SCRIPT DROPDOWN -->
+      <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    </nav>
+  </div>
+
+  <div class="w-full flex items-start relative z-0">
+    <div class="w-full max-w-sm hidden lg:block">
+
+      <div class="flex flex-col items-center justify-between overflow-auto w-full relative top-48"
+        style="height: 75vh;">
+
+        <!-- BARRA SUPERIOR -->
+        <div class="relative flex items-center justify-center">
+          <img src="/public/barraBusca.png" class="h-full w-full" alt="" />
+          <div class="absolute flex w-full px-8">
+            <h1 class="text-xl flex text-white uppercase">Área de atuação</h1>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+
+          <!-- parte 1 -->
+          <div class="flex px-3">
+            <p class="">Clique e saiba mais sobre o bairro:</p>
+          </div>
+
+          <div class="px-3 flex flex-col items-start justify-center gap-1">
+            <h2 class="text-red-700 max-w-xs flex uppercase">
+              Bairros em destaque
+            </h2>
+
+            <div class="flex flex-col items-start justify-center px-5">
+              <button>
+                <a href="areadeatuacaocidade.html" class="hover:underline">
+                  Alto da Lapa
+                </a>
+              </button>
+
+              <button>
+                <a href="areadeatuacaocidade.html" class="hover:underline ">
+                  Alto de Pinheiros
+                </a>
+              </button>
+
+              <button>
+                <a href="areadeatuacaocidade.html" class="hover:underline ">
+                  Higienópolis
+                </a>
+              </button>
+
+              <button>
+                <a href="areadeatuacaocidade.html" class="hover:underline ">
+                  Jardim América
+                </a>
+              </button>
+
+              <button>
+                <a href="areadeatuacaocidade.html" class="hover:underline ">
+                  Jardim Paulista
+                </a>
+              </button>
+
+              <button>
+                <a href="areadeatuacaocidade.html" class="hover:underline ">
+                  Perdizes
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Pinheiros
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Pompéia
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Vila Madalena
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Vila Romana
+                </a>
+              </button>
+            </div>
+
+          </div>
+
+          <div class="px-3 flex flex-col items-start justify-center gap-1">
+            <h2 class="text-red-700 max-w-xs flex uppercase">
+              Demais bairros
+            </h2>
+
+            <div class="flex flex-col items-start justify-center px-5">
+              <button>
+                <a href="" class="hover:underline">
+                  Aclimação
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Água Branca
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Barra Funda
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Bela Vista
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Brooklin
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Butantã
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Campo Belo
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Caxingui
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Chácara Klabin
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Cidade Jardim
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Caxingui
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Chácara Klabin
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Cidade Jardim
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Caxingui
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Chácara Klabin
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Cidade Jardim
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Caxingui
+                </a>
+              </button>
+
+              <button>
+                <a href="" class="hover:underline">
+                  Chácara Klabin
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- parte 6 -->
+        <div class="relative flex items-center bottom-0 pt-4 justify-center">
+          <img src="/public/bannerFooterSearch.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- MAPS -->
+    <div class="w-full block">
+      <div class="map border-0 fixed z-0 w-full leading-[0]">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin"
+          style="border:0" class="w-full h-screen" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
