@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Áreas de Atuação - Cidade</title>
+    <meta name="description" content="áreas de atuação" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/public/fontawesome/css/all.min.css" />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex flex-col items-center justify-center w-full">
+
+  <!-- NAVBAR DESKTOP -->
+  <div class=" justify-center items-center w-full lg:flex hidden absolute top-0 z-50">
+    <div class="relative flex flex-col lg:flex-wrap items-center justify-center w-full">
+      <img src="/public/img-menu.png" class="h-full w-full hidden md:flex" alt="" />
+      <img src="/public/barraEtapaFinanciamentoMobile.png" class="h-full w-full md:hidden flex" alt="" />
+      <div class="absolute top-0 flex items-center justify-center w-full">
+        <div class="absolute top-2 flex items-center justify-end w-full max-w-6xl">
+          <ul class="flex w-full gap-3 items-center justify-end">
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Perdizes
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">99999-0938</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Pinheiros
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">99939-9934</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Jardins
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">99999-0938</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Vila Romana
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">93207-3204</span></p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="absolute top-14 flex items-start justify-end w-full max-w-6xl">
+          <div class="w-1/2">
+            <a href="index.html" class="">
+              <img class="cursor-pointer" src="/public/logo-superior.png" alt="...">
+            </a>
+          </div>
+<div class="w-full">
+          <ul class="lg:flex lg:flex-row lg:items-center lg:justify-between gap-8 w-full hidden max-w-3xl">
+            <li>
+              <a class="text-gray-400" href="index.html">Home</a>
+            </li>
+  
+            <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+              <a href="#"
+                class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                @click.prevent="showChildren=!showChildren">
+                <span>Imóveis</span>
+                <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+              </a>
+  
+              <div class="absolute top-auto left-0 min-w-full w-56 z-30 mt-1" x-show="showChildren"
+                x-transition:enter="transition ease duration-300 transform"
+                x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease duration-300 transform"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                style="display: none;">
+                <div class="bg-white rounded w-full relative z-10 py-1">
+                  <ul class="list-reset">
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="resultadoBusca.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Buscar Imóveis</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Cadastre Seu Imóvel</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="avaliacaoImovel.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Avalie seu Imóvel</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="imoveisFavoritos.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Favoritos</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Imóveis Visualizados</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="indice.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Índice de imóveis</span> </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+  
+            <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+              <a href="#"
+                class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                @click.prevent="showChildren=!showChildren">
+                <span>Serviços</span>
+                <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+              </a>
+  
+              <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                x-transition:enter="transition ease duration-300 transform"
+                x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease duration-300 transform"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                style="display: none;">
+                <div class="bg-white rounded w-full relative z-10 py-1">
+                  <ul class="list-reset">
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="assessoriaFinanciamento.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Financiamento</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="assessoriaJuridica.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Assessoria Jurídica</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Proposta de Compra</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Autorização de Venda</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Autorização de Publicidade</span> </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+  
+            <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+              <a href="#"
+                class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                @click.prevent="showChildren=!showChildren">
+                <span>Institucional</span>
+                <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+              </a>
+  
+              <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                x-transition:enter="transition ease duration-300 transform"
+                x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease duration-300 transform"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                style="display: none;">
+                <div class="bg-white rounded w-full relative z-10 py-1">
+                  <ul class="list-reset">
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="institucional.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Sobre a Zimmermann</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="areasdeatuacao.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Área de Atuação</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Seja Corretor Associado</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="contact.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Contato</span> </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a class="text-gray-400" href="blog.html">BLOG</a>
+            </li>
+            <li>
+              <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <!-- NAVBARAR MOBILE -->
+      <nav class="w-full lg:hidden">
+        <div class="max-w-6xl mx-auto px-4 py-3 lg:px-0">
+          <div class="flex justify-between">
+              <div>
+                <a href="index.html" class="">
+                  <img class="cursor-pointer" src="/public/logo-superior.png" alt="...">
+                </a>
+              </div>
+              <!-- Primary Navbar items -->
+              <div class="hidden md:flex items-center space-x-1">
+                <ul class="lg:flex lg:flex-row lg:items-center lg:justify-between gap-8 w-full hidden">
+                  <li>
+                    <a class="text-gray-400" href="index.html">Home</a>
+                  </li>
+        
+                  <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+                    <a href="#"
+                      class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                      @click.prevent="showChildren=!showChildren">
+                      <span>Imóveis</span>
+                      <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+                    </a>
+        
+                    <div class="absolute top-auto left-0 min-w-full w-56 z-30 mt-1" x-show="showChildren"
+                      x-transition:enter="transition ease duration-300 transform"
+                      x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                      x-transition:leave="transition ease duration-300 transform"
+                      x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                      style="display: none;">
+                      <div class="bg-white rounded w-full relative z-10 py-1">
+                        <ul class="list-reset">
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="resultadoBusca.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Buscar Imóveis</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Cadastre Seu Imóvel</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="avaliacaoImovel.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Avalie seu Imóvel</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="imoveisFavoritos.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Favoritos</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Imóveis Visualizados</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="indice.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Índice de imóveis</span> </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+        
+                  <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+                    <a href="#"
+                      class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                      @click.prevent="showChildren=!showChildren">
+                      <span>Serviços</span>
+                      <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+                    </a>
+        
+                    <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                      x-transition:enter="transition ease duration-300 transform"
+                      x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                      x-transition:leave="transition ease duration-300 transform"
+                      x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                      style="display: none;">
+                      <div class="bg-white rounded w-full relative z-10 py-1">
+                        <ul class="list-reset">
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="assessoriaFinanciamento.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Financiamento</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="assessoriaJuridica.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Assessoria Jurídica</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Proposta de Compra</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Autorização de Venda</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Autorização de Publicidade</span> </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+        
+                  <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+                    <a href="#"
+                      class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                      @click.prevent="showChildren=!showChildren">
+                      <span>Institucional</span>
+                      <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+                    </a>
+        
+                    <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                      x-transition:enter="transition ease duration-300 transform"
+                      x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                      x-transition:leave="transition ease duration-300 transform"
+                      x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                      style="display: none;">
+                      <div class="bg-white rounded w-full relative z-10 py-1">
+                        <ul class="list-reset">
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="institucional.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Sobre a Zimmermann</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="areasdeatuacao.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Área de Atuação</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Seja Corretor Associado</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="contact.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Contato</span> </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-gray-400" href="blog.html">BLOG</a>
+                  </li>
+                  <li>
+                    <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+                  </li>
+                </ul>
+    
+              </div>
+          
+    
+            <!-- Mobile menu button -->
+            <div class="lg:hidden flex items-center">
+              <button class="outline-none mobile-menu-button">
+                <i class="fa-solid fa-bars text-2xl">x</i>
+            </button>
+            </div>
+          </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu bg-black mt-3">
+          <div class="py-4 px-4 gap-2 flex flex-col">
+            <p><a class="text-red-700 uppercase" href="index.html">Home</a></p>
+            <p><a class="text-white" href="blog.html">BLOG</a></p>
+            <p><a class="text-white" href="blog.html">Politica de Privacidade</a></p>
+            <p><a class="text-white" href="blog.html">Termos de Uso</a></p>
+            <p class="text-white mb-1">Imóveis</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="resultadoBusca.html">Buscar Imóveis</a></li>
+              <li><a class="text-white" href="">Cadastre Seu Imóvel</a></li>
+              <li><a class="text-white" href="avaliacaoImovel.html">Avalie seu Imóvel</a></li>
+              <li><a class="text-white" href="imoveisFavoritos.html">Favoritos</a></li>
+              <li><a class="text-white" href="">Imóveis Visualizados</a></li>
+              <li><a class="text-white" href="indice.html">Índice de imóveis</a></li>
+            </ul>
+            <p class="text-white mb-1">Serviços</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="assessoriaFinanciamento.html">Financiamento</a></li>
+              <li><a class="text-white" href="assessoriaJuridica.html">Assessoria Jurídica</a></li>
+              <li><a class="text-white" href="#">Proposta de Compra</a></li>
+              <li><a class="text-white" href="#">Autorização de Venda</a></li>
+              <li><a class="text-white" href="#">Autorização de Publicidade</a></li>
+            </ul>
+            <p class="text-white mb-1">Institucional</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="institucional.html">Sobre a Zimmermann</a></li>
+              <li><a class="text-white" href="areasdeatuacao.html">Área de Atuação</a></li>
+              <li><a class="text-white" href="#">Seja Corretor Associado</a></li>
+              <li><a class="text-white" href="contact.html">Contato</a></li>
+            </ul>
+            <button type="button"
+              class="bg-red-700 h-10 w-44 rounded-md px-2 text-white flex items-center justify-center ">
+              <a href="imoveisFavoritos.html" class="flex items-center justify-center gap-2">
+                <p>Favoritos |</p>
+                <p>00</p>
+                <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+              </a>
+            </button>
+            <div class="flex gap-6">
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <script>
+          const btn = document.querySelector("button.mobile-menu-button");
+          const menu = document.querySelector(".mobile-menu");
+    
+          btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+          });
+        </script>
+        <!-- JAVA SCRIPT DROPDOWN -->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+      </nav>
+
+<div class="flex w-full">
+<!-- component -->
+<div class="container w-full">
+                    <!-- BARRA SUPERIOR -->
+                    <div class="relative flex items-center justify-center">
+                        <img src="/public/bannerBarraAreasdeatuacao.svg" class="h-full w-full hidden lg:flex" alt="" />
+                        <img src="/public/bannerBarraAreasdeatuacaoMobile.svg" class="h-full w-full flex lg:hidden" alt="" />
+                        <div class="absolute flex items-center justify-between w-full px-5">
+                            <p class="text-white uppercase text-xl">
+                                Área de atuação
+                            </p>
+                            <button>
+                                <a href="" class="text-white text-xl">
+                                    Voltar
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+
+
+		<div class="flex flex-col items-center justify-between overflow-auto w-full" style="height: 75vh;">
+
+                                <!-- SOBRE O BAIRRO -->
+                                                    <section class="flex flex-col w-full justify-center items-center max-w-6xl px-8">
+                                                        <h3 class="text-xl text-red-700 py-5 uppercase w-full">Alto da lapa</h3>
+                                                        <img src="/public/alto-da-lapa.svg" class="h-full w-full" alt="" />
+                                                        <div class="flex flex-col py-5">
+                                                            <h2 class="text-red-700 flex uppercase pb-5">
+                                                                Considerado um bairro nobre do distrito da Lapa, o Alto da Lapa é caracterizado pelo
+                                                                verde e é tido como o “Bairro Jardim”.
+                                                            </h2>
+                                                            <h2 class="text-red-700 flex">
+                                                                Por que comprar em Alto da Lapa?
+                                                            </h2>
+                                                            <p class="text-black flex">
+                                                                Considerado um bairro nobre do distrito da Lapa, o Alto da Lapa é caracterizado pelo
+                                                                verde e tem como característica principal “bairro jardim”.
+                                                                Sua concepção urbanística foi criada pelo arquiteto e urbanista inglês Barry Parker na
+                                                                década de 20 e mantêm suas características nos dias atuais.
+                                                            </p>
+                                                            <h2 class="text-red-700 flex pt-5">
+                                                                Perfil imobiliário
+                                                            </h2>
+                                                            <p class="text-black flex ">
+                                                                O bairro Alto da Lapa possui perfil imobiliário de residências horizontais tombados pelo
+                                                                Instituto do Patrimônio Histórico e Artístico Nacional e pelo Conselho de Defesa do
+                                                                Patrimônio Histórico, para que fosse preservada a arquitetura, história e cultura. Sendo
+                                                                assim, o bairro manterá sua essência com seu traçado viário preservado e preservação das
+                                                                áreas verdes, abrindo possibilidade para valorização.
+                                                            </p>
+                                                        </div>
+                                                    </section>
+
+                                        <!-- iIMÓVEIS DESTE BAIRRO -->
+                                        <section class="flex flex-col w-full justify-center items-center max-w-6xl px-8">
+                                            <h3 class="lg:text-xl text-red-700 text-center py-5 uppercase">Veja alguns imóveis deste bairro
+                                            </h3>
+                                            <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 mt-8 gap-5">
+                    
+                                                <!-- IMOVEL 1 -->
+                                                <div class="group relative rounded-xl bg-white border">
+                                                    <div
+                                                        class="flex justify-center z-30 items-center group-hover:rounded-lg opacity-0 bg-red-700 group-hover:opacity-20 absolute top-0 h-full w-full">
+                                                    </div>
+                                                    <div class="relative group">
+                    
+                                                        <div class="group relative">
+                                                            <div class="z-10 h-full w-full ">
+                                                                <img src="/public/ft1.svg"
+                                                                    class="flex h-full w-full object-cover relative object-center" alt="" />
+                                                            </div>
+                                                            <div
+                                                                class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
+                                                                <div class="flex items-center justify-center">
+                                                                    <img src="/public/icone-video.svg" alt="" class="mr-1 h-3">
+                                                                    <p href="#!" class="text-white">
+                                                                        Com vídeo
+                                                                    </p>
+                                                                </div>
+                                                                <div>
+                                                                    <p href="#!" class="text-white">
+                                                                        Cód.: 987653
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                    
+                                                        <div class="p-6">
+                    
+                                                            <div class="pb-6 flex items-center justify-between">
+                                                                <div>
+                                                                    <a href="#!" class="">
+                                                                        Alto de Pinheiros
+                                                                    </a>
+                                                                </div>
+                                                                <div class="flex gap-5">
+                                                                    <a href="#!"
+                                                                        class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
+                                                                        <img src="/public/icon-compartilhar.svg" alt="">
+                                                                    </a>
+                                                                    <a href="#!"
+                                                                        class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
+                                                                        <img src="/public/icon-coracao-selecionado.svg" alt="">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                    
+                                                            <div class="pb-6 flex items-center justify-between">
+                                                                <p href="#!" class="text-red-700">
+                                                                    Cobertura
+                                                                </p>
+                                                                <p href="#!" class="font-medium text-red-700">
+                                                                    R$ 25.000.000,00
+                                                                </p>
+                                                            </div>
+                    
+                                                            <div class="pb-6 flex items-center">
+                                                                <p href="#!" class="">
+                                                                    Alameda Ministro Rocha Azevedo, 1368
+                                                                </p>
+                                                            </div>
+                    
+                                                            <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
+                                                                <div class="flex items-center justify-start">
+                                                                    <p>1345<span class="text-gray-500 font-medium"> m2</span></p>
+                                                                </div>
+                                                                <div class="flex items-center justify-center ">
+                                                                    <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
+                                                                </div>
+                                                                <div class="flex items-center justify-center">
+                                                                    <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
+                                                                </div>
+                                                                <div class="flex items-center justify-end">
+                                                                    <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
+                                                                </div>
+                                                            </div>
+                    
+                                                            <div class="pt-6 flex items-center lg:gap-3 gap-1">
+                    
+                                                                <button
+                                                                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                                                                    <img src="/public/icon-metro.svg" class="mr-1" alt="">
+                                                                    <p class="lg:text-sm text-xs">
+                                                                        Metrô
+                                                                    </p>
+                                                                    <img src="/public/icon-metro-amarela.svg" class="ml-1" alt="">
+                                                                </button>
+                    
+                                                                <button
+                                                                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                                                                    <img src="/public/icon-estrela.svg" class="mr-1" alt="">
+                                                                    <p class="lg:text-sm text-xs">
+                                                                        Destaque
+                                                                    </p>
+                                                                </button>
+                    
+                                                                <button
+                                                                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md lg:px-2 w-32 lg:w-40 py-0.5">
+                                                                    <img src="/public/icon-locacao.svg" class="mr-0.5" alt="">
+                                                                    <p class="lg:text-sm text-xs">
+                                                                        Compre já alugado
+                                                                    </p>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                    
+                                                <!-- IMOVEL 2 -->
+                                                <div class="group relative rounded-xl bg-white border">
+                                                    <div
+                                                        class="flex justify-center z-30 items-center group-hover:rounded-lg opacity-0 bg-red-700 group-hover:opacity-20 absolute top-0 h-full w-full">
+                                                    </div>
+                                                    <div class="relative group">
+                    
+                                                        <div class="group relative">
+                                                            <div class="z-10 h-full w-full ">
+                                                                <img src="/public/ft3.svg"
+                                                                    class="flex h-full w-full object-cover relative object-center" alt="" />
+                                                            </div>
+                                                            <div
+                                                                class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
+                                                                <div class="flex items-center justify-center">
+                                                                    <img src="/public/icone-video.svg" alt="" class="mr-1 h-3">
+                                                                    <p href="#!" class="text-white">
+                                                                        Com vídeo
+                                                                    </p>
+                                                                </div>
+                                                                <div>
+                                                                    <p href="#!" class="text-white">
+                                                                        Cód.: 987653
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                    
+                                                        <div class="p-6">
+                    
+                                                            <div class="pb-6 flex items-center justify-between">
+                                                                <div>
+                                                                    <a href="#!" class="">
+                                                                        Perdizes
+                                                                    </a>
+                                                                </div>
+                                                                <div class="flex gap-5">
+                                                                    <a href="#!"
+                                                                        class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
+                                                                        <img src="/public/icon-compartilhar.svg" alt="">
+                                                                    </a>
+                                                                    <a href="#!"
+                                                                        class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
+                                                                        <img src="/public/icon-coracao-selecionado.svg" alt="">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                    
+                                                            <div class="pb-6 flex items-center justify-between">
+                                                                <p href="#!" class="text-red-700">
+                                                                    Casa em condomínio
+                                                                </p>
+                                                                <p href="#!" class="font-medium text-red-700">
+                                                                    R$ 25.000.000,00
+                                                                </p>
+                                                            </div>
+                    
+                                                            <div class="pb-6 flex items-center">
+                                                                <p href="#!" class="">
+                                                                    Rua Rocha Azevedo, 168
+                                                                </p>
+                                                            </div>
+                    
+                                                            <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
+                                                                <div class="flex items-center justify-start">
+                                                                    <p>135<span class="text-gray-500 font-medium"> m2</span></p>
+                                                                </div>
+                                                                <div class="flex items-center justify-center ">
+                                                                    <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
+                                                                </div>
+                                                                <div class="flex items-center justify-center">
+                                                                    <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
+                                                                </div>
+                                                                <div class="flex items-center justify-end">
+                                                                    <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
+                                                                </div>
+                                                            </div>
+                    
+                                                            <div class="pt-6 grid grid-cols-3 items-center lg:gap-3 gap-1">
+                    
+                                                                <button
+                                                                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                                                                    <img src="/public/icone-permuta.svg" class="mr-1" alt="">
+                                                                    <p class="lg:text-sm text-xs">
+                                                                        Permuta
+                                                                    </p>
+                                                                </button>
+                    
+                                                                <button
+                                                                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                                                                    <img src="/public/icon-estrela.svg" class="mr-1" alt="">
+                                                                    <p class="lg:text-sm text-xs">
+                                                                        Destaque
+                                                                    </p>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                    
+                                            </div>
+                                            <button class="py-10">
+                                                <a href="" class="text-red-700 text-xl">
+                                                    Ver mais imóveis
+                                                </a>
+                                            </button>
+                                        </section>
+
+                                        
+                    
+                                        <!-- INFORMAÇÕES SOBRE A CIDADE -->
+                                        <section class="flex flex-col w-full justify-center items-center max-w-4xl px-8">
+                    
+                                            <div
+                                                class="w-full max-w-6xl lg:flex lg:flex-row flex flex-col items-center justify-center lg:gap-5 py-10">
+                                                <img src="/public/icon-gastronomia.svg" alt="" />
+                                                <div class="flex flex-col w-full justify-center lg:items-start items-center lg:gap-4">
+                                                    <h3 class="lg:text-xl text-red-700 uppercase">Gastronomia
+                                                    </h3>
+                                                    <p class="text-center lg:text-left">
+                                                        Para os apreciadores de uma boa massa o Pellegrini oferece pizzas tradicionais
+                                                        italianas, além das pastas. Já àqueles que preferem se aventurar nas receitas
+                                                        portuguesas o Paparyco com o bacalhau de forno.
+                                                        Lanches tradicionais e caprichados o Snack Point Burger com milk shakes de
+                                                        acompanhamento.
+                                                        E para os adeptos da comida vegetariana o Espaço Zym, com um cardápio de encher os
+                                                        olhos, além de oferecer terapias para o corpo para rejuvenescimento do espírito.
+                                                    </p>
+                                                </div>
+                                            </div>
+                    
+                                            <div
+                                                class="w-full max-w-6xl lg:flex lg:flex-row flex flex-col items-center justify-center lg:gap-5 py-10">
+                                                <img src="/public/icon-transport.svg" alt="" />
+                                                <div class="flex flex-col w-full justify-center lg:items-start items-center lg:gap-4">
+                                                    <h3 class="lg:text-xl text-red-700 uppercase">
+                                                        Transporte Urbano
+                                                    </h3>
+                                                    <p class="text-center lg:text-left">
+                                                        Com excelente localização o Alto da Lapa faz ligação com os principais pontos de São
+                                                        Paulo, está próximo as marginais Tietê e Pinheiros.
+                                                        O bairro também possui fácil acesso a Linha 07-Rubi e Linha 08-Diamante da CPTM,
+                                                        além dos terminais que se interligam em quase todas as regiões de São Paulo.
+                                                    </p>
+                                                </div>
+                                            </div>
+                    
+                                            <div
+                                                class="w-full max-w-6xl lg:flex lg:flex-row flex flex-col items-center justify-center lg:gap-5 py-10">
+                                                <img src="/public/icon-lazer.svg" alt="" />
+                                                <div class="flex flex-col w-full justify-center lg:items-start items-center lg:gap-4">
+                                                    <h3 class="lg:text-xl text-red-700 uppercase">
+                                                        Lazer e Cultura
+                                                    </h3>
+                                                    <p class="text-center lg:text-left">
+                                                        O Alto da Lapa está a cerca de 20 minutos de caminhada do parque Villa Lobos, uma
+                                                        excelente opção de lazer que conta com uma infraestrutura de 741 mil m² de área
+                                                        verde, ciclovia, playground, ilha musical para shows e concertos, além da área de
+                                                        lazer que conta com aparelhos de ginástica, pista de cooper, tabelas de basquete,
+                                                        quadras poliesportivas, lanchonetes e estacionamento.
+                                                        Há quem prefira passeios por shoppings e nas proximidades está o Shopping Villa
+                                                        Lobos, fácil acesso a Rua Cerro Corá com um comercio variado.
+                                                    </p>
+                                                </div>
+                                            </div>
+                    
+                                            <div
+                                                class="w-full max-w-6xl lg:flex lg:flex-row flex flex-col items-center justify-center lg:gap-5 py-10">
+                                                <img src="/public/icon-escola.svg" alt="" />
+                                                <div class="flex flex-col w-full justify-center lg:items-start items-center lg:gap-4">
+                                                    <h3 class="lg:text-xl text-red-700 uppercase">
+                                                        Ensino
+                                                    </h3>
+                                                    <p class="text-center lg:text-left">
+                                                        Apresentando um índice de qualidade de ensino acima da média há anos, entre os
+                                                        colégios podemos destacar o Santo Ivo, Pio XI e Marco Polo. A proximidade com a Lapa
+                                                        para o ensino básico e fundamental o bairro da Lapa oferece mais de 8.000 vagas,
+                                                        distribuídas em escolas particulares e públicas. Entre as mais tradicionais podemos
+                                                        destacar o Colégio Bela Vista (sistema de ensino Objetivo), o Centro Educacional
+                                                        Nossa Senhora da Lapa, o Colégio Oswald de Andrade, o Colégio Adventista Lapa, entre
+                                                        outros.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                                            <!-- HISTORIA -->
+                    <div class="bg-red-800 mt-12 md:p-8 px-8 items-center justify-center">
+                        <section class="lg:flex w-full justify-center items-center bg-red-800">
+                            <div class='lg:justify-center items-center flex flex-col lg:max-w-6xl'>
+                                <div
+                                    class="w-full max-w-6xl lg:flex lg:flex-row flex flex-col items-center justify-center gap-5 pb-32 py-5">
+                                    <img src="/public/icon-história.svg" alt="" />
+                                    <div class="flex flex-col w-full justify-center gap-4">
+                                        <h3 class="lg:text-xl text-white uppercase text-center lg:text-left">
+                                            História
+                                        </h3>
+                                        <p class="text-center lg:text-left text-white">
+                                            No ano de 1921 surgem os primeiros lotes realizados pela Cia City, no Alto
+                                            da Lapa. Com características de um bairro jardim foi projetado pelo
+                                            arquiteto urbanista Barry Parker.
+                                            Inicialmente o projeto seria para acomodação da população operária, mas por
+                                            suas características atraiu imigrantes bem sucedidos financeiramente.
+                                            Alto de Pinheiros ainda preserva sua mesma estrutura coloquial, em 1992 foi
+                                            criada a Associação de Amigos e Moradores do Alto da Lapa e Bela Aliança, o
+                                            objetivo é a preservação do traçado original.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- FOTOS HISTORIA -->
+                    <section
+                        class="lg:flex lg:flex-row flex flex-col w-full justify-center items-center pt-10 relative -top-40">
+                        <div class="lg:flex">
+                            <div class="max-w-xs">
+                                <img src="/public/foto-lapa1.svg" alt="Photo" class="" />
+                            </div>
+                            <div class="max-w-xs">
+                                <img src="/public/foto-lapa2.svg" alt="Photo" class="" />
+                            </div>
+                            <div class="max-w-xs">
+                                <img src="/public/foto-lapa3.svg" alt="Photo" class="" />
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- BUSCA POR BAIRROS -->
+                    <section class="flex flex-col w-full justify-center items-center relative -top-40 max-w-6xl px-8">
+                        <h2 class="text-red-700 uppercase py-10">
+                            Faça uma busca de imóveis no bairro:
+                        </h2>
+                        <div class="grid lg:grid-cols-3 grid-cols-2 w-full gap-16 items-start justify-center">
+
+                            <ul>
+                                <h2 class="flex items-start justify-start text-red-700 font-medium">
+                                    Apartamentos
+                                </h2>
+                                <li>
+                                    <button>
+                                        <a href="">
+                                            Padrão
+                                        </a>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <a href="">
+                                            Studio/Kitnet
+                                        </a>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <a href="">
+                                            Duplex
+                                        </a>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <a href="">
+                                            Garden
+                                        </a>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <a href="">
+                                            Loft
+                                        </a>
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <ul>
+                                <h2 class="flex items-start justify-start text-red-700 font-medium">
+                                    Comerciais
+                                </h2>
+                                <li>
+                                    <button>
+                                        <a href="">
+                                            Sala/Conjunto
+                                        </a>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <a href="">
+                                            Casa Comercial
+                                        </a>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <a href="">
+                                            Prédio
+                                        </a>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <a href="">
+                                            Galpão
+                                        </a>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <a href="">
+                                            Loja/Salão
+                                        </a>
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <ul>
+                                <h2 class="flex items-start justify-start text-red-700 font-medium">
+                                    Casas
+                                </h2>
+                                <li>
+                                    <button>
+                                        <a href="">
+                                            Sobrado
+                                        </a>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <a href="">
+                                            Terrea
+                                        </a>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <a href="">
+                                            Casa de Vila
+                                        </a>
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <ul>
+                                <h2 class="flex items-start justify-start text-red-700 font-medium">
+                                    Coberturas
+                                </h2>
+                                <li>
+                                    <button>
+                                        <a href="">
+                                            Duplex
+                                        </a>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <a href="">
+                                            Penthouse
+                                        </a>
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <ul>
+                                <h2 class="flex items-start justify-start text-red-700 font-medium">
+                                    Terrenos
+                                </h2>
+                                <li>
+                                    <button>
+                                        <a href="">
+                                            Terreno
+                                        </a>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+        </div>
+</div>
+
+<!-- MAPS -->
+        <div class="relative md:block hidden w-full">
+            <div class="map border-0 fixed w-full leading-[0]">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin"
+                    style="border:0" class="w-full h-screen" allowfullscreen></iframe>
+            </div>
+        </div>
+</div>
+
+
+
+</body>
+</html>

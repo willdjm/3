@@ -1,241 +1,508 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-<meta charset="utf-8" />
-<title>Favoritos</title>
-<meta name="description" content="Basic HTML/Tailwind starter" />
-<meta name="author" content="Daily Dev Tips" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="styles.css" />
+    <meta charset="utf-8" />
+    <title>Áreas de Atuação - Cidade</title>
+    <meta name="description" content="áreas de atuação" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/public/fontawesome/css/all.min.css" />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="flex flex-col items-center justify-center w-full">
 
-<div class="w-full flex">
-<div class="">
+    <!-- NAVBARAR -->
+    <nav class="w-full sticky top-0">
+        <div class="max-w-6xl mx-auto px-4 py-3 lg:px-0">
+          <div class="flex justify-between">
+              <div>
+                <a href="index.html" class="">
+                  <img class="cursor-pointer" src="/public/logo-superior.png" alt="...">
+                </a>
+              </div>
+              <!-- Primary Navbar items -->
+              <div class="hidden md:flex items-center space-x-1">
+                <ul class="lg:flex lg:flex-row lg:items-center lg:justify-between gap-8 w-full hidden">
+                  <li>
+                    <a class="text-gray-400" href="index.html">Home</a>
+                  </li>
+        
+                  <li class="block relative z-50 text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+                    <a href="#"
+                      class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                      @click.prevent="showChildren=!showChildren">
+                      <span>Imóveis</span>
+                      <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+                    </a>
+        
+                    <div class="absolute top-auto left-0 min-w-full w-56 z-50 mt-1" x-show="showChildren"
+                      x-transition:enter="transition ease duration-300 transform"
+                      x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                      x-transition:leave="transition ease duration-300 transform"
+                      x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                      style="display: none;">
+                      <div class="bg-white rounded w-full relative z-50 py-1">
+                        <ul class="list-reset">
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="resultadoBusca.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Buscar Imóveis</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Cadastre Seu Imóvel</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="avaliacaoImovel.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Avalie seu Imóvel</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="imoveisFavoritos.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Favoritos</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Imóveis Visualizados</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="indice.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Índice de imóveis</span> </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+        
+                  <li class="block relative z-50 text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+                    <a href="#"
+                      class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                      @click.prevent="showChildren=!showChildren">
+                      <span>Serviços</span>
+                      <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+                    </a>
+        
+                    <div class="absolute top-auto left-0 min-w-full w-60 z-50 mt-1" x-show="showChildren"
+                      x-transition:enter="transition ease duration-300 transform"
+                      x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                      x-transition:leave="transition ease duration-300 transform"
+                      x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                      style="display: none;">
+                      <div class="bg-white rounded w-full relative z-50 py-1">
+                        <ul class="list-reset">
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="assessoriaFinanciamento.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Financiamento</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="assessoriaJuridica.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Assessoria Jurídica</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Proposta de Compra</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Autorização de Venda</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Autorização de Publicidade</span> </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+        
+                  <li class="block relative z-50 text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+                    <a href="#"
+                      class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                      @click.prevent="showChildren=!showChildren">
+                      <span>Institucional</span>
+                      <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+                    </a>
+        
+                    <div class="absolute top-auto left-0 min-w-full w-60 z-50 mt-1" x-show="showChildren"
+                      x-transition:enter="transition ease duration-300 transform"
+                      x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                      x-transition:leave="transition ease duration-300 transform"
+                      x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                      style="display: none;">
+                      <div class="bg-white rounded w-full relative z-50 py-1">
+                        <ul class="list-reset">
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="institucional.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Sobre a Zimmermann</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="areasdeatuacao.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Área de Atuação</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Seja Corretor Associado</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="contact.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Contato</span> </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-gray-400" href="blog.html">BLOG</a>
+                  </li>
+                  <li>
+                    <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+                  </li>
+                </ul>
+    
+              </div>
+          
+    
+            <!-- Mobile menu button -->
+            <div class="lg:hidden flex items-center">
+              <button class="outline-none mobile-menu-button">
+                <i class="fa-solid fa-bars text-2xl">x</i>
+            </button>
+            </div>
+          </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu bg-black mt-3">
+          <div class="py-4 px-4 gap-2 flex flex-col">
+            <p><a class="text-red-700 uppercase" href="index.html">Home</a></p>
+            <p><a class="text-white" href="blog.html">BLOG</a></p>
+            <p><a class="text-white" href="blog.html">Politica de Privacidade</a></p>
+            <p><a class="text-white" href="blog.html">Termos de Uso</a></p>
+            <p class="text-white mb-1">Imóveis</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="resultadoBusca.html">Buscar Imóveis</a></li>
+              <li><a class="text-white" href="">Cadastre Seu Imóvel</a></li>
+              <li><a class="text-white" href="avaliacaoImovel.html">Avalie seu Imóvel</a></li>
+              <li><a class="text-white" href="imoveisFavoritos.html">Favoritos</a></li>
+              <li><a class="text-white" href="">Imóveis Visualizados</a></li>
+              <li><a class="text-white" href="indice.html">Índice de imóveis</a></li>
+            </ul>
+            <p class="text-white mb-1">Serviços</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="assessoriaFinanciamento.html">Financiamento</a></li>
+              <li><a class="text-white" href="assessoriaJuridica.html">Assessoria Jurídica</a></li>
+              <li><a class="text-white" href="#">Proposta de Compra</a></li>
+              <li><a class="text-white" href="#">Autorização de Venda</a></li>
+              <li><a class="text-white" href="#">Autorização de Publicidade</a></li>
+            </ul>
+            <p class="text-white mb-1">Institucional</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="institucional.html">Sobre a Zimmermann</a></li>
+              <li><a class="text-white" href="areasdeatuacao.html">Área de Atuação</a></li>
+              <li><a class="text-white" href="#">Seja Corretor Associado</a></li>
+              <li><a class="text-white" href="contact.html">Contato</a></li>
+            </ul>
+            <button type="button"
+              class="bg-red-700 h-10 w-44 rounded-md px-2 text-white flex items-center justify-center ">
+              <a href="imoveisFavoritos.html" class="flex items-center justify-center gap-2">
+                <p>Favoritos |</p>
+                <p>00</p>
+                <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+              </a>
+            </button>
+            <div class="flex gap-6">
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <script>
+          const btn = document.querySelector("button.mobile-menu-button");
+          const menu = document.querySelector(".mobile-menu");
+    
+          btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+          });
+        </script>
+        <!-- JAVA SCRIPT DROPDOWN -->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+      </nav>
 
-<div class="relative flex items-center justify-center">
-<img src="/public/bannerSearch.svg" class="h-full w-full" alt="" />
-<div class="absolute flex w-full px-8">
-<h1 class="text-xl flex text-white uppercase">Filtrar imóveis</h1>
-</div>
-</div>
+<div class="w-full flex items-start relative z-0">
+    <div class="w-full max-w-sm">
+        <!-- BARRA SUPERIOR -->
+        <div class="relative flex items-center justify-center">
+          <img src="/public/bannerSearch.svg" class="h-full w-full" alt="" />
+          <div class="absolute flex w-full px-8">
+          <h1 class="text-xl flex text-white uppercase">Filtrar imóveis</h1>
+          </div>
+          </div>
 
-<form class="px-4">
-<div class="flex flex-col gap-2">
 
-<!-- parte 1 -->
-<div class="flex items-center justify-center">
-<p class="text-red-700">1.456 imóveis para Compra e Venda</p>
-</div>
+<div class="flex flex-col items-center justify-between overflow-auto w-full" style="height: 75vh;">
 
-<!-- parte 2 -->
-<div class="py-2 gap-2 flex flex-col">
 
-<div class="flex gap-1">
-<div class="flex items-center py-1.5 rounded-full px-2 justify-center gap-1 bg-gray-600">
-<button> 
-<img src="/public/iconClose.svg" alt="" />
-</button>
-<p class="text-xs">Alto de Pinheiros</p>
+                                        <form class="px-4">
+                                          <div class="flex flex-col gap-2">
+                                          
+                                          <!-- parte 1 -->
+                                          <div class="flex items-center justify-center">
+                                          <p class="text-red-700">1.456 imóveis para Compra e Venda</p>
+                                          </div>
+                                          
+                                          <!-- parte 2 -->
+                                          <div class="py-2 gap-2 flex flex-col">
+                                          
+                                          <div class="flex gap-1">
+                                          <div class="flex items-center py-1.5 rounded-full px-2 justify-center gap-1 bg-gray-600">
+                                          <button> 
+                                          <img src="/public/iconClose.svg" alt="" />
+                                          </button>
+                                          <p class="text-xs">Alto de Pinheiros</p>
+                                          </div>
+                                          
+                                          <div class="flex items-center py-1.5 rounded-full px-2 justify-center gap-1 bg-gray-600">
+                                          <button> 
+                                          <img src="/public/iconClose.svg" alt="" />
+                                          </button>
+                                          <p class="text-xs">Higienópolis</p>
+                                          </div>
+                                          </div>
+                                          
+                                          <div class="flex gap-1">
+                                          <div class="flex items-center py-1.5 rounded-full px-2 justify-center gap-1 bg-gray-600">
+                                          <button> 
+                                          <img src="/public/iconClose.svg" alt="" />
+                                          </button>
+                                          <p class="text-xs">Jardim América</p>
+                                          </div>
+                                          </div>
+                                          
+                                          <div class="flex gap-1">
+                                          <div class="flex items-center py-1.5 rounded-full px-2 justify-center gap-1 bg-gray-600">
+                                          <button> 
+                                          <img src="/public/iconClose.svg" alt="" />
+                                          </button>
+                                          <p class="text-xs">Chácara Monte Alegre</p>
+                                          </div>
+                                          
+                                          <div class="flex items-center  py-1.5 rounded-full px-2 justify-center gap-1 bg-gray-600">
+                                          <button> 
+                                          <img src="/public/iconClose.svg" alt="" />
+                                          </button>
+                                          <p class="text-xs">Perdizes</p>
+                                          </div>
+                                          </div>
+                                          </div>
+                                          
+                                          <!-- parte 3 -->
+                                          <div>
+                                          <select id="underline_select" class="py-2.5 w-full text-sm text-gray-500 bg-transparent border-0 border-b border-gray-200">
+                                          <option selected>Todos os Bairros</option>
+                                          <option value="US">United States</option>
+                                          <option value="CA">Canada</option>
+                                          <option value="FR">France</option>
+                                          <option value="DE">Germany</option>
+                                          </select>
+                                          </div>
+                                          
+                                          <div>
+                                          <select id="underline_select" class="py-2.5 w-full text-sm text-gray-500 bg-transparent border-0 border-b border-gray-200">
+                                          <option selected>Todos os Tipos</option>
+                                          <option value="US">United States</option>
+                                          <option value="CA">Canada</option>
+                                          <option value="FR">France</option>
+                                          <option value="DE">Germany</option>
+                                          </select>
+                                          </div>
+                                          
+                                          <!-- parte 4 -->
+                                          <div class="border-0 border-b py-2 border-gray-200">
+                                          <h2>Preço</h2>
+                                          <div class="md:flex w-full gap-2">
+                                          <input class="w-full bg-white mt-2 py-2 px-3 rounded-lg border border-gray-400 text-gray-800" id="grid-first-name" type="text" placeholder="De">
+                                          <input class="w-full bg-white mt-2 py-2 px-3 rounded-lg border border-gray-400 text-gray-800" id="grid-last-name" type="text" placeholder="Até">
+                                          </div>
+                                          </div>
+                                          
+                                          <div class="border-0 border-b py-2 border-gray-200">
+                                          <h2>Área</h2>
+                                          <div class="md:flex w-full gap-2">
+                                          <input class="w-full bg-white mt-2 py-2 px-3 rounded-lg border border-gray-400 text-gray-800" id="grid-first-name" type="text" placeholder="De">
+                                          <input class="w-full bg-white mt-2 py-2 px-3 rounded-lg border border-gray-400 text-gray-800" id="grid-last-name" type="text" placeholder="Até">
+                                          </div>
+                                          </div>
+                                          
+                                          <!-- parte 5 -->
+                                          <div class="md:flex items-center justify-between w-full gap-2 border-0 border-b py-2 border-gray-200">
+                                          <h2 class="text-gray-900 w-full">Dormitórios</h2>
+                                          <ul class="flex w-full gap-1 items-center justify-between">
+                                          <li>
+                                          <input type="checkbox" value="" class="hidden peer" required="">
+                                          <label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
+                                          1
+                                          </label>
+                                          </li>
+                                          <li>
+                                          <input type="checkbox" value="" class="hidden peer" required="">
+                                          <label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
+                                          2
+                                          </label>
+                                          </li>
+                                          <li>
+                                          <input type="checkbox" value="" class="hidden peer" required="">
+                                          <label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
+                                          3
+                                          </label>
+                                          </li>
+                                          <li>
+                                          <input type="checkbox" value="" class="hidden peer" required="">
+                                          <label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
+                                          4+
+                                          </label>
+                                          </li>
+                                          </ul>
+                                          </div>
+                                          
+                                          <div class="md:flex items-center justify-between w-full gap-2 border-0 border-b py-2 border-gray-200">
+                                          <h2 class="text-gray-900 w-full">Suítes</h2>
+                                          <ul class="flex w-full gap-1 items-center justify-between">
+                                          <li>
+                                          <input type="checkbox" value="" class="hidden peer" required="">
+                                          <label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
+                                          1
+                                          </label>
+                                          </li>
+                                          <li>
+                                          <input type="checkbox" value="" class="hidden peer" required="">
+                                          <label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
+                                          2
+                                          </label>
+                                          </li>
+                                          <li>
+                                          <input type="checkbox" value="" class="hidden peer" required="">
+                                          <label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
+                                          3
+                                          </label>
+                                          </li>
+                                          <li>
+                                          <input type="checkbox" value="" class="hidden peer" required="">
+                                          <label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
+                                          4+
+                                          </label>
+                                          </li>
+                                          </ul>
+                                          </div>
+                                          
+                                          <div class="md:flex items-center justify-between w-full gap-2 border-0 border-b py-2 border-gray-200">
+                                          <h2 class="text-gray-900 w-full">Vagas</h2>
+                                          <ul class="flex w-full gap-1 items-center justify-between">
+                                          <li>
+                                          <input type="checkbox" value="" class="hidden peer" required="">
+                                          <label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
+                                          1
+                                          </label>
+                                          </li>
+                                          <li>
+                                          <input type="checkbox" value="" class="hidden peer" required="">
+                                          <label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
+                                          2
+                                          </label>
+                                          </li>
+                                          <li>
+                                          <input type="checkbox" value="" class="hidden peer" required="">
+                                          <label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
+                                          3
+                                          </label>
+                                          </li>
+                                          <li>
+                                          <input type="checkbox" value="" class="hidden peer" required="">
+                                          <label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
+                                          4+
+                                          </label>
+                                          </li>
+                                          </ul>
+                                          </div>
+                                          
+                                          <!-- parte 6 -->
+                                          <div class="lg:flex items-center justify-center w-full gap-3 hidden">
+                                          <input type="text" class="max-w-lg border h-12 border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2" placeholder="Código do imóvel">
+                                          <button type="button" class="bg-red-700 font-medium h-12 w-12 rounded-md text-white px-3 flex items-center justify-center justify-items-center">
+                                          <img src="/public/search_bairros.svg" alt="Photo" class="items-center justify-center flex" />
+                                          </button>
+                                          </div>
+                                          
+                                          </div>
+                                          </form>
+                                          
+                                          <!-- parte 6 -->
+                                          <div class="relative flex items-center bottom-0 pt-4 justify-center">
+                                              <img src="/public/bannerFooterSearch.svg" alt="" />
+                                              <div class="absolute flex items-center justify-around w-full">
+                                          
+                                                  <button>
+                                                      <h1 class="text-base flex text-white underline">Limpar tudo</h1>
+                                                  </button>
+                                          
+                                                  <button class="w-20 h-10 px-2 items-center justify-center flex bg-white rounded-lg">
+                                                      <h1 class="text-base flex text-red-700">Aplicar</h1>
+                                                  </button>
+                                          
+                                              </div>
+                                          </div>
 </div>
-
-<div class="flex items-center py-1.5 rounded-full px-2 justify-center gap-1 bg-gray-600">
-<button> 
-<img src="/public/iconClose.svg" alt="" />
-</button>
-<p class="text-xs">Higienópolis</p>
 </div>
-</div>
-
-<div class="flex gap-1">
-<div class="flex items-center py-1.5 rounded-full px-2 justify-center gap-1 bg-gray-600">
-<button> 
-<img src="/public/iconClose.svg" alt="" />
-</button>
-<p class="text-xs">Jardim América</p>
-</div>
-</div>
-
-<div class="flex gap-1">
-<div class="flex items-center py-1.5 rounded-full px-2 justify-center gap-1 bg-gray-600">
-<button> 
-<img src="/public/iconClose.svg" alt="" />
-</button>
-<p class="text-xs">Chácara Monte Alegre</p>
-</div>
-
-<div class="flex items-center  py-1.5 rounded-full px-2 justify-center gap-1 bg-gray-600">
-<button> 
-<img src="/public/iconClose.svg" alt="" />
-</button>
-<p class="text-xs">Perdizes</p>
-</div>
-</div>
-</div>
-
-<!-- parte 3 -->
-<div>
-<select id="underline_select" class="py-2.5 w-full text-sm text-gray-500 bg-transparent border-0 border-b border-gray-200">
-<option selected>Todos os Bairros</option>
-<option value="US">United States</option>
-<option value="CA">Canada</option>
-<option value="FR">France</option>
-<option value="DE">Germany</option>
-</select>
-</div>
-
-<div>
-<select id="underline_select" class="py-2.5 w-full text-sm text-gray-500 bg-transparent border-0 border-b border-gray-200">
-<option selected>Todos os Tipos</option>
-<option value="US">United States</option>
-<option value="CA">Canada</option>
-<option value="FR">France</option>
-<option value="DE">Germany</option>
-</select>
-</div>
-
-<!-- parte 4 -->
-<div class="border-0 border-b py-2 border-gray-200">
-<h2>Preço</h2>
-<div class="md:flex w-full gap-2">
-<input class="w-full bg-white mt-2 py-2 px-3 rounded-lg border border-gray-400 text-gray-800" id="grid-first-name" type="text" placeholder="De">
-<input class="w-full bg-white mt-2 py-2 px-3 rounded-lg border border-gray-400 text-gray-800" id="grid-last-name" type="text" placeholder="Até">
-</div>
-</div>
-
-<div class="border-0 border-b py-2 border-gray-200">
-<h2>Área</h2>
-<div class="md:flex w-full gap-2">
-<input class="w-full bg-white mt-2 py-2 px-3 rounded-lg border border-gray-400 text-gray-800" id="grid-first-name" type="text" placeholder="De">
-<input class="w-full bg-white mt-2 py-2 px-3 rounded-lg border border-gray-400 text-gray-800" id="grid-last-name" type="text" placeholder="Até">
-</div>
-</div>
-
-<!-- parte 5 -->
-<div class="md:flex items-center justify-between w-full gap-2 border-0 border-b py-2 border-gray-200">
-<h2 class="text-gray-900 w-full">Dormitórios</h2>
-<ul class="flex w-full gap-1 items-center justify-between">
-<li>
-<input type="checkbox" value="" class="hidden peer" required="">
-<label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
-1
-</label>
-</li>
-<li>
-<input type="checkbox" value="" class="hidden peer" required="">
-<label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
-2
-</label>
-</li>
-<li>
-<input type="checkbox" value="" class="hidden peer" required="">
-<label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
-3
-</label>
-</li>
-<li>
-<input type="checkbox" value="" class="hidden peer" required="">
-<label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
-4+
-</label>
-</li>
-</ul>
-</div>
-
-<div class="md:flex items-center justify-between w-full gap-2 border-0 border-b py-2 border-gray-200">
-<h2 class="text-gray-900 w-full">Suítes</h2>
-<ul class="flex w-full gap-1 items-center justify-between">
-<li>
-<input type="checkbox" value="" class="hidden peer" required="">
-<label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
-1
-</label>
-</li>
-<li>
-<input type="checkbox" value="" class="hidden peer" required="">
-<label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
-2
-</label>
-</li>
-<li>
-<input type="checkbox" value="" class="hidden peer" required="">
-<label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
-3
-</label>
-</li>
-<li>
-<input type="checkbox" value="" class="hidden peer" required="">
-<label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
-4+
-</label>
-</li>
-</ul>
-</div>
-
-<div class="md:flex items-center justify-between w-full gap-2 border-0 border-b py-2 border-gray-200">
-<h2 class="text-gray-900 w-full">Vagas</h2>
-<ul class="flex w-full gap-1 items-center justify-between">
-<li>
-<input type="checkbox" value="" class="hidden peer" required="">
-<label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
-1
-</label>
-</li>
-<li>
-<input type="checkbox" value="" class="hidden peer" required="">
-<label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
-2
-</label>
-</li>
-<li>
-<input type="checkbox" value="" class="hidden peer" required="">
-<label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
-3
-</label>
-</li>
-<li>
-<input type="checkbox" value="" class="hidden peer" required="">
-<label class="w-12 flex items-center justify-center px-1 py-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:bg-red-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 ">                           
-4+
-</label>
-</li>
-</ul>
-</div>
-
-<!-- parte 6 -->
-<div class="lg:flex items-center justify-center w-full gap-3 hidden">
-<input type="text" class="max-w-lg border h-12 border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2" placeholder="Código do imóvel">
-<button type="button" class="bg-red-700 font-medium h-12 w-12 rounded-md text-white px-3 flex items-center justify-center justify-items-center">
-<img src="/public/search_bairros.svg" alt="Photo" class="items-center justify-center flex" />
-</button>
-</div>
-
-</div>
-</form>
-
-<!-- parte 6 -->
-<div class="relative flex items-center bottom-0 pt-4 justify-center">
-<img src="/public/bannerFooterSearch.svg" alt=""/>
-<div class="absolute flex gap-20 items-center justify-between">
-
-<button>
-<h1 class="text-base flex text-white">Limpar tudo</h1>
-</button>
-
-<button class="px-6 py-4 bg-white rounded-lg">
-<h1 class="text-base flex text-red-700">Aplicar</h1>
-</button>
-
-</div>
-</div> 
-
-</div>
-
 <!-- MAPS -->
-<div class="w-full">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin" style="border:0" class="w-full h-screen" allowfullscreen></iframe>
-
-
+<div class="w-full hidden lg:block">
+        <div class="map border-0 fixed z-0 w-full leading-[0]">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin"
+                style="border:0" class="w-full h-screen" allowfullscreen></iframe>
+        </div>
 </div>
 </div>
 

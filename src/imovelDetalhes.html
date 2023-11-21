@@ -2,1109 +2,2492 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Detalhes Imóvel</title>
-    <meta name="description" content="detalhes imóvel" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <title>Detalhes Imóvel</title>
+  <meta name="description" content="detalhes imóvel" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/public/fontawesome/css/all.min.css" />
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="flex flex-col items-center justify-center w-full">
 
-    <section class="flex w-full justify-center items-center pb-20 px-5">
-        <div class='lg:justify-center items-center grid w-full lg:max-w-7xl'>
-
-            <!-- FOTO IMOVEL -->
-            <div class="relative flex items-center justify-center">
-                <img src="/public/fto-imovel.svg" class="h-full w-full" alt="" />
-                <div class="absolute bottom-3 flex items-center justify-between w-full px-5">
-
-                    <p class="text-white ">03/33</p>
-
-                    <div class="lg:flex hidden items-center justify-center lg:gap-3 gap-1">
-
-                        <button
-                            class="flex justify-center items-center border bg-white text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                            <img src="/public/icon-metro.svg" class="mr-1" alt="">
-                            <p class="lg:text-sm text-xs">
-                                Metrô
-                            </p>
-                            <img src="/public/icon-metro-amarela.svg" class="ml-1" alt="">
-                        </button>
-
-                        <button
-                            class="flex justify-center items-center border bg-white text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                            <img src="/public/icone-permuta.svg" class="mr-1" alt="">
-                            <p class="lg:text-sm text-xs">
-                                Permuta
-                            </p>
-                        </button>
-
-                        <button
-                            class="flex justify-center items-center border bg-white text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                            <img src="/public/icon-estrela.svg" class="mr-1" alt="">
-                            <p class="lg:text-sm text-xs">
-                                Destaque
-                            </p>
-                        </button>
-
-                        <button
-                            class="flex justify-center items-center border bg-white text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                            <img src="/public/icone-imperdivel.svg" class="mr-1" alt="">
-                            <p class="lg:text-sm text-xs">
-                                Imperdível
-                            </p>
-                        </button>
-
-                        <button
-                            class="flex justify-center items-center border bg-white text-red-700 border-red-700 rounded-md lg:px-2 w-32 lg:w-40 py-0.5">
-                            <img src="/public/icon-locacao.svg" class="mr-0.5" alt="">
-                            <p class="lg:text-sm text-xs">
-                                Compre já alugado
-                            </p>
-                        </button>
-
-                    </div>
-                    <p class="text-white ">Cód.: 987653</p>
-                </div>
-            </div>
-
-            <!-- INFO -->
-            <!-- INFO PC -->
-            <div class="lg:flex items-start justify-between w-full py-4 gap-2 hidden">
-                <div class="grid gap-5">
-                    <p>
-                        Chácara Santo Antônio
-                    </p>
-                    <div class="flex -4 gap-10 items-start">
-
-                        <p class="text-red-700 text-2xl">Apartamento</p>
-                        <p class="flex items-center">Valor:<span class="text-red-700 text-2xl font-bold">R$
-                                25.000.000,00</span></p>
-                        <p>Valor por m²:<span class="text-red-700 font-bold mr-3"> R$ 5.882,00</span></p>
-                    </div>
-                    <p>
-                        Alameda Ministro Rocha Azevedo, 1368
-                    </p>
-                </div>
-                <div class="grid gap-16 items-end justify-end">
-                    <div class="flex gap-5">
-                        <button type="button"
-                            class="bg-red-700 h-16 w-32 rounded-md text-white px-5 flex items-center justify-center justify-items-center">
-                            Ver Vídeo
-                        </button>
-
-                        <button type="button"
-                            class="bg-red-700 h-16 w-32 rounded-md text-white px-5 flex items-center justify-center justify-items-center">
-                            Ver Mapa
-                        </button>
-                    </div>
-                    <button class="flex items-end justify-end">
-                        <a href="" class="text-blue-600">Voltar para imóveis buscados
-                        </a>
-                    </button>
-                </div>
-
-            </div>
-            <!-- INFO MOBILE -->
-            <div class="lg:hidden flex flex-col items-start justify-center w-full py-4 gap-2 border-b border-gray-200">
-
-                <div class="flex items-center justify-center py-1 gap-2">
-
-                    <button class="flex justify-center items-center bg-gray-300 text-black rounded-md px-2 py-0.5">
-                        <img src="/public/icon-metro.svg" class="mr-1" alt="">
-                        <p class="lg:text-sm text-xs">
-                            Metrô
-                        </p>
-                        <img src="/public/icon-metro-amarela.svg" class="ml-1" alt="">
-                    </button>
-
-                    <button class="flex justify-center items-center bg-gray-300 text-black rounded-md px-2 py-0.5">
-                        <img src="/public/icone-permuta.svg" class="mr-1" alt="">
-                        <p class="lg:text-sm text-xs">
-                            Permuta
-                        </p>
-                    </button>
-
-                    <button class="flex justify-center items-center bg-gray-300 text-black rounded-md px-2 py-0.5">
-                        <img src="/public/icon-estrela.svg" class="mr-1" alt="">
-                        <p class="lg:text-sm text-xs">
-                            Destaque
-                        </p>
-                    </button>
-
-                    <button class="flex justify-center items-center bg-gray-300 text-black rounded-md px-2 py-0.5">
-                        <img src="/public/icone-imperdivel.svg" class="mr-1" alt="">
-                        <p class="lg:text-sm text-xs">
-                            Imperdível
-                        </p>
-                    </button>
-                </div>
-
-                <div class="flex gap-2 py-1">
-                    <button type="button"
-                        class="bg-red-700 h-12 w-28 rounded-md text-white px-5 flex items-center justify-center justify-items-center">
-                        Ver Vídeo
-                    </button>
-                    <button type="button"
-                        class="bg-red-700 h-12 w-28 rounded-md text-white px-5 flex items-center justify-center justify-items-center">
-                        Ver Mapa
-                    </button>
-                    <button type="button"
-                        class="bg-gray-300 h-12 w-12 rounded-md text-white flex items-center justify-center justify-items-center">
-                        <img src="/public/icon-compartilhar.svg" alt="">
-                    </button>
-                    <button type="button"
-                        class="bg-gray-300 h-12 w-12 rounded-md text-white flex items-center justify-center justify-items-center">
-                        <img src="/public/icon-coracao.svg" alt="">
-                    </button>
-                </div>
-
-                <div class="flex flex-col gap-3 items-center justify-center w-full">
-                    <p class="text-red-700">
-                        Apartamento
-                    </p>
-                    <p>
-                        Chácara Santo Antônio
-                    </p>
-                    <p>
-                        Alameda Ministro Rocha Azevedo, 1368
-                    </p>
-                    <div class="flex items-center justify-center gap-4 w-full">
-
-                        <div class="flex flex-col items-center justify-center text-center w-full">
-                            <p class="">Valor:</p>
-                            <p class="text-red-700 font-bold">R$ 25.000.000,00</p>
-
-                        </div>
-                        <div class="flex flex-col items-center justify-center text-center w-full">
-                            <p class="">Valor por m²:</p>
-                            <p class="text-red-700 font-bold"> R$ 5.882,00</p>
-                        </div>
-
-                    </div>
-                    <button class="flex items-end justify-end">
-                        <a href="" class="text-blue-600">Voltar para imóveis buscados
-                        </a>
-                    </button>
-                </div>
-            </div>
-
-            <!-- COND IPTU -->
-            <div class="lg:flex lg:flex-col items-center justify-center py-5 gap-2">
-                <div
-                    class="border-0 w-full gap-8 max-w-3xl lg:flex items-center justify-center border-b py-2 border-gray-200">
-                    <div class="flex items-center justify-center">
-                        <p>Condomínio:<span class="text-red-700 font-medium"> R$ 882,00</span></p>
-                    </div>
-                    <div class="flex items-center justify-center py-2">
-                        <p>IPTU:<span class="text-red-700 font-medium"> R$ 5.882</span></p>
-                    </div>
-                </div>
-                <div
-                    class="border-0 w-full gap-8 max-w-3xl lg:flex items-center justify-center border-b py-2 border-gray-200">
-                    <div class="flex gap-4 items-center justify-center">
-                        <div class="lg:flex gap-1 items-center justify-center text-center py-2">
-                            <p>1345</p>
-                            <p class="text-gray-500"> m2 Área construída</p>
-                        </div>
-                        <div class="lg:flex gap-1 items-center justify-center text-center">
-                            <p>745</p>
-                            <p class="text-gray-500"> m2 Área do terreno</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 items-center justify-center">
-                        <div class="flex items-center justify-start">
-                            <p>4<span class="text-gray-500"> dorms</span></p>
-                        </div>
-                        <div class="flex items-center justify-start">
-                            <p>5<span class="text-gray-500"> suítes</span></p>
-                        </div>
-                        <div class="flex items-center justify-start">
-                            <p>5<span class="text-gray-500"> vagas</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- VIDEO -->
-            <div class="flex flex-col items-center justify-center py-10 gap-2">
-                <iframe width="100%" height="600" src="https://www.youtube.com/embed/VAtTxWaYTJo?si=e7AOEVbSMOBe7Rw_"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    class="hidden lg:flex" allowfullscreen></iframe>
-                <iframe width="100%" height="300" src="https://www.youtube.com/embed/VAtTxWaYTJo?si=e7AOEVbSMOBe7Rw_"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    class="flex lg:hidden" allowfullscreen></iframe>
-            </div>
-
-            <!-- SOBRE O IMÓVEL -->
-            <div class='lg:justify-center items-center grid lg:max-w-6xl'>
-                <h3 class="lg:text-xl text-red-700 text-center py-5 uppercase">Sobre o imóvel</h3>
-                <p class="text-center max-w-5xl">
-                    Piso Inferior: Living para 3 ambientes, varanda espaçosa com excelente vista, lavabo, 4 dormitórios
-                    suítes, closet, copa, cozinha, área de serviço e dependência de empregada. Quintal, piscina e salão
-                    de festas.
-                    Piso Superior: 4 suítes.
+  <!-- NAVBAR DESKTOP -->
+  <div class=" justify-center items-center w-full lg:flex hidden absolute top-0 z-50">
+    <div class="relative flex flex-col lg:flex-wrap items-center justify-center w-full">
+      <img src="/public/img-menu.png" class="h-full w-full hidden md:flex" alt="" />
+      <img src="/public/barraEtapaFinanciamentoMobile.png" class="h-full w-full md:hidden flex" alt="" />
+      <div class="absolute top-0 flex items-center justify-center w-full">
+        <div class="absolute top-2 flex items-center justify-end w-full max-w-6xl">
+          <ul class="flex w-full gap-3 items-center justify-end">
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Perdizes
                 </p>
-                <p class="text-center max-w-5xl">
-                    É importante mencionar que o imóvel precisa de reforma. No entanto, o fato de possuir 5 vagas de
-                    garagem e estar em uma excelente localização, em uma rua arborizada e tranquila, com uma completa
-                    infraestrutura de comércio e serviços, faz com que seja um imóvel muito interessante para toda a
-                    família.
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">99999-0938</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Pinheiros
                 </p>
-            </div>
-
-            <!-- DETALHES UNIDADE E CONDOMINIO -->
-            <div class="flex flex-col items-center justify-center py-10 gap-2 ">
-                <div class="flex flex-col items-center justify-center w-full bg-gray-300 py-10">
-                    <h2 class="text-red-700 w-full text-xl py-5 uppercase items-center justify-center flex">
-                        Detalhes do imóvel
-                    </h2>
-                    <div class="flex w-full items-center justify-between max-w-2xl px-4">
-
-                        <ul class="grid gap-2">
-                            <li class="flex gap-2 items-center">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Área Serviço
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Copa
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Closet
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Terraço
-                                </p>
-                            </li>
-
-                        </ul>
-
-                        <ul class="grid gap-2">
-                            <li class="flex gap-2 items-center">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Terraço
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Cozinha
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Quarto Empregada
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    WC Empregada
-                                </p>
-                            </li>
-
-                        </ul>
-
-                        <ul class="lg:grid gap-2 hidden">
-                            <li class="flex gap-2 items-center">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Lavabo
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Piscina
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Quintal
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Salão de Festas
-                                </p>
-                            </li>
-
-                        </ul>
-
-                    </div>
-                </div>
-
-                <div class="flex flex-col items-center justify-center w-full bg-gray-300 py-10">
-                    <h2 class="text-red-700 w-full text-xl py-5 uppercase items-center justify-center flex">
-                        Detalhes do condomínio
-                    </h2>
-                    <div class="flex w-full items-center justify-between max-w-2xl px-4">
-
-                        <ul class="grid gap-2">
-                            <li class="flex gap-2 items-center">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Área Serviço
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Copa
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Closet
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Terraço
-                                </p>
-                            </li>
-
-                        </ul>
-
-                        <ul class="grid gap-2">
-                            <li class="flex gap-2 items-center">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Terraço
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Cozinha
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Quarto Empregada
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    WC Empregada
-                                </p>
-                            </li>
-
-                        </ul>
-
-                        <ul class="lg:grid gap-2 hidden">
-                            <li class="flex gap-2 items-center">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Lavabo
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Piscina
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Quintal
-                                </p>
-                            </li>
-
-                            <li class="flex gap-2 items-center ">
-                                <img src="/public/icon-check.svg" alt="">
-                                <p>
-                                    Salão de Festas
-                                </p>
-                            </li>
-
-                        </ul>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- ICONATUS -->
-            <div class="grid items-center justify-center justify-items-center py-10 gap-5">
-                <h3 class="lg:text-xl text-red-700 text-center py-5 uppercase">Pontos de Interesse mais Próximos</h3>
-                <img src="/public/iconatus.svg" alt="" class="hidden lg:flex">
-                <img src="/public/iconatusMobile.svg" alt="" class="flex lg:hidden">
-            </div>
-
-            <!-- MAPS -->
-            <div class="grid items-center justify-center justify-items-center">
-                <h3 class="lg:text-xl text-red-700 text-center py-5 uppercase">Localização</h3>
-                <div class="lg:w-screen w-80 h-64 lg:max-w-5xl lg:h-[40rem]">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin"
-                        style="border:0" class="w-full h-full" allowfullscreen></iframe>
-                </div>
-            </div>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">99939-9934</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Jardins
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">99999-0938</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Vila Romana
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">93207-3204</span></p>
+              </a>
+            </li>
+          </ul>
         </div>
-    </section>
+        <div class="absolute top-14 flex items-start justify-end w-full max-w-6xl">
+          <div class="w-1/2">
+            <a href="index.html" class="">
+              <img class="cursor-pointer" src="/public/logo-superior.png" alt="...">
+            </a>
+          </div>
+<div class="w-full">
+          <ul class="lg:flex lg:flex-row lg:items-center lg:justify-between gap-8 w-full hidden max-w-3xl">
+            <li>
+              <a class="text-gray-400" href="index.html">Home</a>
+            </li>
+  
+            <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+              <a href="#"
+                class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                @click.prevent="showChildren=!showChildren">
+                <span>Imóveis</span>
+                <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+              </a>
+  
+              <div class="absolute top-auto left-0 min-w-full w-56 z-30 mt-1" x-show="showChildren"
+                x-transition:enter="transition ease duration-300 transform"
+                x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease duration-300 transform"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                style="display: none;">
+                <div class="bg-white rounded w-full relative z-10 py-1">
+                  <ul class="list-reset">
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="resultadoBusca.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Buscar Imóveis</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Cadastre Seu Imóvel</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="avaliacaoImovel.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Avalie seu Imóvel</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="imoveisFavoritos.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Favoritos</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Imóveis Visualizados</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="indice.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Índice de imóveis</span> </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+  
+            <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+              <a href="#"
+                class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                @click.prevent="showChildren=!showChildren">
+                <span>Serviços</span>
+                <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+              </a>
+  
+              <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                x-transition:enter="transition ease duration-300 transform"
+                x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease duration-300 transform"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                style="display: none;">
+                <div class="bg-white rounded w-full relative z-10 py-1">
+                  <ul class="list-reset">
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="assessoriaFinanciamento.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Financiamento</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="assessoriaJuridica.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Assessoria Jurídica</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Proposta de Compra</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Autorização de Venda</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Autorização de Publicidade</span> </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+  
+            <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+              <a href="#"
+                class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                @click.prevent="showChildren=!showChildren">
+                <span>Institucional</span>
+                <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+              </a>
+  
+              <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                x-transition:enter="transition ease duration-300 transform"
+                x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease duration-300 transform"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                style="display: none;">
+                <div class="bg-white rounded w-full relative z-10 py-1">
+                  <ul class="list-reset">
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="institucional.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Sobre a Zimmermann</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="areasdeatuacao.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Área de Atuação</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Seja Corretor Associado</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="contact.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Contato</span> </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a class="text-gray-400" href="blog.html">BLOG</a>
+            </li>
+            <li>
+              <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Imóveis Similares -->
-    <section class="flex flex-col w-full justify-center items-center px-5 bg-gray-300 lg:py-20 py-8">
-        <h3 class="lg:text-xl text-red-700 text-center py-5 uppercase">Imóveis Similares</h3>
+  <!-- NAVBAR MOBILE -->
+<div>
+    <!-- NAVBARAR MOBILE NUMEROS -->
+<nav class="w-full md:hidden ">
+  <div class="relative flex items-center justify-center">
+    <img src="/public/menuBarraTels.png" class="" alt="" />
+    <div class="absolute flex items-center justify-end w-full py-4">
+      <div class="lg:hidden flex items-end justify-end w-full gap-2 px-2 max-w-xs">
+        <button class="outline-none mobile-menu-tel1 flex flex-col items-center justify-center text-gray-500">
+          <span>Perdizes</span>
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </button>
+        <button class="outline-none mobile-menu-tel2 flex flex-col items-center justify-center text-gray-500">
+          <span>Pinheiros</span>
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </button>
+        <div class="lg:hidden flex items-center gap-4">
+          <button class="outline-none mobile-menu-tel3 flex flex-col items-center justify-center text-gray-500">
+            <span>Jardins</span>
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+          <button class="outline-none mobile-menu-tel4 flex flex-col items-center justify-center text-gray-500">
+            <span>Vila Romana</span>
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- mobile menu -->
+  <!-- TEL1 -->
+  <div class="hidden mobile-tel1 bg-red-700 mt-1">
+    <div class="py-4 flex items-center justify-between px-1 gap-1 h-28">
+      <div class="items-center justify-center flex w-full gap-1">
+        <div class="w-14 h-14 bg-red-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <img src="/public/telephone.svg" width="50%" height="50%" class="text-white" alt="">
+        </div>
+        <p class="text-xs text-white">(11) <span class="text-base text-white">5466-5349</span></p>
+      </div>
+      <div class="items-center justify-center flex w-full gap-1">
+        <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+        <div class="w-14 h-14 bg-green-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- TEL2 -->
+  <div class="hidden mobile-tel2 bg-red-700 mt-1">
+    <div class="py-4 flex items-center justify-between px-1 gap-1 h-28">
+      <div class="items-center justify-center flex w-full gap-1">
+        <div class="w-14 h-14 bg-red-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <img src="/public/telephone.svg" width="50%" height="50%" class="text-white" alt="">
+        </div>
+        <p class="text-xs text-white">(11) <span class="text-base text-white">5466-5349</span></p>
+      </div>
+      <div class="items-center justify-center flex w-full gap-1">
+        <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+        <div class="w-14 h-14 bg-green-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- TEL3 -->
+  <div class="hidden mobile-tel3 bg-red-700 mt-1">
+    <div class="py-4 flex items-center justify-between px-1 gap-1 h-28">
+      <div class="items-center justify-center flex w-full gap-1">
+        <div class="w-14 h-14 bg-red-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <img src="/public/telephone.svg" width="50%" height="50%" class="text-white" alt="">
+        </div>
+        <p class="text-xs text-white">(11) <span class="text-base text-white">5466-5349</span></p>
+      </div>
+      <div class="items-center justify-center flex w-full gap-1">
+        <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+        <div class="w-14 h-14 bg-green-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- TEL4 -->
+  <div class="hidden mobile-tel4 bg-red-700 mt-1">
+    <div class="py-4 flex items-center justify-between px-1 gap-1 h-28">
+      <div class="items-center justify-center flex w-full gap-1">
+        <div class="w-14 h-14 bg-red-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <img src="/public/telephone.svg" width="50%" height="50%" class="text-white" alt="">
+        </div>
+        <p class="text-xs text-white">(11) <span class="text-base text-white">5466-5349</span></p>
+      </div>
+      <div class="items-center justify-center flex w-full gap-1">
+        <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+        <div class="w-14 h-14 bg-green-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- JS TEL 1 -->
+  <script>
+    const tel1 = document.querySelector("button.mobile-menu-tel1");
+    const menuTel1 = document.querySelector(".mobile-tel1");
+
+    tel1.addEventListener("click", () => {
+      menuTel1.classList.toggle("hidden");
+    });
+  </script>
+  <!-- JS TEL 2 -->
+  <script>
+    const tel2 = document.querySelector("button.mobile-menu-tel2");
+    const menuTel2 = document.querySelector(".mobile-tel2");
+
+    tel2.addEventListener("click", () => {
+      menuTel2.classList.toggle("hidden");
+    });
+  </script>
+  <!-- JS TEL 1 -->
+  <script>
+    const tel3 = document.querySelector("button.mobile-menu-tel3");
+    const menuTel3 = document.querySelector(".mobile-tel3");
+
+    tel3.addEventListener("click", () => {
+      menuTel3.classList.toggle("hidden");
+    });
+  </script>
+  <!-- JS TEL 2 -->
+  <script>
+    const tel4 = document.querySelector("button.mobile-menu-tel4");
+    const menuTel4 = document.querySelector(".mobile-tel4");
+
+    tel4.addEventListener("click", () => {
+      menuTel4.classList.toggle("hidden");
+    });
+  </script>
+</nav>
+
+      <!-- NAVBARAR MOBILE MENU -->
+      <nav class="w-full lg:hidden">
+        <div class="px-2 py-2">
+          <div class="flex justify-between">
+              <div>
+                <a href="index.html" class="">
+                  <img class="cursor-pointer" src="/public/logo-superior.png" width="90%" height="90%" alt="...">
+                </a>
+              </div>
+
+            <!-- Mobile menu button -->
+            <div class="lg:hidden flex items-center">
+              <button class="outline-none mobile-menu-button">
+                <i class="fa-solid fa-bars text-2xl mr-2"></i>
+            </button>
+            </div>
+          </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu bg-black mt-3">
+          <div class="py-4 px-4 gap-2 flex flex-col">
+            <p><a class="text-red-700 uppercase" href="index.html">Home</a></p>
+            <p><a class="text-white" href="blog.html">BLOG</a></p>
+            <p><a class="text-white" href="blog.html">Politica de Privacidade</a></p>
+            <p><a class="text-white" href="blog.html">Termos de Uso</a></p>
+            <p class="text-white mb-1">Imóveis</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="resultadoBusca.html">Buscar Imóveis</a></li>
+              <li><a class="text-white" href="">Cadastre Seu Imóvel</a></li>
+              <li><a class="text-white" href="avaliacaoImovel.html">Avalie seu Imóvel</a></li>
+              <li><a class="text-white" href="imoveisFavoritos.html">Favoritos</a></li>
+              <li><a class="text-white" href="">Imóveis Visualizados</a></li>
+              <li><a class="text-white" href="indice.html">Índice de imóveis</a></li>
+            </ul>
+            <p class="text-white mb-1">Serviços</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="assessoriaFinanciamento.html">Financiamento</a></li>
+              <li><a class="text-white" href="assessoriaJuridica.html">Assessoria Jurídica</a></li>
+              <li><a class="text-white" href="#">Proposta de Compra</a></li>
+              <li><a class="text-white" href="#">Autorização de Venda</a></li>
+              <li><a class="text-white" href="#">Autorização de Publicidade</a></li>
+            </ul>
+            <p class="text-white mb-1">Institucional</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="institucional.html">Sobre a Zimmermann</a></li>
+              <li><a class="text-white" href="areasdeatuacao.html">Área de Atuação</a></li>
+              <li><a class="text-white" href="#">Seja Corretor Associado</a></li>
+              <li><a class="text-white" href="contact.html">Contato</a></li>
+            </ul>
+            <button type="button"
+              class="bg-red-700 h-10 w-44 rounded-md px-2 text-white flex items-center justify-center ">
+              <a href="imoveisFavoritos.html" class="flex items-center justify-center gap-2">
+                <p>Favoritos |</p>
+                <p>00</p>
+                <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+              </a>
+            </button>
+            <div class="flex gap-6">
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <script>
+          const btn = document.querySelector("button.mobile-menu-button");
+          const menu = document.querySelector(".mobile-menu");
+    
+          btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+          });
+        </script>
+        <!-- JAVA SCRIPT DROPDOWN -->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+      </nav>
+</div>
+
+
+  <!-- NAVBARFIXA OK -->
+  <div class="w-full">
+    <!-- NAVBARFIXA DESKTOP -->
+    <nav class=" fixed bottom-0 z-50 justify-between items-center w-full hidden lg:flex lg:flex-col">
+      <div class="flex items-center justify-end w-full relative -bottom-1">
+        <div class="relative flex items-center justify-center">
+          <img src="/public/img-footer.png" alt="" />
+          <div class="absolute flex items-center justify-stretch w-full max-w-4xl bottom-2 gap-4">
+
+            <div class="flex items-center justify-stretch gap-2">
+              <!-- BUTTON AGENDAR VISITA -->
+              <button onclick="openModal('modal1')"
+                class="flex justify-center text-base items-center border bg-white shadow-sm shadow-red-700 text-red-700 border-red-700 rounded-md w-48 h-16 px-4">
+                Agendar Visita
+              </button>
+              <!-- MODAL1 -->
+              <div id="modal1"
+                class="fixed hidden z-50 inset-0 bg-black bg-opacity-90 overflow-y-auto h-full w-full px-4 modal">
+                <div class="relative top-28 mx-auto shadow-xl rounded-md bg-white max-w-lg w-full">
+                  <!-- Modal header -->
+                  <div class="flex justify-between items-center text-red-700 px-4 pt-5">
+                    <h3>Agendar visita</h3>
+                    <button onclick="closeModal('modal1')">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="flex flex-col justify-center items-center py-5">
+                    <p class="w-full items-start justify-start px-4 py-2">Escolha o dia:</p>
+                    <div class="flex flex-col py-5 items-center justify-between bg-gray-300 w-full">
+                      <p class="font-semibold w-full items-center justify-center flex px-4">
+                        Outubro
+                      </p>
+                      <div class="flex items-center justify-center gap-4 py-2">
+                        <div class="flex flex-col items-center justify-center gap-2">
+                          <p class="font-semibold">Qui.</p>
+                          <p
+                            class="font-semibold h-14 w-14 border bg-white shadow-md rounded-md items-center justify-center flex text-xl">
+                            05</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-2">
+                          <p class="font-semibold">Sex.</p>
+                          <p
+                            class="font-semibold h-14 w-14 border bg-white shadow-md rounded-md items-center justify-center flex text-xl">
+                            06</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-2">
+                          <p class="font-semibold">Sáb.</p>
+                          <p
+                            class="font-semibold h-14 w-14 border bg-white shadow-md rounded-md items-center justify-center flex text-xl">
+                            07</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-2">
+                          <p class="font-semibold">Dom.</p>
+                          <p
+                            class="font-semibold h-14 w-14 border bg-white shadow-md rounded-md items-center justify-center flex text-xl">
+                            08</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-2">
+                          <p class="font-semibold">Seg.</p>
+                          <p
+                            class="font-semibold h-14 w-14 border bg-white shadow-md rounded-md items-center justify-center flex text-xl">
+                            09</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-2">
+                          <p class="font-semibold">Ter.</p>
+                          <p
+                            class="font-semibold h-14 w-14 border bg-white shadow-md rounded-md items-center justify-center flex text-xl">
+                            10</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-2">
+                          <p class="font-semibold">Qua.</p>
+                          <p
+                            class="font-semibold h-14 w-14 border bg-white shadow-md rounded-md items-center justify-center flex text-xl">
+                            11</p>
+                        </div>
+                      </div>
+                      <div class="flex w-full items-center justify-between px-10 py-3">
+                        <button>
+                          <a href="">
+                            <i class="fa-solid fa-chevron-left text-2xl"></i>
+                          </a>
+                        </button>
+                        <button>
+                          <a href="">
+                            <i class="fa-solid fa-angle-right text-2xl"></i>
+                          </a>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="flex flex-col pt-2 items-center justify-between w-full">
+                      <p class="w-full items-center justify-start flex px-4">
+                        Escolha o período:
+                      </p>
+                      <div class="flex items-center justify-between gap-4 py-2 w-full px-4">
+                        <div class="md:flex items-center gap-2 py-2">
+                          <input id="link-checkbox" type="checkbox" value=""
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                          <label for="default-checkbox" class="ms-2 text-base font-medium text-gray-500">
+                            <p class="font-semibold">Manhã <span class=" font-normal">08:00 -
+                                12:00</span></p>
+                          </label>
+                        </div>
+                        <div class="md:flex items-center gap-2 py-2">
+                          <input id="link-checkbox" type="checkbox" value=""
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                          <label for="default-checkbox" class="ms-2 text-base font-medium text-gray-500">
+                            <p class="font-semibold">Tarde <span class=" font-normal">13:00 -
+                                19:00</span></p>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center w-full">
+                      <p class="w-full items-center justify-start flex px-4">
+                        Dados para contato:
+                      </p>
+                      <div class="flex items-center justify-between w-full px-4">
+                        <form class=" flex flex-col justify-center w-full">
+                          <div class="flex flex-col">
+                            <input type="name" name="name" id="name" placeholder="Nome"
+                              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          </div>
+
+                          <div class="flex flex-col mt-2">
+                            <input type="email" name="email" id="email" placeholder="E-mail"
+                              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          </div>
+
+                          <div class="flex flex-col mt-2">
+                            <input type="tel" name="tel" id="tel" placeholder="Celular"
+                              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          </div>
+
+                          <div class="flex lg:items-end items-center lg:justify-center justify-center">
+                            <button type="submit"
+                              class="w-32 bg-red-700 hover:bg-blue-dark text-white py-1.5 px-3 rounded-full mt-3 hover:bg-red-800 transition ease-in-out duration-300">
+                              Enviar
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- JAVA SCRIPT MODAL -->
+              <script type="text/javascript">
+                window.openModal = function (modalId) {
+                  document.getElementById(modalId).style.display = 'block'
+                  document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+                }
+
+                window.closeModal = function (modalId) {
+                  document.getElementById(modalId).style.display = 'none'
+                  document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                }
+
+                // Close all modals when press ESC
+                document.onkeydown = function (event) {
+                  event = event || window.event;
+                  if (event.keyCode === 27) {
+                    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                    let modals = document.getElementsByClassName('modal1');
+                    Array.prototype.slice.call(modals).forEach(i => {
+                      i.style.display = 'none'
+                    })
+                  }
+                };
+              </script>
+              <!-- FIM BUTTON AGENDAR VISITA -->
+
+              <!-- BUTTON MAIS INFORMAÇÕES -->
+              <button onclick="openModal('modal2')"
+                class="flex justify-center text-base items-center border bg-white shadow-sm shadow-red-700 text-red-700 border-red-700 rounded-md w-48 h-16 px-4">
+                Mais informações
+              </button>
+              <!-- MODAL2 -->
+              <div id="modal2"
+                class="fixed hidden z-50 inset-0 bg-black bg-opacity-90 overflow-y-auto h-full w-full px-4 modal">
+                <div class="relative top-28 mx-auto shadow-xl rounded-md bg-white max-w-lg w-full">
+                  <!-- Modal header -->
+                  <div class="flex justify-between items-center text-red-700 px-4 py-5">
+                    <h3>Entre em contato</h3>
+                    <button onclick="closeModal('modal2')">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="flex flex-col justify-center items-center pb-10">
+                    <div class="flex items-center justify-between w-full px-4">
+                      <form class=" flex flex-col justify-center w-full">
+                        <div class="flex flex-col">
+                          <input type="name" name="name" id="name" placeholder="Nome"
+                            class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                        </div>
+
+                        <div class="flex flex-col mt-2">
+                          <input type="email" name="email" id="email" placeholder="E-mail"
+                            class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                        </div>
+
+                        <div class="flex flex-col mt-2">
+                          <input type="tel" name="tel" id="tel" placeholder="Celular"
+                            class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                        </div>
+
+                        <div class="flex flex-col mt-2">
+                          <textarea rows="5"
+                            placeholder="Gostaria de mais informações sobre o imóvel com código 105360 - Casa de 340 m²  no valor de  R$  2,000,000.00  em  Vila Romana São Paulo."
+                            class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md"></textarea>
+                        </div>
+
+                        <div class="md:flex items-center gap-2 py-2">
+                          <input id="link-checkbox" type="checkbox" value=""
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                          <label for="default-checkbox" class="ms-2 text-base font-medium text-gray-500">
+                            <p class="">Por favor, contate-me pelo WhatsApp.</p>
+                          </label>
+                        </div>
+
+                        <div class="flex lg:items-end items-center lg:justify-center justify-center">
+                          <button type="submit"
+                            class="w-32 bg-red-700 hover:bg-blue-dark text-white py-1.5 px-3 rounded-full mt-3 hover:bg-red-800 transition ease-in-out duration-300">
+                            Enviar
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- JAVA SCRIPT MODAL -->
+              <script type="text/javascript">
+                window.openModal = function (modalId) {
+                  document.getElementById(modalId).style.display = 'block'
+                  document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+                }
+
+                window.closeModal = function (modalId) {
+                  document.getElementById(modalId).style.display = 'none'
+                  document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                }
+
+                // Close all modals when press ESC
+                document.onkeydown = function (event) {
+                  event = event || window.event;
+                  if (event.keyCode === 27) {
+                    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                    let modals = document.getElementsByClassName('modal2');
+                    Array.prototype.slice.call(modals).forEach(i => {
+                      i.style.display = 'none'
+                    })
+                  }
+                };
+              </script>
+              <!-- FIM BUTTON MAIS INFORMAÇÕES -->
+
+              <!-- FIM BUTTON PROPOSTA DE COMPRA -->
+              <button onclick="openModal('modal3')"
+                class="flex justify-center text-base items-center border bg-white shadow-sm shadow-red-700 text-red-700 border-red-700 rounded-md w-48 h-16 px-4">
+                Proposta de Compra
+              </button>
+              <!-- MODAL3 -->
+              <div id="modal3"
+                class="fixed hidden z-50 inset-0 bg-black bg-opacity-90 overflow-y-auto h-full w-full px-4 modal">
+                <div class="relative top-28 mx-auto shadow-xl rounded-md bg-white max-w-2xl w-full">
+                  <!-- Modal header -->
+                  <div class="flex justify-between items-center text-red-700 px-4 pt-5">
+                    <h3>Proposta de Compra</h3>
+                    <button onclick="closeModal('modal3')">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="flex flex-col justify-center items-center py-5">
+                    <div class="flex flex-col py-5 items-center justify-between bg-gray-300 w-full">
+
+                      <div class="flex items-center justify-between w-full px-4 gap-1 py-2">
+                        <p class="text-red-700">Imóvel Pretendido:</p>
+                        <p class="">Cód.: 9087635</p>
+                        <p class="">Apartamento</p>
+                        <p class="">Valor: <span class="text-red-700 font-semibold">R$
+                            25.000.000,00</span></p>
+                      </div>
+                      <div class="flex items-center w-full justify-start px-4 gap-4 py-2">
+                        <p class="">Chácara Santo Antônio</p>
+                        <p class="">Alameda Ministro Rocha Azevedo, 1368</p>
+                      </div>
+                      <div class="md:flex items-center justify-start w-full    gap-2 py-3 px-4">
+                        <input id="link-checkbox" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="default-checkbox" class="">
+                          <p class="">Já estou sendo atendido por um corretor(a) Zimmermann.</p>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between w-full px-4">
+                      <form class=" flex justify-center w-full gap-2 py-5">
+                        <div class="w-full h-full">
+                          <div class="flex flex-col gap-1">
+                            <p class=" w-full items-center justify-start flex text-red-700">
+                              Proposta:
+                            </p>
+                            <div class="flex flex-col gap-2">
+                              <input type="name" name="name" id="name" placeholder="Valor (R$)"
+                                class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                            </div>
+                            <div class="flex flex-col ">
+                              <input type="email" name="email" id="email" placeholder="Valor por extenso"
+                                class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                            </div>
+                          </div>
+                          <div class="flex flex-col gap-1 mt-3">
+                            <p class=" w-full items-center justify-start flex text-red-700">
+                              Condições de pagamento:
+                            </p>
+                            <div class="flex gap-2">
+                              <input type="name" name="name" id="name" placeholder="Sinal (R$)"
+                                class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                              <input type="email" name="email" id="email" placeholder="Saldo (R$)"
+                                class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+
+                            </div>
+                            <textarea rows="5" placeholder="Observações"
+                              class="w-full bg-white py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md"></textarea>
+                          </div>
+
+                        </div>
+                        <div class="w-ful">
+
+                          <p class=" w-full items-center justify-start flex text-red-700">
+                            Dados do comprador:
+                          </p>
+                          <div class="flex flex-col gap-2">
+                            <input type="name" name="name" id="name" placeholder="Nome"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                            <input type="email" name="email" id="email" placeholder="E-mail"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                            <input type="email" name="email" id="email" placeholder="Celular"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                            <input type="email" name="email" id="email" placeholder="CPF"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                            <input type="email" name="email" id="email" placeholder="RG"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          </div>
+                          <div class="md:flex items-start justify-start gap-2 py-3">
+                            <input id="link-checkbox" type="checkbox" value=""
+                              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="default-checkbox" class="">
+                              <p class="text-xs">Autorizo a ZIMMERMANN IMÓVEIS – RZ ASSESSORIA
+                                DE IMÓVEIS LTDA, Creci 15.319-J, a apresentar ao
+                                proprietário(a) do imóvel pretendo nesta proposta.</p>
+                            </label>
+                          </div>
+                          <div class="flex lg:items-end items-center lg:justify-end justify-center">
+                            <button type="submit"
+                              class="w-32 bg-red-700 hover:bg-blue-dark text-white py-1.5 px-3 rounded-full mt-3 hover:bg-red-800 transition ease-in-out duration-300">
+                              Enviar
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- JAVA SCRIPT MODAL -->
+              <script type="text/javascript">
+                window.openModal = function (modalId) {
+                  document.getElementById(modalId).style.display = 'block'
+                  document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+                }
+
+                window.closeModal = function (modalId) {
+                  document.getElementById(modalId).style.display = 'none'
+                  document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                }
+
+                // Close all modals when press ESC
+                document.onkeydown = function (event) {
+                  event = event || window.event;
+                  if (event.keyCode === 27) {
+                    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                    let modals = document.getElementsByClassName('modal3');
+                    Array.prototype.slice.call(modals).forEach(i => {
+                      i.style.display = 'none'
+                    })
+                  }
+                };
+              </script>
+              <!-- FIM BUTTON PROPOSTA DE COMPRA -->
+            </div>
+
+            <div class="flex items-center justify-around w-full">
+              <button>
+                <a href="#!" class="text-4xl">
+                  <img src="/public/icon-compartilhar.svg" alt="">
+                </a>
+              </button>
+              <button>
+                <a href="#!" class="text-4xl">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+              </button>
+              <button>
+                <a href="#!" class="text-4xl">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative flex items-center justify-center">
+        <img class="cursor-pointer" src="/public/logo-footer.png" width="100%" height="100%" alt="...">
+        <div class="absolute flex items-center justify-between w-full max-w-6xl">
+          <ul class="flex w-full items-center justify-end gap-7">
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-white uppercase text-base">
+                  Perdizes
+                </p>
+                <i class="fa-brands fa-whatsapp text-white"></i>
+                <p class="text-xs text-white">(11) <span class="text-base text-white">99999-0938</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-white uppercase text-base">
+                  Pinheiros
+                </p>
+                <i class="fa-brands fa-whatsapp text-white"></i>
+                <p class="text-xs text-white">(11) <span class="text-base text-white">99939-9934</span></p>
+              </a>
+            </li>
+            <li class="ml-3 font-bold">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-white uppercase text-base">
+                  Jardins
+                </p>
+                <i class="fa-brands fa-whatsapp text-white"></i>
+                <p class="text-xs text-white">(11) <span class="text-base text-white">99999-0938</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-white uppercase text-base">
+                  Vila Romana
+                </p>
+                <i class="fa-brands fa-whatsapp text-white"></i>
+                <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+              </a>
+            </li>
+          </ul>        
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBARFIXA MOBILE -->
+    <nav class="flex flex-col fixed bottom-0 z-50 justify-center items-center w-full lg:hidden">
+
+      <div class="flex items-center justify-end w-full relative -bottom-3">
+        <div class="relative flex items-center justify-center">
+          <img src="/public/img-footerMobile.png" alt="" />
+          <div class="absolute flex items-center justify-end gap-2 w-full max-w-xs px-3 bottom-2 mr-1">
+
+            <!-- BUTTON AGENDAR VISITA -->
+            <button onclick="openModal('modal4')"
+              class="flex justify-center text-xs items-center border bg-white shadow-sm shadow-red-700 text-red-700 border-red-700 rounded-md w-20 h-10 px-2">
+              Agendar Visita
+            </button>
+            <!-- MODAL4 -->
+            <div id="modal4"
+              class="fixed hidden z-50 inset-0 bg-black bg-opacity-90 overflow-y-auto h-full w-full px-4 modal">
+              <div class="relative top-10 mx-auto shadow-xl rounded-md bg-white max-w-md w-full">
+                <!-- Modal header -->
+                <div class="flex justify-between items-center text-red-700 px-4 pt-5">
+                  <h3>Agendar visita</h3>
+                  <button onclick="closeModal('modal4')">
+                    <i class="fa-solid fa-xmark">x</i>
+                  </button>
+                </div>
+                <!-- Modal body -->
+                <div class="flex flex-col justify-center items-center py-5">
+                  <p class="w-full items-start justify-start px-4 py-2">Escolha o dia:</p>
+                  <div class="flex flex-col py-5 items-center justify-between bg-gray-300 w-full">
+                    <p class="font-semibold w-full items-center justify-center flex px-4">
+                      Outubro
+                    </p>
+                    <div class="flex w-full max-w-md items-center justify-center gap-0.5 py-2">
+                      <div class="flex flex-col items-center justify-center gap-2">
+                        <p class="font-medium">Qui.</p>
+                        <p
+                          class="font-medium h-12 w-12 border bg-white shadow-md rounded-md items-center justify-center flex">
+                          05</p>
+                      </div>
+                      <div class="flex flex-col items-center justify-center gap-2">
+                        <p class="font-medium">Sex.</p>
+                        <p
+                          class="font-medium h-12 w-12 border bg-white shadow-md rounded-md items-center justify-center flex">
+                          06</p>
+                      </div>
+                      <div class="flex flex-col items-center justify-center gap-2">
+                        <p class="font-medium">Sáb.</p>
+                        <p
+                          class="font-medium h-12 w-12 border bg-white shadow-md rounded-md items-center justify-center flex">
+                          07</p>
+                      </div>
+                      <div class="flex flex-col items-center justify-center gap-2">
+                        <p class="font-medium">Dom.</p>
+                        <p
+                          class="font-medium h-12 w-12 border bg-white shadow-md rounded-md items-center justify-center flex">
+                          08</p>
+                      </div>
+                      <div class="flex flex-col items-center justify-center gap-2">
+                        <p class="font-medium">Seg.</p>
+                        <p
+                          class="font-medium h-12 w-12 border bg-white shadow-md rounded-md items-center justify-center flex">
+                          09</p>
+                      </div>
+                      <div class="flex flex-col items-center justify-center gap-2">
+                        <p class="font-medium">Ter.</p>
+                        <p
+                          class="font-medium h-12 w-12 border bg-white shadow-md rounded-md items-center justify-center flex">
+                          10</p>
+                      </div>
+                      <div class="flex flex-col items-center justify-center gap-2">
+                        <p class="font-medium">Qua.</p>
+                        <p
+                          class="font-medium h-12 w-12 border bg-white shadow-md rounded-md items-center justify-center flex">
+                          11</p>
+                      </div>
+                    </div>
+                    <div class="flex w-full items-center justify-between px-6 py-3">
+                      <button>
+                        <a href="">
+                          <i class="fa-solid fa-chevron-left text-2xl"></i>
+                        </a>
+                      </button>
+                      <button>
+                        <a href="">
+                          <i class="fa-solid fa-angle-right text-2xl"></i>
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flex flex-col pt-2 items-center justify-between w-full">
+                    <p class="w-full items-center justify-start flex px-4">
+                      Escolha o período:
+                    </p>
+                    <div class="flex items-center justify-between gap-4 py-2 w-full px-4">
+                      <div class="flex items-center gap-2 py-2">
+                        <input id="link-checkbox" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="default-checkbox" class="ms-2 text-base font-medium text-gray-500">
+                          <p class="font-semibold">Manhã <span class=" font-normal">08:00 -
+                              12:00</span></p>
+                        </label>
+                      </div>
+                      <div class="flex items-center gap-2 py-2">
+                        <input id="link-checkbox" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="default-checkbox" class="ms-2 text-base font-medium text-gray-500">
+                          <p class="font-semibold">Tarde <span class=" font-normal">13:00 -
+                              19:00</span></p>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col items-center justify-center w-full">
+                    <p class="w-full items-center justify-start flex px-4">
+                      Dados para contato:
+                    </p>
+                    <div class="flex items-center justify-between w-full px-4">
+                      <form class=" flex flex-col justify-center w-full">
+                        <div class="flex flex-col">
+                          <input type="name" name="name" id="name" placeholder="Nome"
+                            class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                        </div>
+
+                        <div class="flex flex-col mt-2">
+                          <input type="email" name="email" id="email" placeholder="E-mail"
+                            class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                        </div>
+
+                        <div class="flex flex-col mt-2">
+                          <input type="tel" name="tel" id="tel" placeholder="Celular"
+                            class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                        </div>
+
+                        <div class="flex lg:items-end items-center lg:justify-center justify-center">
+                          <button type="submit"
+                            class="w-32 bg-red-700 hover:bg-blue-dark text-white py-1.5 px-3 rounded-full mt-3 hover:bg-red-800 transition ease-in-out duration-300">
+                            Enviar
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- JAVA SCRIPT MODAL -->
+            <script type="text/javascript">
+              window.openModal = function (modalId) {
+                document.getElementById(modalId).style.display = 'block'
+                document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+              }
+
+              window.closeModal = function (modalId) {
+                document.getElementById(modalId).style.display = 'none'
+                document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+              }
+
+              // Close all modals when press ESC
+              document.onkeydown = function (event) {
+                event = event || window.event;
+                if (event.keyCode === 27) {
+                  document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                  let modals = document.getElementsByClassName('modal4');
+                  Array.prototype.slice.call(modals).forEach(i => {
+                    i.style.display = 'none'
+                  })
+                }
+              };
+            </script>
+            <!-- FIM BUTTON AGENDAR VISITA -->
+
+            <!-- BUTTON MAIS INFORMAÇÕES -->
+            <button onclick="openModal('modal5')"
+              class="flex justify-center text-xs items-center border bg-white shadow-sm shadow-red-700 text-red-700 border-red-700 rounded-md w-20 h-10 px-2">
+              Mais informações
+            </button>
+            <!-- MODAL5 -->
+            <div id="modal5"
+              class="fixed hidden z-50 inset-0 bg-black bg-opacity-90 overflow-y-auto h-full w-full px-4 modal">
+              <div class="relative top-10 mx-auto shadow-xl rounded-md bg-white max-w-md w-full">
+                <!-- Modal header -->
+                <div class="flex justify-between items-center text-red-700 px-4 py-5">
+                  <h3>Entre em contato</h3>
+                  <button onclick="closeModal('modal5')">
+                    <i class="fa-solid fa-xmark">x</i>
+                  </button>
+                </div>
+                <!-- Modal body -->
+                <div class="flex flex-col justify-center items-center pb-10">
+                  <div class="flex items-center justify-between w-full px-4">
+                    <form class=" flex flex-col justify-center w-full">
+                      <div class="flex flex-col">
+                        <input type="name" name="name" id="name" placeholder="Nome"
+                          class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                      </div>
+
+                      <div class="flex flex-col mt-2">
+                        <input type="email" name="email" id="email" placeholder="E-mail"
+                          class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                      </div>
+
+                      <div class="flex flex-col mt-2">
+                        <input type="tel" name="tel" id="tel" placeholder="Celular"
+                          class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                      </div>
+
+                      <div class="flex flex-col mt-2">
+                        <textarea rows="5"
+                          placeholder="Gostaria de mais informações sobre o imóvel com código 105360 - Casa de 340 m²  no valor de  R$  2,000,000.00  em  Vila Romana São Paulo."
+                          class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md"></textarea>
+                      </div>
+
+                      <div class="md:flex items-center gap-2 py-2 max-w-sm">
+                        <input id="link-checkbox" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="default-checkbox" class="ms-2 text-base font-medium text-gray-500">
+                          <p class="">Por favor, contate-me pelo WhatsApp.</p>
+                        </label>
+                      </div>
+
+                      <div class="flex lg:items-end items-center lg:justify-center justify-center">
+                        <button type="submit"
+                          class="w-32 bg-red-700 hover:bg-blue-dark text-white py-1.5 px-3 rounded-full mt-3 hover:bg-red-800 transition ease-in-out duration-300">
+                          Enviar
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- JAVA SCRIPT MODAL -->
+            <script type="text/javascript">
+              window.openModal = function (modalId) {
+                document.getElementById(modalId).style.display = 'block'
+                document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+              }
+
+              window.closeModal = function (modalId) {
+                document.getElementById(modalId).style.display = 'none'
+                document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+              }
+
+              // Close all modals when press ESC
+              document.onkeydown = function (event) {
+                event = event || window.event;
+                if (event.keyCode === 27) {
+                  document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                  let modals = document.getElementsByClassName('modal5');
+                  Array.prototype.slice.call(modals).forEach(i => {
+                    i.style.display = 'none'
+                  })
+                }
+              };
+            </script>
+            <!-- FIM BUTTON MAIS INFORMAÇÕES -->
+
+            <!-- BUTTON PROPOSTA -->
+            <button onclick="openModal('modal6')"
+              class="flex justify-center text-xs items-center border bg-white shadow-sm shadow-red-700 text-red-700 border-red-700 rounded-md w-20 h-10 px-2">
+              Proposta de Compra
+            </button>
+            <!-- MODAL6 -->
+            <div id="modal6"
+              class="fixed hidden z-50 inset-0 bg-black bg-opacity-90 overflow-y-auto h-full w-full px-4 modal">
+              <div class="relative top-10 mx-auto shadow-xl rounded-md bg-white max-w-md w-full">
+                <!-- Modal header -->
+                <div class="flex justify-between items-center text-red-700 px-4 pt-5">
+                  <h3>Proposta de Compra</h3>
+                  <button onclick="closeModal('modal6')">
+                    <i class="fa-solid fa-xmark">x</i>
+                  </button>
+                </div>
+                <!-- Modal body -->
+                <div class="flex flex-col justify-center items-center py-5">
+                  <div class="flex flex-col py-5 items-center justify-between bg-gray-300 w-full">
+                    <div class="flex items-center justify-between w-full px-4 gap-1 py-2">
+                      <p class="text-red-700">Imóvel Pretendido:</p>
+                      <p class="">Cód.: 9087635</p>
+
+                    </div>
+                    <div class="flex items-center justify-between w-full px-4 gap-1 py-2">
+                      <p class="">Apartamento</p>
+                      <p class="">Valor: <span class="text-red-700 font-semibold">R$
+                          25.000.000,00</span></p>
+                    </div>
+                    <div class="flex flex-col items-start w-full justify-start px-4 gap-4 py-2">
+                      <p class="">Chácara Santo Antônio</p>
+                      <p class="">Alameda Ministro Rocha Azevedo, 1368</p>
+                    </div>
+                    <div class="flex items-start justify-start w-full max-w-sm gap-2 py-3 px-4">
+                      <input id="link-checkbox" type="checkbox" value=""
+                        class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                      <label for="default-checkbox" class="">
+                        <p class="">Já estou sendo atendido por um corretor(a) Zimmermann.</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between w-full px-4">
+                    <form class="flex flex-col justify-center w-full gap-2 py-5">
+                      <div class="w-full">
+                        <div class="flex flex-col gap-1">
+                          <p class=" w-full items-center justify-start flex text-red-700">
+                            Proposta:
+                          </p>
+                          <div class="flex flex-col gap-2">
+                            <input type="name" name="name" id="name" placeholder="Valor (R$)"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          </div>
+                          <div class="flex flex-col ">
+                            <input type="email" name="email" id="email" placeholder="Valor por extenso"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          </div>
+                        </div>
+                        <div class="flex flex-col gap-1 mt-3">
+                          <p class=" w-full items-center justify-start flex text-red-700">
+                            Condições de pagamento:
+                          </p>
+                          <div class="flex gap-2">
+                            <input type="name" name="name" id="name" placeholder="Sinal (R$)"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                            <input type="email" name="email" id="email" placeholder="Saldo (R$)"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+
+                          </div>
+                          <textarea rows="5" placeholder="Observações"
+                            class="w-full bg-white py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md"></textarea>
+                        </div>
+
+                      </div>
+                      <div class="w-ful">
+
+                        <p class=" w-full items-center justify-start flex text-red-700">
+                          Dados do comprador:
+                        </p>
+                        <div class="flex flex-col gap-2">
+                          <input type="name" name="name" id="name" placeholder="Nome"
+                            class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          <input type="email" name="email" id="email" placeholder="E-mail"
+                            class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          <input type="email" name="email" id="email" placeholder="Celular"
+                            class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          <input type="email" name="email" id="email" placeholder="CPF"
+                            class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          <input type="email" name="email" id="email" placeholder="RG"
+                            class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                        </div>
+                        <div class="flex max-w-xs items-start justify-start gap-2 py-3">
+                          <input id="link-checkbox" type="checkbox" value=""
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                          <label for="default-checkbox" class="">
+                            <p class="text-xs">Autorizo a ZIMMERMANN IMÓVEIS – RZ ASSESSORIA
+                              DE IMÓVEIS LTDA, Creci 15.319-J, a apresentar ao
+                              proprietário(a) do imóvel pretendo nesta proposta.</p>
+                          </label>
+                        </div>
+                        <div class="flex lg:items-end items-center lg:justify-end justify-center">
+                          <button type="submit"
+                            class="w-32 bg-red-700 hover:bg-blue-dark text-white py-1.5 px-3 rounded-full mt-3 hover:bg-red-800 transition ease-in-out duration-300">
+                            Enviar
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- JAVA SCRIPT MODAL -->
+            <script type="text/javascript">
+              window.openModal = function (modalId) {
+                document.getElementById(modalId).style.display = 'block'
+                document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+              }
+
+              window.closeModal = function (modalId) {
+                document.getElementById(modalId).style.display = 'none'
+                document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+              }
+
+              // Close all modals when press ESC
+              document.onkeydown = function (event) {
+                event = event || window.event;
+                if (event.keyCode === 27) {
+                  document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                  let modals = document.getElementsByClassName('modal6');
+                  Array.prototype.slice.call(modals).forEach(i => {
+                    i.style.display = 'none'
+                  })
+                }
+              };
+            </script>
+            <!-- FIM BUTTON PROPOSTA -->
+
+          </div>
+        </div>
+      </div>
+
+      <a href="index.html">
+        <img class="cursor-pointer" src="/public/logo-barra-mobile.png" width="100%" height="100%" alt="...">
+      </a>
+    </nav>
+  </div>
+
+  <!-- DETALHES IMÓVEL -->
+  <section class="flex w-full justify-center items-center pb-20 px-5">
+    <div class='lg:justify-center items-center grid w-full lg:max-w-7xl'>
+
+      <!-- FOTO IMOVEL -->
+      <div class="relative flex items-center justify-center">
+        <img src="/public/fto-imovel.png" class="h-full w-full" alt="" />
+        <div class="absolute bottom-3 flex items-center justify-between w-full px-5">
+
+          <p class="text-white ">03/33</p>
+
+          <div class="lg:flex hidden items-center justify-center lg:gap-3 gap-1">
+
+            <button
+              class="flex justify-center items-center border bg-white text-red-700 border-red-700 rounded-md px-2 py-0.5">
+              <img src="/public/icon-metro.svg" class="mr-1" alt="">
+              <p class="lg:text-sm text-xs">
+                Metrô
+              </p>
+              <img src="/public/icon-metro-amarela.svg" class="ml-1" alt="">
+            </button>
+
+            <button
+              class="flex justify-center items-center border bg-white text-red-700 border-red-700 rounded-md px-2 py-0.5">
+              <img src="/public/icone-permuta.svg" class="mr-1" alt="">
+              <p class="lg:text-sm text-xs">
+                Permuta
+              </p>
+            </button>
+
+            <button
+              class="flex justify-center items-center border bg-white text-red-700 border-red-700 rounded-md px-2 py-0.5">
+              <img src="/public/icon-estrela.svg" class="mr-1" alt="">
+              <p class="lg:text-sm text-xs">
+                Destaque
+              </p>
+            </button>
+
+            <button
+              class="flex justify-center items-center border bg-white text-red-700 border-red-700 rounded-md px-2 py-0.5">
+              <img src="/public/icone-imperdivel.svg" class="mr-1" alt="">
+              <p class="lg:text-sm text-xs">
+                Imperdível
+              </p>
+            </button>
+
+            <button
+              class="flex justify-center items-center border bg-white text-red-700 border-red-700 rounded-md lg:px-2 w-32 lg:w-40 py-0.5">
+              <img src="/public/icon-locacao.svg" class="mr-0.5" alt="">
+              <p class="lg:text-sm text-xs">
+                Compre já alugado
+              </p>
+            </button>
+
+          </div>
+          <p class="text-white ">Cód.: 987653</p>
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div>
+        <!-- INFO PC -->
+        <div class="md:flex items-start justify-between w-full py-4 gap-2 hidden">
+          <div class="grid gap-8">
+            <p>
+              Chácara Santo Antônio
+            </p>
+            <div class="flex md:flex-col lg:flex-row gap-10 items-start">
+
+              <p class="text-red-700 text-2xl">Apartamento</p>
+              <p class="flex items-center">Valor:<span class="text-red-700 text-2xl font-bold">R$
+                  25.000.000,00</span></p>
+              <p>Valor por m²:<span class="text-red-700 font-bold mr-3"> R$ 5.882,00</span></p>
+            </div>
+            <p>
+              Alameda Ministro Rocha Azevedo, 1368
+            </p>
+          </div>
+          <div class="grid gap-8 items-end justify-end">
+            <div class="flex gap-5">
+              <button type="button"
+                class="bg-red-700 h-16 w-32 rounded-md text-white px-5 flex items-center justify-center justify-items-center">
+                Ver Vídeo
+              </button>
+
+              <button type="button"
+                class="bg-red-700 h-16 w-32 rounded-md text-white px-5 flex items-center justify-center justify-items-center">
+                Ver Mapa
+              </button>
+            </div>
+            <button class="flex items-end justify-end">
+              <a href="" class="text-blue-600">Voltar para imóveis buscados
+              </a>
+            </button>
+          </div>
+
+        </div>
+        <!-- INFO MOBILE -->
+        <div class="md:hidden flex flex-col items-start justify-center w-full py-4 gap-2 border-b border-gray-200">
+
+          <div class="flex items-center justify-center py-1 gap-2">
+
+            <button class="flex justify-center items-center bg-gray-300 text-black rounded-md px-2 py-0.5">
+              <img src="/public/icon-metro.svg" class="mr-1" alt="">
+              <p class="lg:text-sm text-xs">
+                Metrô
+              </p>
+              <img src="/public/icon-metro-amarela.svg" class="ml-1" alt="">
+            </button>
+
+            <button class="flex justify-center items-center bg-gray-300 text-black rounded-md px-2 py-0.5">
+              <img src="/public/icone-permuta.svg" class="mr-1" alt="">
+              <p class="lg:text-sm text-xs">
+                Permuta
+              </p>
+            </button>
+
+            <button class="flex justify-center items-center bg-gray-300 text-black rounded-md px-2 py-0.5">
+              <img src="/public/icon-estrela.svg" class="mr-1" alt="">
+              <p class="lg:text-sm text-xs">
+                Destaque
+              </p>
+            </button>
+
+            <button class="flex justify-center items-center bg-gray-300 text-black rounded-md px-2 py-0.5">
+              <img src="/public/icone-imperdivel.svg" class="mr-1" alt="">
+              <p class="lg:text-sm text-xs">
+                Imperdível
+              </p>
+            </button>
+          </div>
+
+          <div class="flex gap-0.5 justify-center items-center py-1">
+            <button type="button"
+              class="bg-red-700 h-12 w-28 rounded-md text-white px-5 flex items-center justify-center justify-items-center">
+              Ver Vídeo
+            </button>
+            <button type="button"
+              class="bg-red-700 h-12 w-28 rounded-md text-white px-5 flex items-center justify-center justify-items-center">
+              Ver Mapa
+            </button>
+            <button type="button"
+              class="bg-gray-300 h-12 w-12 rounded-md text-white flex items-center justify-center justify-items-center">
+              <img src="/public/icon-compartilhar.svg" alt="">
+            </button>
+            <button type="button"
+              class="bg-gray-300 h-12 w-12 rounded-md text-white flex items-center justify-center justify-items-center">
+              <i class="fa-regular fa-heart text-2xl text-black"></i>
+            </button>
+          </div>
+
+          <div class="flex flex-col gap-3 items-center justify-center w-full">
+            <p class="text-red-700">
+              Apartamento
+            </p>
+            <p>
+              Chácara Santo Antônio
+            </p>
+            <p>
+              Alameda Ministro Rocha Azevedo, 1368
+            </p>
+            <div class="flex items-center justify-center gap-4 w-full">
+
+              <div class="flex flex-col items-center justify-center text-center w-full">
+                <p class="">Valor:</p>
+                <p class="text-red-700 font-bold">R$ 25.000.000,00</p>
+
+              </div>
+              <div class="flex flex-col items-center justify-center text-center w-full">
+                <p class="">Valor por m²:</p>
+                <p class="text-red-700 font-bold"> R$ 5.882,00</p>
+              </div>
+
+            </div>
+            <button class="flex items-end justify-end">
+              <a href="" class="text-blue-600">Voltar para imóveis buscados
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- COND IPTU -->
+      <div class="lg:flex lg:flex-col items-center justify-center py-5 gap-2">
+        <div class="border-0 w-full gap-8 max-w-3xl md:flex items-center justify-center border-b py-2 border-gray-200">
+          <div class="flex items-center justify-center">
+            <p>Condomínio:<span class="text-red-700 font-medium"> R$ 882,00</span></p>
+          </div>
+          <div class="flex items-center justify-center py-2">
+            <p>IPTU:<span class="text-red-700 font-medium"> R$ 5.882</span></p>
+          </div>
+        </div>
+        <div class="border-0 w-full gap-8 max-w-3xl md:flex items-center justify-center border-b py-2 border-gray-200">
+          <div class="flex gap-4 items-center justify-center">
+            <div class="lg:flex gap-1 items-center justify-center text-center py-2">
+              <p>1345</p>
+              <p class="text-gray-500"> m2 Área construída</p>
+            </div>
+            <div class="lg:flex gap-1 items-center justify-center text-center">
+              <p>745</p>
+              <p class="text-gray-500"> m2 Área do terreno</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-center justify-center">
+            <div class="flex items-center justify-start">
+              <p>4<span class="text-gray-500"> dorms</span></p>
+            </div>
+            <div class="flex items-center justify-start">
+              <p>5<span class="text-gray-500"> suítes</span></p>
+            </div>
+            <div class="flex items-center justify-start">
+              <p>5<span class="text-gray-500"> vagas</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO -->
+      <div class="flex flex-col items-center justify-center py-10 gap-2">
+        <iframe width="100%" height="600" src="https://www.youtube.com/embed/VAtTxWaYTJo?si=e7AOEVbSMOBe7Rw_"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          class="hidden lg:flex" allowfullscreen></iframe>
+        <iframe width="100%" height="300" src="https://www.youtube.com/embed/VAtTxWaYTJo?si=e7AOEVbSMOBe7Rw_"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          class="flex lg:hidden" allowfullscreen></iframe>
+      </div>
+
+      <!-- SOBRE O IMÓVEL -->
+      <div class='lg:justify-center items-center grid lg:max-w-6xl'>
+        <h3 class="lg:text-xl text-red-700 text-center py-5 uppercase">Sobre o imóvel</h3>
+        <p class="text-center max-w-5xl">
+          Piso Inferior: Living para 3 ambientes, varanda espaçosa com excelente vista, lavabo, 4 dormitórios
+          suítes, closet, copa, cozinha, área de serviço e dependência de empregada. Quintal, piscina e salão
+          de festas.
+          Piso Superior: 4 suítes.
+        </p>
+        <p class="text-center max-w-5xl">
+          É importante mencionar que o imóvel precisa de reforma. No entanto, o fato de possuir 5 vagas de
+          garagem e estar em uma excelente localização, em uma rua arborizada e tranquila, com uma completa
+          infraestrutura de comércio e serviços, faz com que seja um imóvel muito interessante para toda a
+          família.
+        </p>
+      </div>
+
+      <!-- DETALHES UNIDADE E CONDOMINIO -->
+      <div class="flex flex-col items-center justify-center py-10 gap-2 ">
+        <div class="flex flex-col items-center justify-center w-full bg-gray-300 py-10">
+          <h2 class="text-red-700 w-full text-xl py-5 uppercase items-center justify-center flex">
+            Detalhes do imóvel
+          </h2>
+          <div class="flex w-full items-center justify-between max-w-2xl px-4">
+
+            <ul class="grid gap-2">
+              <li class="flex gap-2 items-center">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Área Serviço
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Copa
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Closet
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Terraço
+                </p>
+              </li>
+
+            </ul>
+
+            <ul class="grid gap-2">
+              <li class="flex gap-2 items-center">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Terraço
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Cozinha
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Quarto Empregada
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  WC Empregada
+                </p>
+              </li>
+
+            </ul>
+
+            <ul class="md:grid gap-2 hidden">
+              <li class="flex gap-2 items-center">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Lavabo
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Piscina
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Quintal
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Salão de Festas
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center justify-center w-full bg-gray-300 py-10">
+          <h2 class="text-red-700 w-full text-xl py-5 uppercase items-center justify-center flex">
+            Detalhes do condomínio
+          </h2>
+          <div class="flex w-full items-center justify-between max-w-2xl px-4">
+
+            <ul class="grid gap-2">
+              <li class="flex gap-2 items-center">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Área Serviço
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Copa
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Closet
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Terraço
+                </p>
+              </li>
+
+            </ul>
+
+            <ul class="grid gap-2">
+              <li class="flex gap-2 items-center">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Terraço
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Cozinha
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Quarto Empregada
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  WC Empregada
+                </p>
+              </li>
+
+            </ul>
+
+            <ul class="md:grid gap-2 hidden">
+              <li class="flex gap-2 items-center">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Lavabo
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Piscina
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Quintal
+                </p>
+              </li>
+
+              <li class="flex gap-2 items-center ">
+                <i class="fa-solid fa-check"></i>
+                <p>
+                  Salão de Festas
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ICONATUS -->
+      <div class="grid items-center justify-center justify-items-center py-10 gap-5">
+        <h3 class="lg:text-xl text-red-700 text-center py-5 uppercase">Pontos de Interesse mais Próximos</h3>
+        <img src="/public/iconatus.svg" alt="" class="hidden md:flex">
+        <img src="/public/iconatusMobile.svg" alt="" class="flex md:hidden">
+      </div>
+
+      <!-- MAPS -->
+      <div class="grid items-center justify-center justify-items-center">
+        <h3 class="lg:text-xl text-red-700 text-center py-5 uppercase">Localização</h3>
+        <div class="lg:w-screen w-80 md:w-[45rem] h-64 md:max-w-5xl md:h-[40rem]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin"
+            style="border:0" class="w-full h-full" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Imóveis Similares -->
+  <section class="flex w-full justify-center items-center py-20 px-5">
+    <div class='lg:justify-center items-center grid lg:max-w-6xl'>
+
+      <div class="items-center justify-center lg:flex lg:flex-col grid gap-5">
+        <div class="flex items-center justify-center gap-1">
+          <h3 class="lg:text-xl text-red-700 text-center uppercase">
+            Imóveis Similares
+          </h3>
+        </div>
+
         <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-8 gap-5 max-w-6xl">
 
-            <!-- IMOVEL 1 -->
-            <div class="group relative rounded-xl bg-white border">
+          <!-- IMOVEL 1 -->
+          <div class="group relative rounded-xl bg-white border">
+            <a href="imovelDetalhes.html">
 
-                <!-- SOMBRA HOVER -->
-                <div
-                    class="flex justify-center z-30 items-center group-hover:rounded-lg opacity-0 bg-red-700 group-hover:opacity-20 absolute top-0 h-full w-full">
+              <!-- SOMBRA HOVER -->
+              <span
+                class="absolute left-0 z-20 block w-full h-0 transition-all bg-red-700 opacity-20 group-hover:h-full top-1/2 group-hover:rounded-lg group-hover:top-0 duration-700 ease"></span>
+
+              <div class="relative group">
+
+                <!-- FOTO IMÓVEL -->
+                <div class="group relative">
+                  <div class="z-10 h-full w-full ">
+                    <img src="/public/ft1.png" class="flex h-full w-full object-cover relative object-center" alt="" />
+                  </div>
+                  <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
+                    <div class="flex items-center justify-center">
+                      <i class="fa-solid fa-video mr-1 text-white"></i>
+                      <p class="text-white">Com vídeo</p>
+                    </div>
+                    <div>
+                      <p class="text-white">Cód.: 987653</p>
+                    </div>
+                  </div>
                 </div>
 
-                <div class="relative group">
+                <div class="px-3 pt-5 pb-8">
 
-                    <!-- FOTO IMÓVEL -->
-                    <div class="group relative">
-                        <div class="z-10 h-full w-full ">
-                            <img src="/public/ft1.svg" class="flex h-full w-full object-cover relative object-center"
-                                alt="" />
-                        </div>
-                        <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
-                            <div class="flex items-center justify-center">
-                                <img src="/public/icone-video.svg" alt="" class="mr-1 h-3">
-                                <p href="#!" class="text-white">Com vídeo</p>
-                            </div>
-                            <div>
-                                <p href="#!" class="text-white">Cód.: 987653</p>
-                            </div>
-                        </div>
+                  <div class="pb-6 flex items-center w-full justify-between">
+                    <div class="w-full">
+                      <a href="#!" class="">
+                        Alto de Pinheiros
+                      </a>
                     </div>
-
-                    <div class="p-6">
-
-                        <div class="pb-6 flex items-center justify-between">
-                            <div>
-                                <a href="#!" class="">
-                                    Alto de Pinheiros
-                                </a>
-                            </div>
-                            <div class="flex gap-5">
-                                <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                                    <img src="/public/icon-compartilhar.svg" alt="">
-                                </a>
-                                <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                                    <img src="/public/icon-coracao.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="pb-6 flex items-center justify-between">
-                            <p href="#!" class="text-red-700">
-                                Cobertura
-                            </p>
-                            <p href="#!" class="font-medium text-red-700">
-                                R$ 25.000.000,00
-                            </p>
-                        </div>
-
-                        <div class="pb-6 flex items-center">
-                            <p href="#!" class="">
-                                Alameda Ministro Rocha Azevedo, 1368
-                            </p>
-                        </div>
-
-                        <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
-                            <div class="flex items-center justify-start">
-                                <p>1345<span class="text-gray-500 font-medium"> m2</span></p>
-                            </div>
-                            <div class="flex items-center justify-center ">
-                                <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
-                            </div>
-                            <div class="flex items-center justify-center">
-                                <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
-                            </div>
-                            <div class="flex items-center justify-end">
-                                <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
-                            </div>
-                        </div>
-
-                        <div class="pt-6 flex items-center lg:gap-3 gap-1">
-
-                            <button
-                                class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                                <img src="/public/icon-metro.svg" class="mr-1" alt="">
-                                <p class="lg:text-xs text-xs">
-                                    Metrô
-                                </p>
-                                <img src="/public/icon-metro-amarela.svg" class="ml-1" alt="">
-                            </button>
-
-                            <button
-                                class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                                <img src="/public/icon-estrela.svg" class="mr-1" alt="">
-                                <p class="lg:text-xs text-xs">
-                                    Destaque
-                                </p>
-                            </button>
-
-                            <button
-                                class="flex justify-center items-center border text-red-700 border-red-700 rounded-md lg:px-2 w-32 lg:w-40 py-0.5">
-                                <img src="/public/icon-locacao.svg" class="mr-0.5" alt="">
-                                <p class="lg:text-xs text-xs">
-                                    Compre já alugado
-                                </p>
-                            </button>
-                        </div>
+                    <div class="flex gap-5 items-center justify-end w-full">
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <img src="/public/icon-compartilhar.svg" alt="">
+                      </a>
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <i class="fa-regular fa-heart text-2xl"></i>
+                      </a>
                     </div>
+                  </div>
+
+                  <div class="pb-6 flex items-center justify-between">
+                    <p href="#!" class="text-red-700">
+                      Cobertura
+                    </p>
+                    <p href="#!" class="font-medium text-red-700">
+                      R$ 25.000.000,00
+                    </p>
+                  </div>
+
+                  <div class="pb-6 flex items-center">
+                    <p href="#!" class="">
+                      Alameda Ministro Rocha Azevedo, 1368
+                    </p>
+                  </div>
+
+                  <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
+                    <div class="flex items-center justify-start">
+                      <p>1345<span class="text-gray-500 font-medium"> m2</span></p>
+                    </div>
+                    <div class="flex items-center justify-center ">
+                      <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                      <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
+                    </div>
+                    <div class="flex items-center justify-end">
+                      <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
+                    </div>
+                  </div>
+
+                  <div class="pt-6 flex items-center lg:gap-3 gap-1 w-full">
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <img src="/public/icon-metro.svg" class="mr-1" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Metrô
+                      </p>
+                      <i class="fa-solid fa-circle ml-1 text-yellow-500 text-xs"></i>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <i class="fa-solid fa-star mr-1 text-xs"></i>
+                      <p class="lg:text-xs text-xs">
+                        Destaque
+                      </p>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md lg:px-2 w-32 lg:w-36 py-0.5">
+                      <img src="/public/icon-locacao.svg" class="mr-0.5" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Compre já alugado
+                      </p>
+                    </button>
+                  </div>
                 </div>
-            </div>
+              </div>
+            </a>
+          </div>
 
-            <!-- IMOVEL 2 -->
-            <div class="group relative rounded-xl bg-white border">
-                <!-- SOMBRA HOVER -->
-                <div
-                    class="flex justify-center z-30 items-center group-hover:rounded-lg opacity-0 bg-red-700 group-hover:opacity-20 absolute top-0 h-full w-full">
-                </div>
-                <div class="relative group">
+          <!-- IMOVEL 2 -->
+          <div class="group relative rounded-xl bg-white border">
+            <a href="imovelDetalhes.html">
 
-                    <!-- FOTO IMÓVEL -->
-                    <div class="group relative">
-                        <div class="z-10 h-full w-full ">
-                            <img src="/public/ft3.svg" class="flex h-full w-full object-cover relative object-center"
-                                alt="" />
-                        </div>
-                        <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
-                            <div class="flex items-center justify-center">
-                                <img src="/public/icone-video.svg" alt="" class="mr-1 h-3">
-                                <p href="#!" class="text-white">
-                                    Com vídeo
-                                </p>
-                            </div>
-                            <div>
-                                <p href="#!" class="text-white">
-                                    Cód.: 987653
-                                </p>
-                            </div>
-                        </div>
+              <!-- SOMBRA HOVER -->
+              <span
+                class="absolute left-0 z-20 block w-full h-0 transition-all bg-red-700 opacity-20 group-hover:h-full top-1/2 group-hover:rounded-lg group-hover:top-0 duration-700 ease"></span>
+
+              <div class="relative group">
+
+                <!-- FOTO IMÓVEL -->
+                <div class="group relative">
+                  <div class="z-10 h-full w-full ">
+                    <img src="/public/ft3.png" class="flex h-full w-full object-cover relative object-center" alt="" />
+                  </div>
+                  <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
+                    <div class="flex items-center justify-center">
+                      <i class="fa-solid fa-video mr-1 text-white"></i>
+                      <p class="text-white">Com vídeo</p>
                     </div>
-
-                    <div class="p-6">
-
-                        <div class="pb-6 flex items-center justify-between">
-                            <div>
-                                <a href="#!" class="">
-                                    Perdizes
-                                </a>
-                            </div>
-                            <div class="flex gap-5">
-                                <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                                    <img src="/public/icon-compartilhar.svg" alt="">
-                                </a>
-                                <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                                    <img src="/public/icon-coracao.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="pb-6 flex items-center justify-between">
-                            <p href="#!" class="text-red-700">
-                                Casa em condomínio
-                            </p>
-                            <p href="#!" class="font-medium text-red-700">
-                                R$ 25.000.000,00
-                            </p>
-                        </div>
-
-                        <div class="pb-6 flex items-center">
-                            <p href="#!" class="">
-                                Rua Rocha Azevedo, 168
-                            </p>
-                        </div>
-
-                        <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
-                            <div class="flex items-center justify-start">
-                                <p>135<span class="text-gray-500 font-medium"> m2</span></p>
-                            </div>
-                            <div class="flex items-center justify-center ">
-                                <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
-                            </div>
-                            <div class="flex items-center justify-center">
-                                <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
-                            </div>
-                            <div class="flex items-center justify-end">
-                                <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
-                            </div>
-                        </div>
-
-                        <div class="pt-6 grid grid-cols-3 items-center lg:gap-3 gap-1">
-
-                            <button
-                                class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                                <img src="/public/icone-permuta.svg" class="mr-1" alt="">
-                                <p class="lg:text-xs text-xs">
-                                    Permuta
-                                </p>
-                            </button>
-
-                            <button
-                                class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                                <img src="/public/icon-estrela.svg" class="mr-1" alt="">
-                                <p class="lg:text-xs text-xs">
-                                    Destaque
-                                </p>
-                            </button>
-                        </div>
+                    <div>
+                      <p class="text-white">Cód.: 987653</p>
                     </div>
+                  </div>
                 </div>
-            </div>
 
-            <!-- IMOVEL 3 -->
-            <div class="group relative rounded-xl bg-white border">
-                <!-- SOMBRA HOVER -->
-                <div
-                    class="flex justify-center z-30 items-center group-hover:rounded-lg opacity-0 bg-red-700 group-hover:opacity-20 absolute top-0 h-full w-full">
-                </div>
-                <div class="relative group">
-                    <!-- FOTO IMÓVEL -->
-                    <div class="group relative">
-                        <div class="z-10 h-full w-full ">
-                            <img src="/public/ft2.svg" class="flex h-full w-full object-cover relative object-center"
-                                alt="" />
-                        </div>
-                        <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
-                            <div class="flex items-center justify-center">
-                                <img src="/public/icone-video.svg" alt="" class="mr-1 h-3">
-                                <p href="#!" class="text-white">
-                                    Com vídeo
-                                </p>
-                            </div>
-                            <div>
-                                <p href="#!" class="text-white">
-                                    Cód.: 987653
-                                </p>
-                            </div>
-                        </div>
+                <div class="px-3 pt-5 pb-8">
+
+                  <div class="pb-6 flex items-center w-full justify-between">
+                    <div class="w-full">
+                      <a href="#!" class="">
+                        Perdizes
+                      </a>
                     </div>
-
-                    <div class="p-6">
-
-                        <div class="pb-6 flex items-center justify-between">
-                            <div>
-                                <a href="#!" class="">
-                                    Chácara Santo Antônio
-                                </a>
-                            </div>
-                            <div class="flex gap-5">
-                                <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                                    <img src="/public/icon-compartilhar.svg" alt="">
-                                </a>
-                                <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                                    <img src="/public/icon-coracao.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="pb-6 flex items-center justify-between">
-                            <p href="#!" class="text-red-700">
-                                Apartamento
-                            </p>
-                            <p href="#!" class="font-medium text-red-700">
-                                R$ 25.000.000,00
-                            </p>
-                        </div>
-
-                        <div class="pb-6 flex items-center">
-                            <p href="#!" class="">
-                                Alameda Ministro Rocha Azevedo, 1368
-                            </p>
-                        </div>
-
-                        <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
-                            <div class="flex items-center justify-start">
-                                <p>135<span class="text-gray-500 font-medium"> m2</span></p>
-                            </div>
-                            <div class="flex items-center justify-center ">
-                                <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
-                            </div>
-                            <div class="flex items-center justify-center">
-                                <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
-                            </div>
-                            <div class="flex items-center justify-end">
-                                <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
-                            </div>
-                        </div>
-
-                        <div class="pt-6 grid grid-cols-3 items-center lg:gap-3 gap-1">
-                            <button
-                                class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                                <img src="/public/icon-metro.svg" class="mr-1" alt="">
-                                <p class="lg:text-xs text-xs">
-                                    Metrô
-                                </p>
-                                <img src="/public/icone-metro-lilas.svg" class="ml-1" alt="">
-                            </button>
-
-                            <button
-                                class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                                <img src="/public/icone-permuta.svg" class="mr-1" alt="">
-                                <p class="lg:text-xs text-xs">
-                                    Permuta
-                                </p>
-                            </button>
-
-                            <button
-                                class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                                <img src="/public/icon-estrela.svg" class="mr-1" alt="">
-                                <p class="lg:text-xs text-xs">
-                                    Destaque
-                                </p>
-                            </button>
-
-                            <button
-                                class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                                <img src="/public/icone-imperdivel.svg" class="mr-1" alt="">
-                                <p class="lg:text-xs text-xs">
-                                    Imperdível
-                                </p>
-                            </button>
-
-                            <button
-                                class="flex justify-center items-center border text-red-700 border-red-700 rounded-md lg:px-2 w-40 py-0.5">
-                                <img src="/public/icon-locacao.svg" class="mr-1" alt="">
-                                <p class="lg:text-xs text-xs">
-                                    Compre já alugado
-                                </p>
-                            </button>
-                        </div>
+                    <div class="flex gap-5 items-center justify-end w-full">
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <img src="/public/icon-compartilhar.svg" alt="">
+                      </a>
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <i class="fa-regular fa-heart text-2xl"></i>
+                      </a>
                     </div>
+                  </div>
+
+                  <div class="pb-6 flex items-center justify-between">
+                    <p href="#!" class="text-red-700">
+                      Casa em condomínio
+                    </p>
+                    <p href="#!" class="font-medium text-red-700">
+                      R$ 25.000.000,00
+                    </p>
+                  </div>
+
+                  <div class="pb-6 flex items-center">
+                    <p href="#!" class="">
+                      Rua Rocha Azevedo, 168
+                    </p>
+                  </div>
+
+                  <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
+                    <div class="flex items-center justify-start">
+                      <p>1345<span class="text-gray-500 font-medium"> m2</span></p>
+                    </div>
+                    <div class="flex items-center justify-center ">
+                      <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                      <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
+                    </div>
+                    <div class="flex items-center justify-end">
+                      <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
+                    </div>
+                  </div>
+
+                  <div class="pt-6 grid grid-cols-3 items-center lg:gap-3 gap-1">
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <img src="/public/icone-permuta.svg" class="mr-1" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Permuta
+                      </p>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <i class="fa-solid fa-star mr-1 text-xs"></i>
+                      <p class="lg:text-xs text-xs">
+                        Destaque
+                      </p>
+                    </button>
+                  </div>
                 </div>
-            </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- IMOVEL 3 -->
+          <div class="group relative rounded-xl bg-white border">
+            <a href="imovelDetalhes.html">
+
+              <!-- SOMBRA HOVER -->
+              <span
+                class="absolute left-0 z-20 block w-full h-0 transition-all bg-red-700 opacity-20 group-hover:h-full top-1/2 group-hover:rounded-lg group-hover:top-0 duration-700 ease"></span>
+
+              <div class="relative group">
+
+                <!-- FOTO IMÓVEL -->
+                <div class="group relative">
+                  <div class="z-10 h-full w-full ">
+                    <img src="/public/ft2.png" class="flex h-full w-full object-cover relative object-center" alt="" />
+                  </div>
+                  <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
+                    <div class="flex items-center justify-center">
+                      <i class="fa-solid fa-video mr-1 text-white"></i>
+                      <p class="text-white">Com vídeo</p>
+                    </div>
+                    <div>
+                      <p class="text-white">Cód.: 987653</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="px-3 pt-5 pb-8">
+
+                  <div class="pb-6 flex items-center w-full justify-between">
+                    <div class="w-full">
+                      <a href="#!" class="">
+                        Chácara Santo Antônio
+                      </a>
+                    </div>
+                    <div class="flex gap-5 items-center justify-end w-full">
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <img src="/public/icon-compartilhar.svg" alt="">
+                      </a>
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <i class="fa-regular fa-heart text-2xl"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="pb-6 flex items-center justify-between">
+                    <p href="#!" class="text-red-700">
+                      Apartamento
+                    </p>
+                    <p href="#!" class="font-medium text-red-700">
+                      R$ 25.000.000,00
+                    </p>
+                  </div>
+
+                  <div class="pb-6 flex items-center">
+                    <p href="#!" class="">
+                      Alameda Ministro Rocha Azevedo, 1368
+                    </p>
+                  </div>
+
+                  <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
+                    <div class="flex items-center justify-start">
+                      <p>1345<span class="text-gray-500 font-medium"> m2</span></p>
+                    </div>
+                    <div class="flex items-center justify-center ">
+                      <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                      <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
+                    </div>
+                    <div class="flex items-center justify-end">
+                      <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
+                    </div>
+                  </div>
+
+                  <div class="pt-6 grid grid-cols-3 items-center lg:gap-3 gap-1">
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <img src="/public/icon-metro.svg" class="mr-1" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Metrô
+                      </p>
+                      <i class="fa-solid fa-circle ml-1 text-yellow-500 text-xs"></i>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <img src="/public/icone-permuta.svg" class="mr-1" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Permuta
+                      </p>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <i class="fa-solid fa-star mr-1 text-xs"></i>
+                      <p class="lg:text-xs text-xs">
+                        Destaque
+                      </p>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <i class="fa-solid fa-percent mr-1 text-xs"></i>
+                      <p class="lg:text-xs text-xs">
+                        Imperdível
+                      </p>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md lg:px-2 w-32 lg:w-40 py-0.5">
+                      <img src="/public/icon-locacao.svg" class="mr-0.5" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Compre já alugado
+                      </p>
+                    </button>
+
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-red-700 w-full flex flex-col justify-center items-center py-20 text-white px-5">
-        <div class='lg:justify-between justify-center w-full items-center flex flex-col lg:max-w-6xl'>
-            <!-- ACESSO -->
-            <div class='flex flex-col w-full justify-between items-stretch'>
-                <div class="w-full items-center flex">
-                    <span class="flex items-center justify-center mr-4">ACESSO</span>
-                    <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
-                </div>
-                <div class="grid grid-cols-1 gap-8 pt-10 md:grid-cols-4 ml-16 lg:ml-0">
-                    <div>
-                        <h2 class="mb-3">Home</h2>
-                        <ul>
-                            <li class="mb-2">
-                                <a href="#" class=" hover:underline">BLOG</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Política de Privacidade</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Termos de Uso</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="mb-3">Imóveis</h2>
-                        <ul class="ml-4">
-                            <li class="mb-2">
-                                <a href="#" class=" hover:underline">Buscar Imóveis</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Cadastre Seu Imóvel</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Avalie seu Imóvel</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Favoritos</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Imóveis Visualizados</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Índice de Imóveis</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h2 class="mb-3">Serviços</h2>
-                        <ul class="ml-4">
-                            <li class="mb-2">
-                                <a href="#" class=" hover:underline">Financiamento</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Assessoria Jurídica</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Proposta de Compra</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Autorização de Venda</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Autorização de Publicidade</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h2 class="mb-3">Institucional</h2>
-                        <ul class="ml-4">
-                            <li class="mb-2">
-                                <a href="#" class=" hover:underline">Sobre a Zimmermann</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Área de Atuação</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Seja Corretor Associado</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Contato</a>
-                            </li>
-                            <li class="mb-2 flex gap-5 text-white items-center ">
-                                <a href="#">
-                                    <img src="/public/instagram-brands.svg" alt="">
-
-                                </a>
-                                <a href="#">
-                                    <img src="/public/facebook-brands.svg" alt="">
-
-                                </a>
-                                <a href="#">
-                                    <img src="/public/linkedin-brands.svg" alt="">
-
-                                </a>
-                                <a href="#">
-                                    <img src="/public/youtube-brands.svg" alt="">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SOMBRA -->
-            <img src="/public/blur-vermelho-1.svg" class="rotate-180" alt="logo Gukenz" width="100%" height="100%" />
-
-            <!-- NOSSAS UNIDADES -->
-            <div class='flex flex-col w-full justify-between items-stretch pt-14'>
-                <div class="w-full items-center flex">
-                    <span class="flex items-center justify-center mr-4">NOSSAS UNIDADES</span>
-                    <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
-                </div>
-
-                <div class="grid grid-cols-1 w-full gap-8 py-10 md:grid-cols-4 ml-16 lg:ml-0">
-
-                    <div>
-                        <h2 class="mb-3">Agência <span class="font-semibold">Perdizes</span></h2>
-                        <ul class="flex flex-col gap-3">
-                            <li>
-                                <p class="flex justify-start">
-                                    <img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
-                                    (11) 99999-0938
-                                </p>
-                            </li>
-                            <li>
-                                <p class="flex justify-start">
-                                    <img src="/public/telephone_126341.svg" class="mr-1" alt="">
-                                    (11) 99999-0938
-                                </p>
-                            </li>
-                            <li class="mb-1">
-                                <p>R. Campevas, 341</p>
-                                <p>Perdizes - CEP 05016-010</p>
-                                <p>São Paulo - SP</p>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Ver no mapa</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h2 class="mb-3">Agência Pinheiros
-                        </h2>
-                        <ul class="">
-                            <li class="mb-2">
-                                <p class="flex justify-start">
-                                    <img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
-
-                                    (11) 99939-9934
-                                </p>
-                            </li>
-                            <li class="mb-2">
-                                <p class="flex justify-start">
-                                    <img src="/public/telephone_126341.svg" class="mr-1" alt="">
-                                    (11) 99999-0938
-                                </p>
-                            </li>
-                            <li class="mb-2">
-                                <p>R. Simão Álvares, 464
-                                </p>
-                                <p>Pinheiros - CEP 05417-020
-                                </p>
-                                <p>São Paulo - SP</p>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Ver no mapa</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h2 class="mb-3">Agência Jardins
-                        </h2>
-                        <ul class="">
-                            <li class="mb-2">
-                                <p class="flex justify-start">
-                                    <img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
-
-                                    (11) 99999-0938
-                                </p>
-                            </li>
-                            <li class="mb-2">
-                                <p class="flex justify-start">
-                                    <img src="/public/telephone_126341.svg" class="mr-1" alt="">
-                                    (11) 99999-0938
-                                </p>
-                            </li>
-                            <li class="mb-2">
-                                <p>
-                                    Al. Joaquim Eugênio de Lima, 1281
-                                </p>
-                                <p>
-                                    Jardim Paulista - CEP 01403-003
-                                </p>
-                                <p>
-                                    São Paulo - SP
-                                </p>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Ver no mapa</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h2 class="mb-3">Agência Vila Romana
-                        </h2>
-                        <ul class="">
-                            <li class="lg:mb-2">
-                                <p class="flex justify-start">
-                                    <img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
-                                    (11) 93207-3204
-                                </p>
-                            </li>
-                            <li class="mb-2">
-                                <p class="flex justify-start">
-                                    <img src="/public/telephone_126341.svg" class="mr-1" alt="">
-                                    (11) 99999-0938
-                                </p>
-                            </li>
-                            <li class="mb-2">
-                                <p>
-                                    R. Tito, 766
-                                </p>
-                                <p>
-                                    Vila Romana - CEP 05051-000
-                                </p>
-                                <p>
-                                    São Paulo - SP</p>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="hover:underline">Ver no mapa</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- SOMBRA -->
-            <img src="/public/blur-vermelho-1.svg" alt="logo Gukenz" width="100%" height="100%" />
-
-            <!-- HORÁRIOS -->
-            <div class='flex flex-col w-full justify-between items-stretch'>
-                <div class="grid lg:grid-cols-4 grid-cols-1 lg:divide-x items-start justify-start w-full">
-                    <span class="text-center lg:text-sm">
-                        Segunda a sexta das 8h30 às 18h30
-                    </span>
-                    <span class="text-center lg:text-sm">
-                        Sábado e feriados das 8h30 às 13h30
-                    </span>
-                    <span class="text-center lg:text-sm">
-                        Domingos das 9h às 13h (plantão online)
-                    </span>
-                    <span class="text-center lg:text-sm">
-                        Atendimento online todos os dias.
-                    </span>
-                </div>
-            </div>
-
-            <!-- COPYRIGHT -->
-            <div class='flex flex-col w-full justify-between items-stretch pt-14'>
-                <div class='grid lg:flex w-full lg:justify-between py-8 gap-10'>
-                    <span class="text-sm text-center hidden lg:flex">CRECI 15.319-J - © Copyright 2023 - Zimmermann
-                        Imóveis LTDA -
-                        Todos os direitos reservados.</span>
-                    <span class="text-center lg:hidden">CRECI 15.319-J - © Copyright 2023 <br> Zimmermann Imóveis LTDA
-                        <br> Todos
-                        os direitos reservados.</span>
-                    <div class='flex gap-10 items-end justify-center'>
-                        <a href="https://sacorp.tec.br/?utm_source=www.mayerbastoscostaadv.com.br&utm_medium=banner&utm_campaign=slogan"
-                            target='_blank' rel="noreferrer">
-                            <img src="/public/logo-sacorp.svg" alt="logo Sacorp" width="100%" height="100%"
-                                loading="lazy" />
-                        </a>
-                        <a href="https://www.gukenz.com.br/" target='_blank' rel="noreferrer">
-                            <img src="/public/logo-gukenz.svg" alt="logo Gukenz" width="100%" height="100%" />
-                        </a>
-                    </div>
-                </div>
-            </div>
+  <!-- FOOTER -->
+  <footer class="bg-red-700 w-full flex flex-col justify-center items-center py-20 text-white px-10">
+    <div class='lg:justify-between justify-center w-full items-center flex flex-col'>
+      <!-- ACESSO -->
+      <div class='flex flex-col w-full justify-between items-stretch lg:max-w-6xl'>
+        <div class="w-full items-center flex">
+          <span class="flex items-center justify-center mr-4">ACESSO</span>
+          <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
         </div>
-    </footer>
+        <div class="grid grid-cols-1 gap-8 pt-10 md:grid-cols-4">
+          <div>
+            <h2 class="mb-3">
+              <a href="index.html">Home</a>
+            </h2>
+            <ul>
+              <li class="mb-2">
+                <a href="blog.html" class=" hover:underline">BLOG</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:underline">Política de Privacidade</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:underline">Termos de Uso</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-3">Imóveis</h2>
+            <ul class="ml-4">
+              <li class="mb-2">
+                <a href="resultadoBusca.html" class=" hover:underline">Buscar Imóveis</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:underline">Cadastre Seu Imóvel</a>
+              </li>
+              <li class="mb-2">
+                <a href="avaliacaoImovel.html" class="hover:underline">Avalie seu Imóvel</a>
+              </li>
+              <li class="mb-2">
+                <a href="imoveisFavoritos.html" class="hover:underline">Favoritos</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:underline">Imóveis Visualizados</a>
+              </li>
+              <li class="mb-2">
+                <a href="indice.html" class="hover:underline">Índice de Imóveis</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="mb-3">Serviços</h2>
+            <ul class="ml-4">
+              <li class="mb-2">
+                <a href="assessoriaFinanciamento.html" class=" hover:underline">Financiamento</a>
+              </li>
+              <li class="mb-2">
+                <a href="assessoriaJuridica.html" class="hover:underline">Assessoria Jurídica</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:underline">Proposta de Compra</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:underline">Autorização de Venda</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:underline">Autorização de Publicidade</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="mb-3">Institucional</h2>
+            <ul class="ml-4">
+              <li class="mb-2">
+                <a href="institucional.html" class=" hover:underline">Sobre a Zimmermann</a>
+              </li>
+              <li class="mb-2">
+                <a href="areasdeatuacao.html" class="hover:underline">Área de Atuação</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:underline">Seja Corretor Associado</a>
+              </li>
+              <li class="mb-2">
+                <a href="contact.html" class="hover:underline">Contato</a>
+              </li>
+              <li class="mb-2 flex gap-5 text-white items-center ">
+                <a href="#">
+                  <i class="fa-brands fa-instagram text-3xl text-white"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-facebook text-3xl text-white"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin text-3xl text-white"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-youtube text-3xl text-white"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOMBRA -->
+      <img src="/public/blur-vermelho-1.png" alt="logo Gukenz" width="100%" height="100%" />
+
+      <!-- NOSSAS UNIDADES -->
+      <div class='flex flex-col w-full justify-between items-stretch pt-14 lg:max-w-6xl'>
+        <div class="w-full items-center flex">
+          <span class="flex items-center justify-center mr-4">NOSSAS UNIDADES</span>
+          <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 py-10 md:grid-cols-4">
+          <div>
+            <h2 class="mb-3">Agência <span class="font-semibold">Perdizes</span></h2>
+            <ul class="flex flex-col gap-3">
+              <li>
+                <p class="flex justify-start">
+                  <a href="">
+                    <i class="fa-brands fa-whatsapp text-white text-xl"></i>
+                    (11) 99999-0938
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p class="flex justify-start">
+                  <img src="/public/telephone.svg" class="mr-1" alt="">
+                  (11) 99999-0938
+                </p>
+              </li>
+              <li class="mb-1">
+                <p>R. Campevas, 341</p>
+                <p>Perdizes - CEP 05016-010</p>
+                <p>São Paulo - SP</p>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="underline">Ver no mapa</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="mb-3">Agência <span class="font-semibold">Pinheiros</span></h2>
+            <ul class="flex flex-col gap-3">
+              <li>
+                <p class="flex justify-start">
+                  <a href="">
+                    <i class="fa-brands fa-whatsapp text-white text-xl"></i>
+                    (11) 99939-9934
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p class="flex justify-start">
+                  <img src="/public/telephone.svg" class="mr-1" alt="">
+                  (11) 99999-0938
+                </p>
+              </li>
+              <li class="mb-1">
+                <p>R. Simão Álvares, 464
+                </p>
+                <p>Pinheiros - CEP 05417-020
+                </p>
+                <p>São Paulo - SP</p>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="underline">Ver no mapa</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="mb-3">Agência <span class="font-semibold">Jardins</span></h2>
+            <ul class="flex flex-col gap-3">
+              <li>
+                <p class="flex justify-start">
+                  <a href="">
+                    <i class="fa-brands fa-whatsapp text-white text-xl"></i>
+                    (11) 99999-0938
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p class="flex justify-start">
+                  <img src="/public/telephone.svg" class="mr-1" alt="">
+                  (11) 99999-0938
+                </p>
+              </li>
+              <li class="mb-1">
+                <p>
+                  Al. Joaquim Eugênio de Lima, 1281
+                </p>
+                <p>
+                  Jardim Paulista - CEP 01403-003
+                </p>
+                <p>
+                  São Paulo - SP
+                </p>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="underline">Ver no mapa</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="mb-3">Agência <span class="font-semibold">Vila Romana</span></h2>
+            <ul class="flex flex-col gap-3">
+              <li>
+                <p class="flex justify-start">
+                  <a href="">
+                    <i class="fa-brands fa-whatsapp text-white text-xl"></i>
+                    (11) 93207-3204
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p class="flex justify-start">
+                  <img src="/public/telephone.svg" class="mr-1" alt="">
+                  (11) 99999-0938
+                </p>
+              </li>
+              <li class="mb-1">
+                <p>
+                  R. Tito, 766
+                </p>
+                <p>
+                  Vila Romana - CEP 05051-000
+                </p>
+                <p>
+                  São Paulo - SP</p>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="underline">Ver no mapa</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOMBRA -->
+      <img src="/public/blur-vermelho-1.png" class="rotate-180" alt="logo Gukenz" width="100%" height="100%" />
+
+      <!-- HORÁRIOS -->
+      <div class='flex flex-col w-full justify-between items-stretch lg:max-w-6xl'>
+        <div class="grid md:grid-cols-4 grid-cols-1 lg:divide-x items-start justify-start w-full">
+          <span class="text-center lg:text-sm">
+            Segunda a sexta das 8h30 às 18h30
+          </span>
+          <span class="text-center lg:text-sm">
+            Sábado e feriados das 8h30 às 13h30
+          </span>
+          <span class="text-center lg:text-sm">
+            Domingos das 9h às 13h (plantão online)
+          </span>
+          <span class="text-center lg:text-sm">
+            Atendimento online todos os dias.
+          </span>
+        </div>
+      </div>
+
+      <!-- COPYRIGHT -->
+      <div class='flex flex-col w-full justify-between items-stretch pt-14 lg:max-w-6xl'>
+        <div class='grid lg:flex w-full lg:justify-between py-8 gap-10'>
+          <span class="text-sm text-center lg:flex">CRECI 15.319-J - © Copyright 2023 - Zimmermann Imóveis LTDA -
+            Todos os direitos reservados.</span>
+          <div class='flex gap-10 items-end justify-center'>
+            <a href="https://sacorp.tec.br/?utm_source=www.mayerbastoscostaadv.com.br&utm_medium=banner&utm_campaign=slogan"
+              target='_blank' rel="noreferrer">
+              <img src="/public/sacorp.png" alt="logo Sacorp" width="100%" height="100%" loading="lazy" />
+            </a>
+            <a href="https://www.gukenz.com.br/" target='_blank' rel="noreferrer">
+              <img src="/public/gukenz.png" alt="logo Gukenz" width="100%" height="100%" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BUSCA FOOTER -->
+  <div class="max-w-6xl w-full lg:flex items-center justify-between pt-10 pb-40 hidden">
+    <div class="text flex-col flex items-center justify-center text-sm">
+      <p class="">Imóveis à venda em São Paulo:
+        <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Água Branca <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Água Rasa <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Alto Da Boa Vista <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Alto Da Lapa <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Alto Da Mooca <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Alto De Pinheiros <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Americanópolis <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Barra Funda <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Bela Vista <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Belenzinho <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Bom Retiro <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Bosque Da Saúde <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Brás <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Brooklin <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Butantã <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Cambuci <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Brás <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Brooklin <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Butantã <span class="no-underline">-</span></a>
+        <span class="moreText hidden">
+          <a href="" class="underline">Imóveis em Brás <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Brooklin <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Butantã <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Cambuci <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+        </span>
+      </p>
+      <button class="read-more-btn cursor-pointer">Mostrar mais <i class="fa-solid fa-chevron-down"></i></button>
+    </div>
+    <!-- JS -->
+    <script>
+      const readMoreBtn = document.querySelector(".read-more-btn");
+    const text = document.querySelector(".text");
+    readMoreBtn.addEventListener("click", (e) => {
+        text.classList.toggle("show-more");
+        if (readMoreBtn.innerText === "Read More") {
+            readMoreBtn.innerText = "Mostrar mais";
+        } else {
+            readMoreBtn.innerText = "Read More";
+        }
+    });
+    </script>
+    <!-- CSS -->
+    <style>
+    .moreText {
+        display: none;
+    }
+    .text.show-more .moreText {
+        display: inline;
+    }
+    .text.show-more .dots {
+        display: none;
+    }
+    </style>
+  </div>
 
 </body>
-
 </html>

@@ -7,24 +7,533 @@
   <meta name="description" content="contato" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/public/fontawesome/css/all.min.css" />
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="flex flex-col items-center justify-center w-full">
 
+  <!-- NAVBAR DESKTOP -->
+  <div class=" justify-center items-center w-full lg:flex hidden absolute top-0 z-50">
+    <div class="relative flex flex-col lg:flex-wrap items-center justify-center w-full">
+      <img src="/public/img-menu.png" class="h-full w-full hidden md:flex" alt="" />
+      <img src="/public/barraEtapaFinanciamentoMobile.png" class="h-full w-full md:hidden flex" alt="" />
+      <div class="absolute top-0 flex items-center justify-center w-full">
+        <div class="absolute top-2 flex items-center justify-end w-full max-w-6xl">
+          <ul class="flex w-full gap-3 items-center justify-end">
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Perdizes
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">99999-0938</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Pinheiros
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">99939-9934</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Jardins
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">99999-0938</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Vila Romana
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">93207-3204</span></p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="absolute top-14 flex items-start justify-end w-full max-w-6xl">
+          <div class="w-1/2">
+            <a href="index.html" class="">
+              <img class="cursor-pointer" src="/public/logo-superior.png" alt="...">
+            </a>
+          </div>
+<div class="w-full">
+          <ul class="lg:flex lg:flex-row lg:items-center lg:justify-between gap-8 w-full hidden max-w-3xl">
+            <li>
+              <a class="text-gray-400" href="index.html">Home</a>
+            </li>
+  
+            <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+              <a href="#"
+                class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                @click.prevent="showChildren=!showChildren">
+                <span>Imóveis</span>
+                <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+              </a>
+  
+              <div class="absolute top-auto left-0 min-w-full w-56 z-30 mt-1" x-show="showChildren"
+                x-transition:enter="transition ease duration-300 transform"
+                x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease duration-300 transform"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                style="display: none;">
+                <div class="bg-white rounded w-full relative z-10 py-1">
+                  <ul class="list-reset">
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="resultadoBusca.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Buscar Imóveis</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Cadastre Seu Imóvel</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="avaliacaoImovel.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Avalie seu Imóvel</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="imoveisFavoritos.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Favoritos</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Imóveis Visualizados</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="indice.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Índice de imóveis</span> </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+  
+            <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+              <a href="#"
+                class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                @click.prevent="showChildren=!showChildren">
+                <span>Serviços</span>
+                <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+              </a>
+  
+              <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                x-transition:enter="transition ease duration-300 transform"
+                x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease duration-300 transform"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                style="display: none;">
+                <div class="bg-white rounded w-full relative z-10 py-1">
+                  <ul class="list-reset">
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="assessoriaFinanciamento.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Financiamento</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="assessoriaJuridica.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Assessoria Jurídica</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Proposta de Compra</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Autorização de Venda</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Autorização de Publicidade</span> </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+  
+            <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+              <a href="#"
+                class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                @click.prevent="showChildren=!showChildren">
+                <span>Institucional</span>
+                <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+              </a>
+  
+              <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                x-transition:enter="transition ease duration-300 transform"
+                x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease duration-300 transform"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                style="display: none;">
+                <div class="bg-white rounded w-full relative z-10 py-1">
+                  <ul class="list-reset">
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="institucional.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Sobre a Zimmermann</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="areasdeatuacao.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Área de Atuação</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Seja Corretor Associado</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="contact.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Contato</span> </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a class="text-gray-400" href="blog.html">BLOG</a>
+            </li>
+            <li>
+              <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR MOBILE -->
+  <div>
+    <!-- NAVBARAR MOBILE NUMEROS -->
+<nav class="w-full md:hidden ">
+  <div class="relative flex items-center justify-center">
+    <img src="/public/menuBarraTels.png" class="" alt="" />
+    <div class="absolute flex items-center justify-end w-full py-4">
+      <div class="lg:hidden flex items-end justify-end w-full gap-2 px-2 max-w-xs">
+        <button class="outline-none mobile-menu-tel1 flex flex-col items-center justify-center text-gray-500">
+          <span>Perdizes</span>
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </button>
+        <button class="outline-none mobile-menu-tel2 flex flex-col items-center justify-center text-gray-500">
+          <span>Pinheiros</span>
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </button>
+        <div class="lg:hidden flex items-center gap-4">
+          <button class="outline-none mobile-menu-tel3 flex flex-col items-center justify-center text-gray-500">
+            <span>Jardins</span>
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+          <button class="outline-none mobile-menu-tel4 flex flex-col items-center justify-center text-gray-500">
+            <span>Vila Romana</span>
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- mobile menu -->
+  <!-- TEL1 -->
+  <div class="hidden mobile-tel1 bg-red-700 mt-1">
+    <div class="py-4 flex items-center justify-between px-1 gap-1 h-28">
+      <div class="items-center justify-center flex w-full gap-1">
+        <div class="w-14 h-14 bg-red-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <img src="/public/telephone.svg" width="50%" height="50%" class="text-white" alt="">
+        </div>
+        <p class="text-xs text-white">(11) <span class="text-base text-white">5466-5349</span></p>
+      </div>
+      <div class="items-center justify-center flex w-full gap-1">
+        <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+        <div class="w-14 h-14 bg-green-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- TEL2 -->
+  <div class="hidden mobile-tel2 bg-red-700 mt-1">
+    <div class="py-4 flex items-center justify-between px-1 gap-1 h-28">
+      <div class="items-center justify-center flex w-full gap-1">
+        <div class="w-14 h-14 bg-red-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <img src="/public/telephone.svg" width="50%" height="50%" class="text-white" alt="">
+        </div>
+        <p class="text-xs text-white">(11) <span class="text-base text-white">5466-5349</span></p>
+      </div>
+      <div class="items-center justify-center flex w-full gap-1">
+        <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+        <div class="w-14 h-14 bg-green-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- TEL3 -->
+  <div class="hidden mobile-tel3 bg-red-700 mt-1">
+    <div class="py-4 flex items-center justify-between px-1 gap-1 h-28">
+      <div class="items-center justify-center flex w-full gap-1">
+        <div class="w-14 h-14 bg-red-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <img src="/public/telephone.svg" width="50%" height="50%" class="text-white" alt="">
+        </div>
+        <p class="text-xs text-white">(11) <span class="text-base text-white">5466-5349</span></p>
+      </div>
+      <div class="items-center justify-center flex w-full gap-1">
+        <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+        <div class="w-14 h-14 bg-green-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- TEL4 -->
+  <div class="hidden mobile-tel4 bg-red-700 mt-1">
+    <div class="py-4 flex items-center justify-between px-1 gap-1 h-28">
+      <div class="items-center justify-center flex w-full gap-1">
+        <div class="w-14 h-14 bg-red-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <img src="/public/telephone.svg" width="50%" height="50%" class="text-white" alt="">
+        </div>
+        <p class="text-xs text-white">(11) <span class="text-base text-white">5466-5349</span></p>
+      </div>
+      <div class="items-center justify-center flex w-full gap-1">
+        <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+        <div class="w-14 h-14 bg-green-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- JS TEL 1 -->
+  <script>
+    const tel1 = document.querySelector("button.mobile-menu-tel1");
+    const menuTel1 = document.querySelector(".mobile-tel1");
+
+    tel1.addEventListener("click", () => {
+      menuTel1.classList.toggle("hidden");
+    });
+  </script>
+  <!-- JS TEL 2 -->
+  <script>
+    const tel2 = document.querySelector("button.mobile-menu-tel2");
+    const menuTel2 = document.querySelector(".mobile-tel2");
+
+    tel2.addEventListener("click", () => {
+      menuTel2.classList.toggle("hidden");
+    });
+  </script>
+  <!-- JS TEL 1 -->
+  <script>
+    const tel3 = document.querySelector("button.mobile-menu-tel3");
+    const menuTel3 = document.querySelector(".mobile-tel3");
+
+    tel3.addEventListener("click", () => {
+      menuTel3.classList.toggle("hidden");
+    });
+  </script>
+  <!-- JS TEL 2 -->
+  <script>
+    const tel4 = document.querySelector("button.mobile-menu-tel4");
+    const menuTel4 = document.querySelector(".mobile-tel4");
+
+    tel4.addEventListener("click", () => {
+      menuTel4.classList.toggle("hidden");
+    });
+  </script>
+</nav>
+
+      <!-- NAVBARAR MOBILE MENU -->
+      <nav class="w-full lg:hidden">
+        <div class="px-2 py-2">
+          <div class="flex justify-between">
+              <div>
+                <a href="index.html" class="">
+                  <img class="cursor-pointer" src="/public/logo-superior.png" width="90%" height="90%" alt="...">
+                </a>
+              </div>
+
+            <!-- Mobile menu button -->
+            <div class="lg:hidden flex items-center">
+              <button class="outline-none mobile-menu-button">
+                <i class="fa-solid fa-bars text-2xl mr-2"></i>
+            </button>
+            </div>
+          </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu bg-black mt-3">
+          <div class="py-4 px-4 gap-2 flex flex-col">
+            <p><a class="text-red-700 uppercase" href="index.html">Home</a></p>
+            <p><a class="text-white" href="blog.html">BLOG</a></p>
+            <p><a class="text-white" href="blog.html">Politica de Privacidade</a></p>
+            <p><a class="text-white" href="blog.html">Termos de Uso</a></p>
+            <p class="text-white mb-1">Imóveis</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="resultadoBusca.html">Buscar Imóveis</a></li>
+              <li><a class="text-white" href="">Cadastre Seu Imóvel</a></li>
+              <li><a class="text-white" href="avaliacaoImovel.html">Avalie seu Imóvel</a></li>
+              <li><a class="text-white" href="imoveisFavoritos.html">Favoritos</a></li>
+              <li><a class="text-white" href="">Imóveis Visualizados</a></li>
+              <li><a class="text-white" href="indice.html">Índice de imóveis</a></li>
+            </ul>
+            <p class="text-white mb-1">Serviços</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="assessoriaFinanciamento.html">Financiamento</a></li>
+              <li><a class="text-white" href="assessoriaJuridica.html">Assessoria Jurídica</a></li>
+              <li><a class="text-white" href="#">Proposta de Compra</a></li>
+              <li><a class="text-white" href="#">Autorização de Venda</a></li>
+              <li><a class="text-white" href="#">Autorização de Publicidade</a></li>
+            </ul>
+            <p class="text-white mb-1">Institucional</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="institucional.html">Sobre a Zimmermann</a></li>
+              <li><a class="text-white" href="areasdeatuacao.html">Área de Atuação</a></li>
+              <li><a class="text-white" href="#">Seja Corretor Associado</a></li>
+              <li><a class="text-white" href="contact.html">Contato</a></li>
+            </ul>
+            <button type="button"
+              class="bg-red-700 h-10 w-44 rounded-md px-2 text-white flex items-center justify-center ">
+              <a href="imoveisFavoritos.html" class="flex items-center justify-center gap-2">
+                <p>Favoritos |</p>
+                <p>00</p>
+                <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+              </a>
+            </button>
+            <div class="flex gap-6">
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <script>
+          const btn = document.querySelector("button.mobile-menu-button");
+          const menu = document.querySelector(".mobile-menu");
+    
+          btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+          });
+        </script>
+        <!-- JAVA SCRIPT DROPDOWN -->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+      </nav>
+</div>
+
+  <!-- NAVBARFIXA -->
+  <div class="w-full">
+    <!-- NAVBARFIXA DESKTOP -->
+    <nav class="fixed bottom-0 z-50 justify-center items-center w-full hidden lg:flex">
+      <div class="relative flex items-center justify-center">
+        <img class="cursor-pointer" src="/public/logo-footer.png" width="100%" height="100%" alt="...">
+        <div class="absolute flex items-center justify-between w-full max-w-6xl">
+          <ul class="flex w-full items-center justify-end gap-7">
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-white uppercase text-base">
+                  Perdizes
+                </p>
+                <i class="fa-brands fa-whatsapp text-white"></i>
+                <p class="text-xs text-white">(11) <span class="text-base text-white">99999-0938</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-white uppercase text-base">
+                  Pinheiros
+                </p>
+                <i class="fa-brands fa-whatsapp text-white"></i>
+                <p class="text-xs text-white">(11) <span class="text-base text-white">99939-9934</span></p>
+              </a>
+            </li>
+            <li class="ml-3 font-bold">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-white uppercase text-base">
+                  Jardins
+                </p>
+                <i class="fa-brands fa-whatsapp text-white"></i>
+                <p class="text-xs text-white">(11) <span class="text-base text-white">99999-0938</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-white uppercase text-base">
+                  Vila Romana
+                </p>
+                <i class="fa-brands fa-whatsapp text-white"></i>
+                <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+              </a>
+            </li>
+          </ul>        
+        </div>
+      </div>
+    </nav>
+
+    <!-- NAVBARFIXA MOBILE -->
+    <nav class="flex fixed bottom-0 z-50 justify-center items-center w-full md:hidden">
+        <a href="index.html">
+          <img class="cursor-pointer" src="/public/logo-barra-mobile.png" width="100%" height="100%" alt="...">
+        </a>
+    </nav>
+  </div>
+
   <!-- BANNER -->
-  <section class="w-full flex flex-col justify-center items-center pt-10 px-5">
-    <div class='max-w-7xl flex flex-col w-full justify-between items-stretch'>
+  <section class="w-full flex flex-col justify-center items-center pt-10 px-5 lg:relative lg:top-10">
+    <div class='max-w-8xl flex flex-col w-full justify-between items-stretch'>
 
       <div class="relative flex items-center justify-center">
-        <img src="/public/bannerContato.svg" class="hidden lg:flex" alt="" />
-        <img src="/public/bannerContatoMobile.svg" class="flex lg:hidden" alt="" />
-        <div class="absolute -bottom-3 flex items-center justify-end">
-          <h1 class="text-3xl text-white uppercase">CONTATO</h1>
+        <img src="/public/bannerContato.png" class="hidden md:flex" alt="" />
+        <img src="/public/bannerContatoMobile.png" class="flex md:hidden" alt="" />
+        <div class="absolute -bottom-1 flex items-center justify-end">
+          <h1 class="text-5xl text-white uppercase">CONTATO</h1>
         </div>
       </div>
 
       <!-- SOMBRA -->
-      <img src="/public/blur-vermelho-1.svg" alt="logo Gukenz" width="100%" height="100%" />
+      <img src="/public/blur-vermelho-1.png" class="rotate-180" alt="logo Gukenz" width="100%" height="100%" />
 
     </div>
   </section>
@@ -33,7 +542,7 @@
   <section class="w-full flex flex-col justify-center items-center pt-5 pb-20 px-5">
     <div class='max-w-6xl flex flex-col w-full justify-between items-stretch'>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 max-w-6xl gap-5">
+      <div class="grid grid-cols-1 lg:grid-cols-2 max-w-6xl gap-5">
         <div class="mr-2 flex lg:justify-center">
           <p class="text-black uppercase text-xl max-w-xs w-64">
             Envie estas informações que logo um de nossos especialistas entrará
@@ -44,21 +553,22 @@
         <form class=" flex flex-col justify-center w-full">
           <div class="flex flex-col">
             <input type="name" name="name" id="name" placeholder="Nome"
-              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800">
+              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
           </div>
 
           <div class="flex flex-col mt-2">
             <input type="email" name="email" id="email" placeholder="E-mail"
-              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800">
+              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
           </div>
 
           <div class="flex flex-col mt-2">
             <input type="tel" name="tel" id="tel" placeholder="Celular"
-              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800">
+              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
           </div>
 
           <div class="flex flex-col mt-2">
-            <select class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800">
+            <select
+              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
               <option>Escolha a área desejada</option>
               <option>Option 2</option>
               <option>Option 3</option>
@@ -67,7 +577,7 @@
           </div>
           <div class="flex flex-col mt-2">
             <textarea rows="5" placeholder="Mensagem"
-              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800"></textarea>
+              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md"></textarea>
           </div>
 
           <div class="flex lg:items-end items-center lg:justify-end justify-center">
@@ -76,28 +586,28 @@
               Enviar
             </button>
           </div>
-
         </form>
       </div>
-
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-red-700 w-full flex flex-col justify-center items-center py-20 text-white px-5">
-    <div class='lg:justify-between justify-center w-full items-center flex flex-col lg:max-w-6xl'>
+  <footer class="bg-red-700 w-full flex flex-col justify-center items-center py-20 text-white px-10">
+    <div class='lg:justify-between justify-center w-full items-center flex flex-col'>
       <!-- ACESSO -->
-      <div class='flex flex-col w-full justify-between items-stretch'>
+      <div class='flex flex-col w-full justify-between items-stretch lg:max-w-6xl'>
         <div class="w-full items-center flex">
           <span class="flex items-center justify-center mr-4">ACESSO</span>
           <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
         </div>
-        <div class="grid grid-cols-1 gap-8 pt-10 md:grid-cols-4 ml-16 lg:ml-0">
+        <div class="grid grid-cols-1 gap-8 pt-10 md:grid-cols-4">
           <div>
-            <h2 class="mb-3">Home</h2>
+            <h2 class="mb-3">
+              <a href="index.html">Home</a>
+            </h2>
             <ul>
               <li class="mb-2">
-                <a href="#" class=" hover:underline">BLOG</a>
+                <a href="blog.html" class=" hover:underline">BLOG</a>
               </li>
               <li class="mb-2">
                 <a href="#" class="hover:underline">Política de Privacidade</a>
@@ -111,22 +621,22 @@
             <h2 class="mb-3">Imóveis</h2>
             <ul class="ml-4">
               <li class="mb-2">
-                <a href="#" class=" hover:underline">Buscar Imóveis</a>
+                <a href="resultadoBusca.html" class=" hover:underline">Buscar Imóveis</a>
               </li>
               <li class="mb-2">
                 <a href="#" class="hover:underline">Cadastre Seu Imóvel</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Avalie seu Imóvel</a>
+                <a href="avaliacaoImovel.html" class="hover:underline">Avalie seu Imóvel</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Favoritos</a>
+                <a href="imoveisFavoritos.html" class="hover:underline">Favoritos</a>
               </li>
               <li class="mb-2">
                 <a href="#" class="hover:underline">Imóveis Visualizados</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Índice de Imóveis</a>
+                <a href="indice.html" class="hover:underline">Índice de Imóveis</a>
               </li>
             </ul>
           </div>
@@ -135,10 +645,10 @@
             <h2 class="mb-3">Serviços</h2>
             <ul class="ml-4">
               <li class="mb-2">
-                <a href="#" class=" hover:underline">Financiamento</a>
+                <a href="assessoriaFinanciamento.html" class=" hover:underline">Financiamento</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Assessoria Jurídica</a>
+                <a href="assessoriaJuridica.html" class="hover:underline">Assessoria Jurídica</a>
               </li>
               <li class="mb-2">
                 <a href="#" class="hover:underline">Proposta de Compra</a>
@@ -156,32 +666,29 @@
             <h2 class="mb-3">Institucional</h2>
             <ul class="ml-4">
               <li class="mb-2">
-                <a href="#" class=" hover:underline">Sobre a Zimmermann</a>
+                <a href="institucional.html" class=" hover:underline">Sobre a Zimmermann</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Área de Atuação</a>
+                <a href="areasdeatuacao.html" class="hover:underline">Área de Atuação</a>
               </li>
               <li class="mb-2">
                 <a href="#" class="hover:underline">Seja Corretor Associado</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Contato</a>
+                <a href="contact.html" class="hover:underline">Contato</a>
               </li>
               <li class="mb-2 flex gap-5 text-white items-center ">
                 <a href="#">
-                  <img src="/public/instagram-brands.svg" alt="">
-
+                  <i class="fa-brands fa-instagram text-3xl text-white"></i>
                 </a>
                 <a href="#">
-                  <img src="/public/facebook-brands.svg" alt="">
-
+                  <i class="fa-brands fa-facebook text-3xl text-white"></i>
                 </a>
                 <a href="#">
-                  <img src="/public/linkedin-brands.svg" alt="">
-
+                  <i class="fa-brands fa-linkedin text-3xl text-white"></i>
                 </a>
                 <a href="#">
-                  <img src="/public/youtube-brands.svg" alt="">
+                  <i class="fa-brands fa-youtube text-3xl text-white"></i>
                 </a>
               </li>
             </ul>
@@ -190,29 +697,30 @@
       </div>
 
       <!-- SOMBRA -->
-      <img src="/public/blur-vermelho-1.svg" class="rotate-180" alt="logo Gukenz" width="100%" height="100%" />
+      <img src="/public/blur-vermelho-1.png" alt="logo Gukenz" width="100%" height="100%" />
 
       <!-- NOSSAS UNIDADES -->
-      <div class='flex flex-col w-full justify-between items-stretch pt-14'>
+      <div class='flex flex-col w-full justify-between items-stretch pt-14 lg:max-w-6xl'>
         <div class="w-full items-center flex">
           <span class="flex items-center justify-center mr-4">NOSSAS UNIDADES</span>
           <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
         </div>
 
-        <div class="grid grid-cols-1 w-full gap-8 py-10 md:grid-cols-4 ml-16 lg:ml-0">
-
+        <div class="grid grid-cols-1 gap-8 py-10 md:grid-cols-4">
           <div>
             <h2 class="mb-3">Agência <span class="font-semibold">Perdizes</span></h2>
             <ul class="flex flex-col gap-3">
               <li>
                 <p class="flex justify-start">
-                  <img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
-                  (11) 99999-0938
+                  <a href="">
+                    <i class="fa-brands fa-whatsapp text-white text-xl"></i>
+                    (11) 99999-0938
+                  </a>
                 </p>
               </li>
               <li>
                 <p class="flex justify-start">
-                  <img src="/public/telephone_126341.svg" class="mr-1" alt="">
+                  <img src="/public/telephone.svg" class="mr-1" alt="">
                   (11) 99999-0938
                 </p>
               </li>
@@ -222,29 +730,29 @@
                 <p>São Paulo - SP</p>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Ver no mapa</a>
+                <a href="#" class="underline">Ver no mapa</a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h2 class="mb-3">Agência Pinheiros
-            </h2>
-            <ul class="">
-              <li class="mb-2">
+            <h2 class="mb-3">Agência <span class="font-semibold">Pinheiros</span></h2>
+            <ul class="flex flex-col gap-3">
+              <li>
                 <p class="flex justify-start">
-                  <img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
-
-                  (11) 99939-9934
+                  <a href="">
+                    <i class="fa-brands fa-whatsapp text-white text-xl"></i>
+                    (11) 99939-9934
+                  </a>
                 </p>
               </li>
-              <li class="mb-2">
+              <li>
                 <p class="flex justify-start">
-                  <img src="/public/telephone_126341.svg" class="mr-1" alt="">
+                  <img src="/public/telephone.svg" class="mr-1" alt="">
                   (11) 99999-0938
                 </p>
               </li>
-              <li class="mb-2">
+              <li class="mb-1">
                 <p>R. Simão Álvares, 464
                 </p>
                 <p>Pinheiros - CEP 05417-020
@@ -252,29 +760,29 @@
                 <p>São Paulo - SP</p>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Ver no mapa</a>
+                <a href="#" class="underline">Ver no mapa</a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h2 class="mb-3">Agência Jardins
-            </h2>
-            <ul class="">
-              <li class="mb-2">
+            <h2 class="mb-3">Agência <span class="font-semibold">Jardins</span></h2>
+            <ul class="flex flex-col gap-3">
+              <li>
                 <p class="flex justify-start">
-                  <img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
-
+                  <a href="">
+                    <i class="fa-brands fa-whatsapp text-white text-xl"></i>
+                    (11) 99999-0938
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p class="flex justify-start">
+                  <img src="/public/telephone.svg" class="mr-1" alt="">
                   (11) 99999-0938
                 </p>
               </li>
-              <li class="mb-2">
-                <p class="flex justify-start">
-                  <img src="/public/telephone_126341.svg" class="mr-1" alt="">
-                  (11) 99999-0938
-                </p>
-              </li>
-              <li class="mb-2">
+              <li class="mb-1">
                 <p>
                   Al. Joaquim Eugênio de Lima, 1281
                 </p>
@@ -286,28 +794,29 @@
                 </p>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Ver no mapa</a>
+                <a href="#" class="underline">Ver no mapa</a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h2 class="mb-3">Agência Vila Romana
-            </h2>
-            <ul class="">
-              <li class="lg:mb-2">
+            <h2 class="mb-3">Agência <span class="font-semibold">Vila Romana</span></h2>
+            <ul class="flex flex-col gap-3">
+              <li>
                 <p class="flex justify-start">
-                  <img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
-                  (11) 93207-3204
+                  <a href="">
+                    <i class="fa-brands fa-whatsapp text-white text-xl"></i>
+                    (11) 93207-3204
+                  </a>
                 </p>
               </li>
-              <li class="mb-2">
+              <li>
                 <p class="flex justify-start">
-                  <img src="/public/telephone_126341.svg" class="mr-1" alt="">
+                  <img src="/public/telephone.svg" class="mr-1" alt="">
                   (11) 99999-0938
                 </p>
               </li>
-              <li class="mb-2">
+              <li class="mb-1">
                 <p>
                   R. Tito, 766
                 </p>
@@ -318,20 +827,19 @@
                   São Paulo - SP</p>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Ver no mapa</a>
+                <a href="#" class="underline">Ver no mapa</a>
               </li>
             </ul>
           </div>
-
         </div>
       </div>
 
       <!-- SOMBRA -->
-      <img src="/public/blur-vermelho-1.svg" alt="logo Gukenz" width="100%" height="100%" />
+      <img src="/public/blur-vermelho-1.png" class="rotate-180" alt="logo Gukenz" width="100%" height="100%" />
 
       <!-- HORÁRIOS -->
-      <div class='flex flex-col w-full justify-between items-stretch'>
-        <div class="grid lg:grid-cols-4 grid-cols-1 lg:divide-x items-start justify-start w-full">
+      <div class='flex flex-col w-full justify-between items-stretch lg:max-w-6xl'>
+        <div class="grid md:grid-cols-4 grid-cols-1 lg:divide-x items-start justify-start w-full">
           <span class="text-center lg:text-sm">
             Segunda a sexta das 8h30 às 18h30
           </span>
@@ -348,25 +856,92 @@
       </div>
 
       <!-- COPYRIGHT -->
-      <div class='flex flex-col w-full justify-between items-stretch pt-14'>
+      <div class='flex flex-col w-full justify-between items-stretch pt-14 lg:max-w-6xl'>
         <div class='grid lg:flex w-full lg:justify-between py-8 gap-10'>
-          <span class="text-sm text-center hidden lg:flex">CRECI 15.319-J - © Copyright 2023 - Zimmermann Imóveis LTDA -
+          <span class="text-sm text-center lg:flex">CRECI 15.319-J - © Copyright 2023 - Zimmermann Imóveis LTDA -
             Todos os direitos reservados.</span>
-          <span class="text-center lg:hidden">CRECI 15.319-J - © Copyright 2023 <br> Zimmermann Imóveis LTDA <br> Todos
-            os direitos reservados.</span>
           <div class='flex gap-10 items-end justify-center'>
             <a href="https://sacorp.tec.br/?utm_source=www.mayerbastoscostaadv.com.br&utm_medium=banner&utm_campaign=slogan"
               target='_blank' rel="noreferrer">
-              <img src="/public/logo-sacorp.svg" alt="logo Sacorp" width="100%" height="100%" loading="lazy" />
+              <img src="/public/sacorp.png" alt="logo Sacorp" width="100%" height="100%" loading="lazy" />
             </a>
             <a href="https://www.gukenz.com.br/" target='_blank' rel="noreferrer">
-              <img src="/public/logo-gukenz.svg" alt="logo Gukenz" width="100%" height="100%" />
+              <img src="/public/gukenz.png" alt="logo Gukenz" width="100%" height="100%" />
             </a>
           </div>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- BUSCA FOOTER -->
+  <div class="max-w-6xl w-full lg:flex items-center justify-between pt-10 pb-32 hidden">
+    <div class="text flex-col flex items-center justify-center text-sm">
+      <p class="">Imóveis à venda em São Paulo:
+        <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Água Branca <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Água Rasa <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Alto Da Boa Vista <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Alto Da Lapa <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Alto Da Mooca <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Alto De Pinheiros <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Americanópolis <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Barra Funda <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Bela Vista <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Belenzinho <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Bom Retiro <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Bosque Da Saúde <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Brás <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Brooklin <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Butantã <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Cambuci <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Brás <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Brooklin <span class="no-underline">-</span></a>
+        <a href="" class="underline">Imóveis em Butantã <span class="no-underline">-</span></a>
+        <span class="moreText hidden">
+          <a href="" class="underline">Imóveis em Brás <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Brooklin <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Butantã <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Cambuci <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+        </span>
+      </p>
+      <button class="read-more-btn cursor-pointer">Mostrar mais <i class="fa-solid fa-chevron-down"></i></button>
+    </div>
+    <!-- JS -->
+    <script>
+      const readMoreBtn = document.querySelector(".read-more-btn");
+    const text = document.querySelector(".text");
+    readMoreBtn.addEventListener("click", (e) => {
+        text.classList.toggle("show-more");
+        if (readMoreBtn.innerText === "Read More") {
+            readMoreBtn.innerText = "Mostrar mais";
+        } else {
+            readMoreBtn.innerText = "Read More";
+        }
+    });
+    </script>
+    <!-- CSS -->
+    <style>
+    .moreText {
+        display: none;
+    }
+    .text.show-more .moreText {
+        display: inline;
+    }
+    .text.show-more .dots {
+        display: none;
+    }
+    </style>
+  </div>
 
 </body>
 </html>
