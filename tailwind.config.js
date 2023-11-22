@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/*.html"],
+  content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
       colors: {
@@ -24,8 +24,8 @@ module.exports = {
         'gray': {
           300: '#F4F4F4',
           400: '#E8E8E8',
-          600: '#D5D5D5',
           500: '#8E8E8E',
+          600: '#D5D5D5',
         },
       },
     },

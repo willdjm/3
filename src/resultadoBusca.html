@@ -386,7 +386,7 @@
 </nav>
 
       <!-- NAVBARAR MOBILE MENU -->
-      <nav class="w-full lg:hidden">
+      <nav class="w-full lg:hidden bg-white">
         <div class="px-2 py-2">
           <div class="flex justify-between">
               <div>
@@ -521,7 +521,7 @@
   </div>
 
   <!-- BUSCA -->
-  <section class="max-w-6xl w-full lg:flex lg:flex-row flex flex-col items-start justify-between gap-20 px-2 lg:px-0 lg:relative lg:-top-24 z-0">
+  <section class="max-w-6xl w-full lg:flex lg:flex-row flex flex-col items-start justify-between lg:gap-20 gap-2 px-2 lg:px-0 lg:relative lg:-top-24 z-0">
 
     <!-- LADO ESQUERDO FILTROS -->
     <div class="w-full md:max-w-xs">
@@ -536,7 +536,7 @@
         </div>
 
         <!-- FILTROS -->
-        <form class="px-4">
+        <form class="px-4 bg-white">
           <div class="flex flex-col gap-2">
 
             <div class="flex items-center">
@@ -782,8 +782,8 @@
         </form>
 
         <!-- FOOTER FILTROS -->
-        <div class="relative flex items-center bottom-0 pt-4 justify-center">
-          <img src="/public/bannerFooterSearch.png" alt="" />
+        <div class="relative flex items-center w-full justify-center">
+          <img src="/public/bannerFooterSearch.png" alt="" width="100%" height="100%" class=""/>
           <div class="absolute flex items-center justify-around w-full">
 
             <button>
@@ -798,9 +798,9 @@
       </div>
 
       <!-- MENU BUSCA MOBILE -->
-      <div class="lg:hidden flex">
-        <details class="group flex flex-col w-full">
-          <summary class="flex items-center justify-between font-medium marker:content-none hover:cursor-pointer">
+      <div class="lg:hidden flex items-center justify-center w-full">
+        <details class="group flex flex-col w-full items-center justify-center">
+          <summary class="flex items-center justify-center font-medium marker:content-none hover:cursor-pointer">
 
             <div class="relative flex items-center justify-center">
               <img src="/public/menuBuscaMobile.png" class="h-full w-full" alt="" />
@@ -813,10 +813,10 @@
             </div>
           </summary>
 
-          <article class="w-full">
+          <article class="w-full flex flex-col items-center justify-center">
 
             <!-- FILTROS -->
-            <form class="pt-5 overflow-auto" style="height: 65vh">
+            <form class="pt-5 overflow-auto bg-white w-full px-3" style="height: 65vh">
               <div class="flex flex-col gap-2">
 
                 <div class="flex items-center">
@@ -853,7 +853,7 @@
                   </select>
                 </div>
 
-                <div class="border-0 border-b py-2 border-gray-200">
+                <div class="border-0 border-b py-2 border-gray-200 flex gap-2">
                   <h2>Preço</h2>
                   <div class="md:flex w-full gap-2">
                     <input class="w-full bg-white mt-2 py-2 px-3 rounded-lg border border-gray-400 text-gray-800"
@@ -863,7 +863,7 @@
                   </div>
                 </div>
 
-                <div class="border-0 border-b py-2 border-gray-200">
+                <div class="border-0 border-b py-2 border-gray-200 flex gap-2">
                   <h2>Área</h2>
                   <div class="md:flex w-full gap-2">
                     <input class="w-full bg-white mt-2 py-2 px-3 rounded-lg border border-gray-400 text-gray-800"
@@ -873,7 +873,7 @@
                   </div>
                 </div>
 
-                <div class="md:flex items-center justify-between w-full gap-1 border-0 border-b py-2 border-gray-200">
+                <div class="flex items-center justify-between w-full gap-1 border-0 border-b py-2 border-gray-200">
                   <h2 class="text-gray-900 w-full">Dormitórios</h2>
                   <ul class="flex w-full gap-1 items-center justify-between">
                     <li>
@@ -907,7 +907,7 @@
                   </ul>
                 </div>
 
-                <div class="md:flex items-center justify-between w-full gap-2 border-0 border-b py-2 border-gray-200">
+                <div class="flex items-center justify-between w-full gap-2 border-0 border-b py-2 border-gray-200">
                   <h2 class="text-gray-900 w-full">Suítes</h2>
                   <ul class="flex w-full gap-1 items-center justify-between">
                     <li>
@@ -941,7 +941,7 @@
                   </ul>
                 </div>
 
-                <div class="md:flex items-center justify-between w-full gap-2 border-0 border-b py-2 border-gray-200">
+                <div class="flex items-center justify-between w-full gap-2 border-0 border-b py-2 border-gray-200">
                   <h2 class="text-gray-900 w-full">Vagas</h2>
                   <ul class="flex w-full gap-1 items-center justify-between">
                     <li>
@@ -1054,15 +1054,15 @@
                     placeholder="Código do imóvel">
                   <button type="button"
                     class="bg-red-700 font-medium h-12 w-12 rounded-md text-white px-3 flex items-center justify-center justify-items-center">
-                    <img src="/public/search_bairros.svg" alt="Photo" class="items-center justify-center flex" />
+                    <i class="fa-solid fa-magnifying-glass text-2xl"></i>
                   </button>
                 </div>
               </div>
             </form>
 
             <!-- FOOTER FILTROS -->
-            <div class="relative flex items-center bottom-0 pt-4 justify-center">
-              <img src="/public/bannerFooterSearch.svg" alt="" />
+            <div class="relative flex items-center justify-center">
+              <img src="/public/bannerFooterSearch.png" alt="" width="100%" height="100%" class=""/>
               <div class="absolute flex items-center justify-around w-full">
 
                 <button>
