@@ -1,0 +1,569 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <title>Lançamentos</title>
+</head>
+<body class="flex w-full items-center justify-center">
+<div class="flex flex-col items-center justify-center max-w-6xl">
+
+
+
+
+
+
+<section class="w-full flex py-10">
+
+    <form class="grid items-center w-full border-4 p-5 rounded-xl">
+
+<div class="flex w-full items-center justify-between gap-5">
+        <!-- Campos iniciais -->
+        <div class="w-full">
+          <select 
+          id="tipoNegocio" 
+          name="tipoNegocio"
+          class="mt-1 p-2 w-full border rounded-lg focus:outline-none focus:border-blue-500">
+            <!-- Opções de tipo de negócio -->
+            <option value="comprar">Comprar/Alugar</option>
+            <option value="comprar">Comprar</option>
+            <option value="alugar">Alugar</option>
+          </select>
+        </div>
+  
+        <div class="w-full">
+          <select 
+          id="tipoNegocio" 
+          name="tipoNegocio"
+          class="mt-1 p-2 w-full border rounded-lg focus:outline-none focus:border-blue-500">
+            <!-- Opções de tipo de negócio -->
+            <option value="todos">Todos os tipos</option>
+            <option value="apartamentos">Apartamentos</option>
+            <option value="casas">Casas / Sobrados</option>
+            <option value="salas">Salas</option>
+            <option value="comercial">Comercial</option>
+            <option value="flats">Flats</option>
+          </select>
+        </div>
+  
+        <div class="w-full">
+          <input 
+          type="text" 
+          id="referencia" 
+          name="referencia" 
+          placeholder="Cód ou palavra chave" 
+          class="mt-1 p-2 w-full border rounded-lg placeholder:text-black placeholder:font-semibold focus:outline-none focus:border-blue-500">
+        </div>
+  
+        <!-- Botão "Mostrar Mais" -->
+        <div class="w-full">
+          <button 
+          type="button" 
+          id="mostrarMais" 
+          class="mt-1 p-2 w-full border rounded-lg placeholder:text-black placeholder:font-semibold focus:outline-none focus:border-blue-500">
+          <span>Outros filtros</span>
+          <img src="" alt="">
+        </button>
+        </div>
+
+        <div class="w-full flex justify-end">
+          <button 
+          type="submit" 
+          class="mt-1 p-2 w-full border rounded-lg placeholder:text-black placeholder:font-semibold focus:outline-none focus:border-blue-500">
+          Buscar
+        </button>
+        </div>
+</div>
+      <!-- Campos adicionais inicialmente ocultos -->
+      <div id="camposAdicionais" class="w-full hidden pt-5">
+<div class="flex items-center justify-center gap-5">
+  <div class="w-full md:w-1/2 lg:w-1/3 mb-4">
+    <select 
+    id="tipoNegocio" 
+    name="tipoNegocio"
+    class="mt-1 p-2 w-full border rounded-lg focus:outline-none focus:border-blue-500">
+      <!-- Opções de tipo de negócio -->
+      <option value="todos">
+        <img src="" alt="">
+        <span>Quartos</span>
+      </option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4+</option>
+    </select>
+  </div>
+
+  <div class="w-full md:w-1/2 lg:w-1/3 mb-4">
+    <select 
+    id="tipoNegocio" 
+    name="tipoNegocio"
+    class="mt-1 p-2 w-full border rounded-lg focus:outline-none focus:border-blue-500">
+      <!-- Opções de tipo de negócio -->
+      <option value="todos">
+        <img src="" alt="">
+        <span>Banheiros</span>
+      </option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4+</option>
+    </select>
+  </div>
+
+  <div class="w-full md:w-1/2 lg:w-1/3 mb-4">
+    <select 
+    id="tipoNegocio" 
+    name="tipoNegocio"
+    class="mt-1 p-2 w-full border rounded-lg focus:outline-none focus:border-blue-500">
+      <!-- Opções de tipo de negócio -->
+      <option value="todos">
+        <img src="" alt="">
+        <span>Suítes</span>
+      </option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4+</option>
+    </select>
+  </div>
+
+</div>
+<div class="flex items-center justify-between gap-5 pt-5">
+
+  <div class="w-full">
+    <label for="preco" class="block text-sm font-medium text-gray-600 text-center">Área útil</label>
+    <div class="mt-1 rounded-md flex flex-col">
+        <input type="range" id="preco" name="preco" min="0" max="1300" step="10"
+               class="range-input appearance-none w-full h-6 rounded-md bg-gray-300 focus:outline-none focus:ring focus:border-blue-300">
+<div class="flex w-full items-center justify-between">
+  <output for="preco" class="px-2 text-sm text-gray-700">
+    <span id="precoValor">0 m2</span></output>
+  <span class="px-2 text-sm text-gray-700">1300 m2</span>
+</div>
+
+    </div>
+</div>
+
+<div class="w-full">
+  <label for="preco2" class="block text-sm font-medium text-gray-600 text-center">Área total</label>
+  <div class="mt-1 rounded-md flex flex-col">
+      <input type="range" id="preco2" name="preco2" min="0" max="1300" step="10"
+             class="range-input appearance-none w-full h-6 rounded-md bg-gray-300 focus:outline-none focus:ring focus:border-blue-300">
+<div class="flex w-full items-center justify-between">
+<output for="preco2" class="px-2 text-sm text-gray-700">
+  <span id="precoValor2">0 m2</span></output>
+<span class="px-2 text-sm text-gray-700">1300 m2</span>
+</div>
+
+  </div>
+</div>
+
+<div class="w-full">
+  <label for="preco3" class="block text-sm font-medium text-gray-600 text-center">Área total</label>
+  <div class="mt-1 rounded-md flex flex-col">
+      <input type="range" id="preco3" name="preco3" min="0" max="1300" step="10"
+             class="range-input appearance-none w-full h-6 rounded-md bg-gray-300 focus:outline-none focus:ring focus:border-blue-300">
+<div class="flex w-full items-center justify-between">
+<output for="preco3" class="px-2 text-sm text-gray-700">R$ 
+  <span id="precoValor3">0</span></output>
+<span class="px-2 text-sm text-gray-700">R$ 60000</span>
+</div>
+
+  </div>
+</div>
+
+<!-- JavaScript para atualizar o valor dinamicamente -->
+<script>
+    const inputPreco = document.getElementById('preco');
+    const spanPrecoValor = document.getElementById('precoValor');
+
+    inputPreco.addEventListener('input', function() {
+        spanPrecoValor.textContent = inputPreco.value;
+    });
+
+    const inputPreco2 = document.getElementById('preco2');
+    const spanPrecoValor2 = document.getElementById('precoValor2');
+
+    inputPreco2.addEventListener('input', function() {
+        spanPrecoValor2.textContent = inputPreco2.value;
+    });
+
+    const inputPreco3 = document.getElementById('preco3');
+    const spanPrecoValor3 = document.getElementById('precoValor3');
+
+    inputPreco3.addEventListener('input', function() {
+        spanPrecoValor3.textContent = inputPreco3.value;
+    });
+</script>
+
+
+</div>
+      </div>
+
+
+    </form>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const mostrarMaisBtn = document.getElementById('mostrarMais');
+      const camposAdicionais = document.getElementById('camposAdicionais');
+
+      mostrarMaisBtn.addEventListener('click', function () {
+        camposAdicionais.classList.toggle('hidden');
+      });
+    });
+  </script>
+</section>
+
+
+
+
+
+
+  <section>
+<img src="../public/banner.png" alt="">
+  </section>
+
+  <section class="w-full flex items-center justify-center">
+
+        <div class="flex flex-col gap-2 w-full">
+    <div>
+      <div class="flex items-center gap-2 pt-4">
+        <h2 class="text-lg font-bold">Universo Tatuape - Esfera</h2>
+        <div class="flex items-center gap-3">
+          <button>
+            <a href="">
+              <img src="../public/icon-hotsites.svg" alt="">
+            </a>
+          </button>
+          <button>
+            <a href="">
+              <img src="../public/icon-hotsites.svg" alt="">
+            </a>
+          </button>
+        </div>
+      </div>
+      <p class="font-bold text-lg">Tatuape - SP</p>
+      <p class="text-sm">Rua Sousa Breves, S/N - Tatuape - São Paulo/SP</p>
+    </div>
+    
+    <div class="grid grid-cols-4 gap-5 py-10 justify-between">
+        
+      <div class="flex gap-2">
+          <img src="../public/icon-hotsites.svg" alt="">
+          <div class="flex flex-col justify-center">
+            <span class="text-sm">Área</span>
+            <span class="text-sm">76 a 109m</span>
+          </div>
+        </div>
+
+        <div class="flex  gap-2">
+          <img src="../public/icon-hotsites.svg" alt="">
+          <div class="flex flex-col justify-center">
+            <span class="text-sm">Estagio</span>
+            <span class="text-sm">Não iniciado</span>
+          </div>
+        </div>
+
+        <div class="flex  gap-2">
+          <img src="../public/icon-hotsites.svg" alt="">
+          <div class="flex flex-col justify-center">
+            <span class="text-sm">Dormitórios</span>
+            <span class="text-sm">2 a 3</span>
+          </div>
+        </div>
+
+        <div class="flex  gap-2">
+          <img src="../public/icon-hotsites.svg" alt="">
+          <div class="flex flex-col justify-center">
+            <span class="text-sm">Suites</span>
+            <span class="text-sm">2 a 3</span>
+          </div>
+        </div>
+
+        <div class="flex  gap-2">
+          <img src="../public/icon-hotsites.svg" alt="">
+          <div class="flex flex-col justify-center">
+            <span class="text-sm">Banheiros</span>
+            <span class="text-sm">2 a 3</span>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img src="../public/icon-hotsites.svg" alt="">
+          <div class="flex flex-col justify-center">
+            <span class="text-sm">Vagas</span>
+            <span class="text-sm">1 a 2</span>
+          </div>
+        </div>
+
+    
+    </div>
+        </div>
+
+<div class="w-full max-w-sm ">
+  <div class="flex flex-col p-5 justify-center rounded-md shadow-md gap-2  w-full mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">Universo Tatuape - Esfera</h2>
+    <p class="text-sm">Preencha os campos abaixo com seus dados e um de nossos corretores entrará em contato.</p>
+
+    <form action="#" method="POST" class="grid gap-5 py-5">
+
+
+        <div class="mt-4">
+            <label for="name" class="block text-sm font-medium text-gray-700">Seu nome:</label>
+            <input type="name" id="name" name="nme" placeholder="Digite seu nome" class="mt-1 p-2 w-full border rounded-md">
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">E-mail:</label>
+              <input type="email" id="email" name="email" placeholder="Digite seu e-mail" class="mt-1 p-2 w-full border rounded-md">
+          </div>
+          <div>
+              <label for="phone" class="block text-sm font-medium text-gray-700">Celular:</label>
+              <input type="phone" id="phone" name="phone" placeholder="(xx) xxxx-xxxx" class="mt-1 p-2 w-full border rounded-md">
+          </div>
+      </div>
+
+
+
+        <div class="mt-6">
+          <button class="bg-red-500 hover:bg-blue-700 text-white w-full py-2 px-4 rounded">
+            Enviar dados
+          </button>
+        </div>
+    </form>
+</div>
+<div class="flex items-center justify-center py-5">
+    <img src="../public/icon-hotsites.svg" alt="">
+      <span class="text-xs font-bold text-red-500">Este é um ambiente seguro!</span>
+</div>
+</div>
+    
+
+  </section>
+
+  <section class="grid gap-5 w-full pt-10">
+    <h2 class="font-bold ">Sobre o Imóvel</h2>
+    <p class="text-justify">
+      Venda Casa de alto padrão mobiliada no Condomínio Alpes da Cantareira tendo 83 metros de frente sendo 400 metros de área construída e 1.870 de área total, no piso Térreo Sala de TV, estar, jantar e lareira com pé direito duplo, cozinha americana planejada integrada com as salas, lavanderia, lavado, e 3 suítes, sendo a principal com closet e banheira.
+      Piso superior mezanino com sala de estar, escritório moveis planejados e solarim.
+      Piso inferior espaço gourmet com churrasqueira, forno de pizza, fogão a lenha, sala de TV com sofá em couro, salão de jogos e piscina coberta 6x3 aquecida com luz led, banheiro e lavado.
+      Fino acabamento em granito, moveis planejados em todos os ambientes, janelas em vidro temperado e alumínio branco, rampa de acesso, área de preservação toda bosqueada com árvores frutíferas, corrimões internos e externos em alumínio, alarme individuais, aquecimento a gás. Aceita Permuta.
+      Venda Casa de alto padrão mobiliada no Condomínio Alpes da Cantareira tendo 83 metros de frente sendo 400 metros de área construída e 1.870 de área total, no piso Térreo Sala de TV, estar, jantar e lareira com pé direito duplo, cozinha americana planejada integrada com as salas, lavanderia, lavado, e 3 suítes, sendo a principal com closet e banheira.
+      Piso superior mezanino com sala de estar, escritório moveis planejados e solarim.
+      Piso inferior espaço gourmet com churrasqueira, forno de pizza, fogão a lenha, sala de TV com sofá em couro, salão de jogos e piscina coberta 6x3 aquecida com luz led, banheiro e lavado.
+      Fino acabamento em granito, moveis planejados em todos os ambientes, janelas em vidro temperado e alumínio branco, rampa de acesso, área de preservação toda bosqueada com árvores frutíferas, corrimões internos e externos em alumínio, alarme individuais, aquecimento a gás. Aceita Permuta.
+    </p>
+    <button class="text-red-500 flex font-bold">Ver menos</button>
+  </section>
+  
+  <section class="flex flex-col justify-start items-start gap-2 pt-10 w-full">
+
+
+
+  
+
+
+
+
+
+
+
+    <h2 class="font-bold">Instalações do condomínio</h2>
+  <div class="grid grid-cols-3 gap-3 py-5 text-container overflow-hidden h-24 w-full">
+    <div class="flex items-center gap-1">
+      <img src="../public/icon-hotsites.svg" alt="">
+      <span>Brinquedoteca</span>
+    </div>
+    <div class="flex items-center gap-1">
+      <img src="../public/icon-hotsites.svg" alt="">
+      <span>Brinquedoteca</span>
+    </div>
+    <div class="flex items-center gap-1">
+      <img src="../public/icon-hotsites.svg" alt="">
+      <span>Brinquedoteca</span>
+    </div>
+    <div class="flex items-center gap-1">
+      <img src="../public/icon-hotsites.svg" alt="">
+      <span>Brinquedoteca</span>
+    </div>
+    <div class="flex items-center gap-1">
+      <img src="../public/icon-hotsites.svg" alt="">
+      <span>Brinquedoteca</span>
+    </div>
+    <div class="flex items-center gap-1">
+      <img src="../public/icon-hotsites.svg" alt="">
+      <span>Brinquedoteca</span>
+    </div>
+    <div class="flex items-center gap-1">
+      <img src="../public/icon-hotsites.svg" alt="">
+      <span>Brinquedoteca</span>
+    </div>
+    <div class="flex items-center gap-1">
+      <img src="../public/icon-hotsites.svg" alt="">
+      <span>Brinquedoteca</span>
+    </div>
+    <div class="flex items-center gap-1">
+      <img src="../public/icon-hotsites.svg" alt="">
+      <span>Brinquedoteca</span>
+    </div>
+    <div class="flex items-center gap-1">
+      <img src="../public/icon-hotsites.svg" alt="">
+      <span>Brinquedoteca</span>
+    </div>
+    <div class="flex items-center gap-1">
+      <img src="../public/icon-hotsites.svg" alt="">
+      <span>Brinquedoteca</span>
+    </div>
+    
+
+  </div>
+  <button class="text-red-500 flex font-bold" id="verMais">Ver mais</button>
+  <button class="text-red-500 font-bold hidden" id="verMenos">Ver Menos</button>
+  </section>
+  
+  <script>
+    const textContainer = document.querySelector('.text-container');
+    const verMaisButton = document.getElementById('verMais');
+    const verMenosButton = document.getElementById('verMenos');
+
+    verMaisButton.addEventListener('click', function() {
+        textContainer.classList.remove('h-24');
+        verMaisButton.classList.add('hidden');
+        verMenosButton.classList.remove('hidden');
+    });
+
+    verMenosButton.addEventListener('click', function() {
+        textContainer.classList.add('h-24');
+        verMaisButton.classList.remove('hidden');
+        verMenosButton.classList.add('hidden');
+    });
+</script>
+
+  
+  <section class="grid gap-3 pt-10 w-full">
+    <h2 class="font-bold flex pb-5">Tipos de unidade</h2>
+  <div>
+    <div class="flex items-center border border-gray-200 max-w-2xl rounded-md">
+      <img src="../public/ap.png" alt="">
+      <div class="flex flex-col gap-2">
+        <h2 class="text-xl">Apartamento 76m</h2>
+  <div class="flex gap-5">
+    <div>
+      <span class="text-sm">Dormintórios</span>
+      <div class="flex items-center gap-1">
+        <img src="../public/icon-hotsites.svg" alt="">
+        <span class="text-sm">2</span>
+      </div>
+    </div>
+    <div>
+      <span class="text-sm">Suítes</span>
+      <div class="flex items-center gap-1">
+        <img src="../public/icon-hotsites.svg" alt="">
+        <span class="text-sm">2</span>
+      </div>
+    </div>
+    <div>
+      <span class="text-sm">Banheiros</span>
+      <div class="flex items-center gap-1">
+        <img src="../public/icon-hotsites.svg" alt="">
+        <span class="text-sm">2</span>
+      </div>
+    </div>
+    <div>
+      <span class="text-sm">Vagas</span>
+      <div class="flex items-center gap-1">
+        <img src="../public/icon-hotsites.svg" alt="">
+        <span class="text-sm">1</span>
+      </div>
+    </div>
+  
+  </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="flex items-center border border-gray-200 max-w-2xl rounded-md">
+      <img src="../public/ap.png" alt="">
+      <div class="flex flex-col gap-2">
+        <h2 class="text-xl">Apartamento 76m</h2>
+  <div class="flex gap-5">
+    <div>
+      <span class="text-sm">Dormintórios</span>
+      <div>
+        <span>IC</span>
+        <span class="text-sm">2</span>
+      </div>
+    </div>
+    <div>
+      <span class="text-sm">Suítes</span>
+      <div>
+        <span>IC</span>
+        <span class="text-sm">2</span>
+      </div>
+    </div>
+    <div>
+      <span class="text-sm">Banheiros</span>
+      <div>
+        <span>IC</span>
+        <span class="text-sm">2</span>
+      </div>
+    </div>
+    <div>
+      <span class="text-sm">Vagas</span>
+      <div>
+        <span>IC</span>
+        <span class="text-sm">1</span>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="flex items-center border border-gray-200 max-w-2xl rounded-md">
+      <img src="../public/ap.png" alt="">
+      <div class="flex flex-col gap-2">
+        <h2 class="text-xl">Apartamento 76m</h2>
+  <div class="flex gap-5">
+    <div>
+      <span class="text-sm">Dormintórios</span>
+      <div>
+        <span>IC</span>
+        <span class="text-sm">2</span>
+      </div>
+    </div>
+    <div>
+      <span class="text-sm">Suítes</span>
+      <div>
+        <span>IC</span>
+        <span class="text-sm">2</span>
+      </div>
+    </div>
+    <div>
+      <span class="text-sm">Banheiros</span>
+      <div>
+        <span>IC</span>
+        <span class="text-sm">2</span>
+      </div>
+    </div>
+    <div>
+      <span class="text-sm">Vagas</span>
+      <div>
+        <span>IC</span>
+        <span class="text-sm">1</span>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+  
+  </section>
+</div>
+</body>
+</html>
